@@ -5,14 +5,17 @@ metadata:
   name: nse-supplier-k8s
 spec:
   template:
+    metadata:
+      labels:
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
         - name: nse-supplier
           env:
             - name: NSM_SERVICE_NAME
-              value: autoscale-icmp-responder
+              value: autoscale-istio-proxy
             - name: NSM_LABELS
-              value: app:icmp-responder-supplier
+              value: any:true
             - name: NSM_NAMESPACE
               valueFrom:
                 fieldRef:

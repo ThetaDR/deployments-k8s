@@ -2,7 +2,7 @@
 apiVersion: networkservicemesh.io/v1
 kind: NetworkService
 metadata:
-  name: autoscale-icmp-responder
+  name: autoscale-istio-proxy
   namespace: nsm-system
 spec:
   payload: IP
@@ -11,9 +11,8 @@ spec:
       fallthrough: true
       routes:
         - destination_selector:
-            app: nse-vl3-vpp
-            nodeName: "{{.nodeName}}"
+            podName: "{{ .podName }}"
     - source_selector:
       routes:
         - destination_selector:
-            app: icmp-responder-supplier
+            any: "true"
