@@ -1,0 +1,599 @@
+time="2022-11-09T10:19:16Z" level=info msg="Starting NetworkServiceMesh Client ..."
+This application is configured via the environment. The following environment
+variables can be used:
+
+KEY                          TYPE                                                   DEFAULT                                                REQUIRED    DESCRIPTION
+NSM_NAME                     String                                                 nsc                                                                Name of Network Service Client
+NSM_CONNECT_TO               URL                                                    unix:///var/lib/networkservicemesh/nsm.io.sock                     url to connect to NSM
+NSM_DIAL_TIMEOUT             Duration                                               5s                                                                 timeout to dial NSMgr
+NSM_REQUEST_TIMEOUT          Duration                                               15s                                                                timeout to request NSE
+NSM_MAX_TOKEN_LIFETIME       Duration                                               10m                                                                maximum lifetime of tokens
+NSM_LABELS                   Comma-separated list of String                                                                                            A list of client labels with format key1=val1,key2=val2, will be used a primary list for network services
+NSM_MECHANISM                String                                                 kernel                                                             Default Mechanism to use, supported values: kernel, vfio
+NSM_NETWORK_SERVICES         Comma-separated list of URL                                                                                               A list of Network Service Requests
+NSM_AWARENESS_GROUPS         Comma-separated list of Comma-separated list of URL                                                                       Awareness groups for mutually aware NSEs
+NSM_LOG_LEVEL                String                                                 INFO                                                               Log level
+NSM_OPENTELEMETRYENDPOINT    String                                                 otel-collector.observability.svc.cluster.local:4317                OpenTelemetry Collector Endpoint
+NSM_LOCALDNSSERVERADDRESS    String                                                 127.0.0.1:53                                                       Default address for local DNS server
+NSM_LIVENESSCHECKENABLED     True or False                                          true                                                               Dataplane liveness check enabled/disabled
+NSM_LIVENESSCHECKINTERVAL    Duration                                               200ms                                                              Dataplane liveness check interval
+NSM_LIVENESSCHECKTIMEOUT     Duration                                               1s                                                                 Dataplane liveness check timeout
+Nov  9 10:19:16.164[36m [INFO] [cmd:[/bin/app]] [0mrootConf: &{Name:productpage-v1-689464fb8b-rt62b ConnectTo:{Scheme:unix Opaque: User: Host: Path:/var/lib/networkservicemesh/nsm.io.sock RawPath: ForceQuery:false RawQuery: Fragment: RawFragment:} DialTimeout:5s RequestTimeout:15s MaxTokenLifetime:10m0s Labels:[] Mechanism:kernel NetworkServices:[{Scheme:kernel Opaque: User:autoscale-istio-proxy Host:my.cluster2 Path:/nsm-1 RawPath: ForceQuery:false RawQuery:app=productpage Fragment: RawFragment:}] AwarenessGroups:[] LogLevel:TRACE OpenTelemetryEndpoint:otel-collector.observability.svc.cluster.local:4317 LocalDNSServerAddress:127.0.0.1:53 LivenessCheckEnabled:true LivenessCheckInterval:200ms LivenessCheckTimeout:1s}
+Nov  9 10:19:17.219[36m [INFO] [cmd:[/bin/app]] [0msVID: "spiffe://nsm.cluster1/ns/default/pod/productpage-v1-689464fb8b-rt62b"
+Nov  9 10:19:17.225[36m [INFO] [cmd:[/bin/app]] [0mNSC: Connecting to Network Service Manager unix:///var/lib/networkservicemesh/nsm.io.sock
+Nov  9 10:19:17.235[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1) ⎆ sdk/pkg/networkservice/common/updatepath/updatePathClient.Request()
+Nov  9 10:19:17.236[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1.1)   request={"connection":{"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5NzQ2fQ.X77ieMmRB_6uT_t37IhpHjNOsrduhvxnDHoblMkfYvqxSERp0YApzBxl7-s-peGHYLuOQy8eOoZOGAQgPh17WQ","expires":{"seconds":1667989746,"nanos":339982615}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5NzQ2fQ.IjEZut2u6ftrnHOvr_2Zed331wXFzc3Jo1F1IXLCRA3tNoZzf2-FZGf5ocb8CUW66Nm1QL9llNl8ssmJOp-zUg","expires":{"seconds":1667989746,"nanos":519598752}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk3NDd9.hdGQulHsYmAPFN-b5fEqwy6B0ybIW9MxugLyLbAk3dAT4--5BXyWi-VLXXdzvpe-8LkoezLorX5Fo6DDqYXnzA","expires":{"seconds":1667989747,"nanos":118173093},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk3NDd9.W0SGSKUgfnVvxWJwWhRiPeuYlj9QLQJxAg4g8oKVuaZtuqR_bYAYjLSDi1xEGL7gpKS21Zq-KSy7AyqPr4jrsw","expires":{"seconds":1667989747,"nanos":135409674}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5NzQ3fQ.i_TVlDZQ4bvI7d_fEjXDzxH-lRCIs5ZMN4eRzn6EdwJRpOTVa1S81BrAw5axJtMGssIwZ_-SX1abV5L2Sv2YTw","expires":{"seconds":1667989747,"nanos":166344152}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5NzQ3fQ.qCYbOh9JQZ2WlRxdVy_xeZ6v5J23GW3e6bdTRPfKZofdLnU6NUCsHFog1UhUXosmLuOna4AVRAT8LNRz8ipbOg","expires":{"seconds":1667989747,"nanos":439879293}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk3NDd9.I28c9M4g66dpNtWUoMaJ-5dGF7wP_5w-uz9QxWE9W-JZ6sIUcPZB7IMY9J5PdJZne_Ovno9j46AzAHzcoyWPmQ","expires":{"seconds":1667989747,"nanos":558492518},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk3NDd9.hjgpy369voMlq8qioqeHCWOkaUKsq5MYVNizczPmkQ__lxXsenGjNLxX1yOofHwTS3JFx58QXfzj8mFDM04G7w","expires":{"seconds":1667989747,"nanos":562624006}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"},"mechanism_preferences":[{"cls":"LOCAL","type":"KERNEL","parameters":{"name":"nsm-1"}}]}
+Nov  9 10:19:17.237[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(2)  ⎆ sdk/pkg/networkservice/common/begin/beginClient.Request()
+Nov  9 10:19:17.237[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(3)   ⎆ sdk/pkg/networkservice/utils/metadata/metaDataClient.Request()
+Nov  9 10:19:17.238[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(4)    ⎆ sdk/pkg/networkservice/common/refresh/refreshClient.Request()
+Nov  9 10:19:17.239[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(5)     ⎆ sdk/pkg/networkservice/common/clienturl/clientURLClient.Request()
+Nov  9 10:19:17.239[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(5.1)       passed clientURL: unix:///var/lib/networkservicemesh/nsm.io.sock
+Nov  9 10:19:17.239[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(6)      ⎆ sdk/pkg/networkservice/common/clientconn/clientConnClient.Request()
+Nov  9 10:19:17.240[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7)       ⎆ sdk/pkg/networkservice/common/heal/healClient.Request()
+Nov  9 10:19:17.241[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(8)        ⎆ sdk/pkg/networkservice/common/dial/dialClient.Request()
+Nov  9 10:19:17.241[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9)         ⎆ sdk/pkg/networkservice/common/clientinfo/clientInfo.Request()
+Nov  9 10:19:17.241[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9.1)           Environment variable NODE_NAME is not set. Skipping.
+Nov  9 10:19:17.241[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9.2)           The label podName was already assigned to productpage-v1-689464fb8b-rt62b. Skipping.
+Nov  9 10:19:17.241[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9.3)           Environment variable CLUSTER_NAME is not set. Skipping.
+Nov  9 10:19:17.242[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(10)          ⎆ sdk/pkg/networkservice/common/upstreamrefresh/upstreamRefreshClient.Request()
+Nov  9 10:19:17.242[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(11)           ⎆ sdk-sriov/pkg/networkservice/common/token/multitoken/tokenClient.Request()
+Nov  9 10:19:17.242[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(12)            ⎆ sdk/pkg/networkservice/common/mechanisms/mechanismsClient.Request()
+Nov  9 10:19:17.243[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13)             ⎆ sdk/pkg/networkservice/core/next/nextClient.Request()
+Nov  9 10:19:17.243[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(14)              ⎆ sdk/pkg/networkservice/common/mechanisms/kernel/kernelMechanismClient.Request()
+Nov  9 10:19:17.244[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(14.1)                request-diff={"mechanism_preferences":{"0":{"parameters":{"+inodeURL":"file:///proc/thread-self/ns/net"}}}}
+Nov  9 10:19:17.244[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(15)               ⎆ sdk/pkg/networkservice/common/mechanisms/sendfd/sendFDClient.Request()
+Nov  9 10:19:17.245[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(15.1)                 request-diff={"mechanism_preferences":{"0":{"parameters":{"inodeURL":"inode://4/4026538174"}}}}
+Nov  9 10:19:17.245[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(16)                ⎆ sdk/pkg/networkservice/connectioncontext/dnscontext/dnsContextClient.Request()
+Nov  9 10:19:17.246[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(16.1)                  request-diff={"connection":{"context":{"dns_context":{"configs":{"+1":{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}}}}}}
+Nov  9 10:19:17.246[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(17)                 ⎆ sdk/pkg/networkservice/common/excludedprefixes/excludedPrefixesClient.Request()
+Nov  9 10:19:17.248[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(18)                  ⎆ sdk/pkg/networkservice/common/authorize/authorizeClient.Request()
+Nov  9 10:19:17.249[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(19)                   ⎆ sdk/pkg/networkservice/common/trimpath/trimpathClient.Request()
+Nov  9 10:19:17.250[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(20)                    ⎆ sdk/pkg/networkservice/common/connect/connectClient.Request()
+Nov  9 10:19:18.550[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(20.1)                      request-response={"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]},{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5NzU3fQ.WiVe-q_IgoFCdJvGkYfBTaw8xUkFeEi94qtLQNM28dC7YpNb4o3SIWhMAOWZ-xY2yn1gGS8Pb9NwmmaRg0rkXA","expires":{"seconds":1667989757,"nanos":250340089}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5NzU3fQ.mNE6i0ACsC6qVTlbTWx-_3OAfqN6G3LrFXIZqZqubdEkpz4WvXzHyyYBL1iP9KJeXOUgEdQs9b6iyXAPH7JmHw","expires":{"seconds":1667989757,"nanos":419114328}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk3NTd9.hPDGAK0BgKjXxNGPndfCndW-iRdvw98E0BcUniCqOACQ4a4tDc_E10rrz_eZGLCjKPXa2AljumiXyo7hs-_2QQ","expires":{"seconds":1667989757,"nanos":745518339},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"2","server_rx_bytes":"96","server_rx_packets":"2","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk3NTd9.v4-64Ti_BWBLBpIEdAGvevkCNnEha_P9N-VD2Fh2k1V5duYNG4Y7KfZeNMvkgG0MSR6Vp9lQ4z6jv3L7VpUoew","expires":{"seconds":1667989757,"nanos":762684026}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5NzU3fQ.BbSN2U8gBq_xWsb0vPGgTAo4E0KZfcFjB5skfjGxd8dg-9dgFvSHAUh2qrEsSRYMOYSiVt7Zmor5Xl9Y4FQx1Q","expires":{"seconds":1667989757,"nanos":816687473}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5NzU3fQ.oxSwVeuBnyXG1GBpGqUw9GJIWEJdXIpPAi4E9KOd2lMRTQauAOKe3Pcc6rsjvmJolWBw-6FVM1rq9NFN88TTBA","expires":{"seconds":1667989757,"nanos":855733019}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk3NTh9.nWk4lENVMmb3tsnERh7fMiy05c_J8OvlTxj92Ebpg3mJS8OadMy4IH5aQPdkq0Q0AYTz_M5xUIlKvQud1PpTcw","expires":{"seconds":1667989758,"nanos":22062132},"metrics":{"client_drops":"2","client_rx_bytes":"96","client_rx_packets":"2","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk3NTh9.eK0-ApGhNgftxG0Jp6v8jqP6NgOJEp3l91dczM3jghMmUebUSkmEmOHhbG31xh47FwK2RLYctulj_SVMDcweXw","expires":{"seconds":1667989758,"nanos":116247701}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"}
+Nov  9 10:19:18.592[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(17.1)                   Request excluded IPs - srcIPs: [172.16.1.3/32], dstIPs: [172.16.1.2/32], excluded prefixes: [10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:19:18.592[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(17.2)                   Added excluded prefixes: [172.16.1.3/32 172.16.1.2/32 10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:19:18.593[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(15.2)                 request-response-diff={"mechanism":{"parameters":{"inodeURL":"file:///proc/thread-self/ns/net"}}}
+Nov  9 10:19:18.616[36m [INFO] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(4.1)      expiration after 9m58.633453877s at 2022-11-09 10:29:17.250340089 +0000 UTC
+Nov  9 10:19:18.618[36m [INFO] [cmd:[/bin/app]] [0msuccessfully connected to autoscale-istio-proxy@my.cluster2. Response: id:"productpage-v1-689464fb8b-rt62b-0" network_service:"autoscale-istio-proxy@my.cluster2" mechanism:{cls:"LOCAL" type:"KERNEL" parameters:{key:"inodeURL" value:"file:///proc/thread-self/ns/net"} parameters:{key:"name" value:"nsm-1"}} context:{ip_context:{src_ip_addrs:"172.16.1.3/32" dst_ip_addrs:"172.16.1.2/32" src_routes:{prefix:"172.16.1.2/32"} dst_routes:{prefix:"172.16.1.3/32"} excluded_prefixes:"10.96.0.0/16" excluded_prefixes:"10.244.0.0/16"} dns_context:{configs:{dns_server_ips:"172.16.1.2"} configs:{dns_server_ips:"10.96.0.10" search_domains:"default.svc.cluster.local" search_domains:"svc.cluster.local" search_domains:"cluster.local"}} MTU:1440} labels:{key:"app" value:"productpage"} labels:{key:"nodeName" value:"kind-1-worker"} labels:{key:"podName" value:"productpage-v1-689464fb8b-rt62b"} path:{path_segments:{name:"productpage-v1-689464fb8b-rt62b" id:"productpage-v1-689464fb8b-rt62b-0" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5NzU3fQ.WiVe-q_IgoFCdJvGkYfBTaw8xUkFeEi94qtLQNM28dC7YpNb4o3SIWhMAOWZ-xY2yn1gGS8Pb9NwmmaRg0rkXA" expires:{seconds:1667989757 nanos:250340089}} path_segments:{name:"nsmgr-8bfqw" id:"bfa7c431-01fd-408a-9365-eb05ec06a5b1" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5NzU3fQ.mNE6i0ACsC6qVTlbTWx-_3OAfqN6G3LrFXIZqZqubdEkpz4WvXzHyyYBL1iP9KJeXOUgEdQs9b6iyXAPH7JmHw" expires:{seconds:1667989757 nanos:419114328}} path_segments:{name:"forwarder-vpp-snkgr" id:"a404aa99-5866-4443-b965-52b7099721c4" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk3NTd9.hPDGAK0BgKjXxNGPndfCndW-iRdvw98E0BcUniCqOACQ4a4tDc_E10rrz_eZGLCjKPXa2AljumiXyo7hs-_2QQ" expires:{seconds:1667989757 nanos:745518339} metrics:{key:"client_drops" value:"0"} metrics:{key:"client_rx_bytes" value:"0"} metrics:{key:"client_rx_packets" value:"0"} metrics:{key:"client_tx_bytes" value:"0"} metrics:{key:"client_tx_packets" value:"0"} metrics:{key:"server_drops" value:"2"} metrics:{key:"server_rx_bytes" value:"96"} metrics:{key:"server_rx_packets" value:"2"} metrics:{key:"server_tx_bytes" value:"0"} metrics:{key:"server_tx_packets" value:"0"}} path_segments:{name:"nsmgr-proxy-84499bbc69-h8hnx" id:"69e385fc-3138-47f4-a8ff-3132d67b0891" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk3NTd9.v4-64Ti_BWBLBpIEdAGvevkCNnEha_P9N-VD2Fh2k1V5duYNG4Y7KfZeNMvkgG0MSR6Vp9lQ4z6jv3L7VpUoew" expires:{seconds:1667989757 nanos:762684026}} path_segments:{name:"nsmgr-proxy-84c66cb54d-7jcq6" id:"bccf157c-8a77-4fbf-93cf-8cb7c2f65729" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5NzU3fQ.BbSN2U8gBq_xWsb0vPGgTAo4E0KZfcFjB5skfjGxd8dg-9dgFvSHAUh2qrEsSRYMOYSiVt7Zmor5Xl9Y4FQx1Q" expires:{seconds:1667989757 nanos:816687473}} path_segments:{name:"nsmgr-8z829" id:"27f70d8d-e2dd-4046-9ae7-597f15c5faaf" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5NzU3fQ.oxSwVeuBnyXG1GBpGqUw9GJIWEJdXIpPAi4E9KOd2lMRTQauAOKe3Pcc6rsjvmJolWBw-6FVM1rq9NFN88TTBA" expires:{seconds:1667989757 nanos:855733019}} path_segments:{name:"forwarder-vpp-g7vft" id:"93c77616-20e0-4032-aad7-349278769b5c" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk3NTh9.nWk4lENVMmb3tsnERh7fMiy05c_J8OvlTxj92Ebpg3mJS8OadMy4IH5aQPdkq0Q0AYTz_M5xUIlKvQud1PpTcw" expires:{seconds:1667989758 nanos:22062132} metrics:{key:"client_drops" value:"2"} metrics:{key:"client_rx_bytes" value:"96"} metrics:{key:"client_rx_packets" value:"2"} metrics:{key:"client_tx_bytes" value:"0"} metrics:{key:"client_tx_packets" value:"0"} metrics:{key:"server_drops" value:"0"} metrics:{key:"server_rx_bytes" value:"0"} metrics:{key:"server_rx_packets" value:"0"} metrics:{key:"server_tx_bytes" value:"0"} metrics:{key:"server_tx_packets" value:"0"}} path_segments:{name:"proxy-productpage-v1-689464fb8b-rt62b" id:"a7dbd07a-bc6a-41da-95c5-424c513a8ee0" token:"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk3NTh9.eK0-ApGhNgftxG0Jp6v8jqP6NgOJEp3l91dczM3jghMmUebUSkmEmOHhbG31xh47FwK2RLYctulj_SVMDcweXw" expires:{seconds:1667989758 nanos:116247701}}} network_service_endpoint_name:"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2" payload:"IP"
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38066->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38062->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:41 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:41 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38732->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38728->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:42 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38796->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38800->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:43 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 15788
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:19:44 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 16430
+;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38858->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:38862->10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:19:44 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:25 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:25 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40620->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40622->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:26 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40690->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40694->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:27 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 57539
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 A
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.svc.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [ERROR] [noloopDNSHandler:ServeDNS] loop is not allowed: query: ;; opcode: QUERY, status: NOERROR, id: 58557
+;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;productpage.default.cluster.local.	IN	 AAAA
+
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40768->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:40770->10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial tcp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: dial udp 172.16.1.2:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial udp 10.96.0.10:53: i/o timeout
+2022/11/09 10:20:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: dial tcp 10.96.0.10:53: i/o timeout
+Nov  9 10:21:18.344[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1) ⎆ sdk/pkg/networkservice/utils/metadata/metaDataClient.Request()
+Nov  9 10:21:18.344[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1.1)   request={"connection":{"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"file:///proc/thread-self/ns/net","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]},{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5NzU3fQ.WiVe-q_IgoFCdJvGkYfBTaw8xUkFeEi94qtLQNM28dC7YpNb4o3SIWhMAOWZ-xY2yn1gGS8Pb9NwmmaRg0rkXA","expires":{"seconds":1667989757,"nanos":250340089}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5NzU3fQ.mNE6i0ACsC6qVTlbTWx-_3OAfqN6G3LrFXIZqZqubdEkpz4WvXzHyyYBL1iP9KJeXOUgEdQs9b6iyXAPH7JmHw","expires":{"seconds":1667989757,"nanos":419114328}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk3NTd9.hPDGAK0BgKjXxNGPndfCndW-iRdvw98E0BcUniCqOACQ4a4tDc_E10rrz_eZGLCjKPXa2AljumiXyo7hs-_2QQ","expires":{"seconds":1667989757,"nanos":745518339},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"2","server_rx_bytes":"96","server_rx_packets":"2","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk3NTd9.v4-64Ti_BWBLBpIEdAGvevkCNnEha_P9N-VD2Fh2k1V5duYNG4Y7KfZeNMvkgG0MSR6Vp9lQ4z6jv3L7VpUoew","expires":{"seconds":1667989757,"nanos":762684026}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5NzU3fQ.BbSN2U8gBq_xWsb0vPGgTAo4E0KZfcFjB5skfjGxd8dg-9dgFvSHAUh2qrEsSRYMOYSiVt7Zmor5Xl9Y4FQx1Q","expires":{"seconds":1667989757,"nanos":816687473}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5NzU3fQ.oxSwVeuBnyXG1GBpGqUw9GJIWEJdXIpPAi4E9KOd2lMRTQauAOKe3Pcc6rsjvmJolWBw-6FVM1rq9NFN88TTBA","expires":{"seconds":1667989757,"nanos":855733019}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk3NTh9.nWk4lENVMmb3tsnERh7fMiy05c_J8OvlTxj92Ebpg3mJS8OadMy4IH5aQPdkq0Q0AYTz_M5xUIlKvQud1PpTcw","expires":{"seconds":1667989758,"nanos":22062132},"metrics":{"client_drops":"2","client_rx_bytes":"96","client_rx_packets":"2","client_tx_bytes":"0","client_tx_packets":"0","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"0","server_tx_packets":"0"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk3NTh9.eK0-ApGhNgftxG0Jp6v8jqP6NgOJEp3l91dczM3jghMmUebUSkmEmOHhbG31xh47FwK2RLYctulj_SVMDcweXw","expires":{"seconds":1667989758,"nanos":116247701}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"},"mechanism_preferences":[{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}}]}
+Nov  9 10:21:18.344[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(2)  ⎆ sdk/pkg/networkservice/common/refresh/refreshClient.Request()
+Nov  9 10:21:18.345[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(3)   ⎆ sdk/pkg/networkservice/common/clienturl/clientURLClient.Request()
+Nov  9 10:21:18.345[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(3.1)     passed clientURL: unix:///var/lib/networkservicemesh/nsm.io.sock
+Nov  9 10:21:18.345[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(4)    ⎆ sdk/pkg/networkservice/common/clientconn/clientConnClient.Request()
+Nov  9 10:21:18.346[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(5)     ⎆ sdk/pkg/networkservice/common/heal/healClient.Request()
+Nov  9 10:21:18.346[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [heal:eventLoop] [type:networkService] [0m(7.1)         received eventIn: <nil>, err: rpc error: code = Canceled desc = context canceled
+Nov  9 10:21:18.346[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(6)      ⎆ sdk/pkg/networkservice/common/dial/dialClient.Request()
+Nov  9 10:21:18.347[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7)       ⎆ sdk/pkg/networkservice/common/clientinfo/clientInfo.Request()
+Nov  9 10:21:18.347[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.1)         Environment variable NODE_NAME is not set. Skipping.
+Nov  9 10:21:18.347[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.2)         The label podName was already assigned to productpage-v1-689464fb8b-rt62b. Skipping.
+Nov  9 10:21:18.347[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.3)         Environment variable CLUSTER_NAME is not set. Skipping.
+Nov  9 10:21:18.348[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(8)        ⎆ sdk/pkg/networkservice/common/upstreamrefresh/upstreamRefreshClient.Request()
+Nov  9 10:21:18.348[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9)         ⎆ sdk-sriov/pkg/networkservice/common/token/multitoken/tokenClient.Request()
+Nov  9 10:21:18.349[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(10)          ⎆ sdk/pkg/networkservice/common/mechanisms/mechanismsClient.Request()
+Nov  9 10:21:18.349[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(11)           ⎆ sdk/pkg/networkservice/core/next/nextClient.Request()
+Nov  9 10:21:18.349[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(12)            ⎆ sdk/pkg/networkservice/common/mechanisms/kernel/kernelMechanismClient.Request()
+Nov  9 10:21:18.350[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(12.1)              request-diff={"mechanism_preferences":{"0":{"parameters":{"inodeURL":"file:///proc/thread-self/ns/net"}}}}
+Nov  9 10:21:18.350[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13)             ⎆ sdk/pkg/networkservice/common/mechanisms/sendfd/sendFDClient.Request()
+Nov  9 10:21:18.351[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13.1)               request-diff={"connection":{"mechanism":{"parameters":{"inodeURL":"inode://4/4026538174"}}},"mechanism_preferences":{"0":{"parameters":{"inodeURL":"inode://4/4026538174"}}}}
+Nov  9 10:21:18.351[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(14)              ⎆ sdk/pkg/networkservice/connectioncontext/dnscontext/dnsContextClient.Request()
+Nov  9 10:21:18.352[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(15)               ⎆ sdk/pkg/networkservice/common/excludedprefixes/excludedPrefixesClient.Request()
+Nov  9 10:21:18.352[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.1)                 Adding new excluded IPs to the request: [172.16.1.3/32 172.16.1.2/32 10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:21:18.352[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.2)                 Excluded prefixes from request - [10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:21:18.352[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(16)                ⎆ sdk/pkg/networkservice/common/authorize/authorizeClient.Request()
+Nov  9 10:21:18.353[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(17)                 ⎆ sdk/pkg/networkservice/common/trimpath/trimpathClient.Request()
+Nov  9 10:21:18.353[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(18)                  ⎆ sdk/pkg/networkservice/common/connect/connectClient.Request()
+Nov  9 10:21:19.458[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(18.1)                    request-response={"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]},{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5ODc4fQ.OhTn5QoSwALY8gzykh3r7xSFqsDEQS5zsy2DzQ-H8XfZZlUlryNhcmuXe3GeWT3mQHUEkA4mOBWQo0VB27iBKw","expires":{"seconds":1667989878,"nanos":353855312}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5ODc4fQ.7w89g5waYLagKoz6BbkRMvmPEuzg1nHz8zd7wJtVrRvuRWXFrdEezIpRI6MMN5oWerSrwEEizUoR2uD3TaC4Qw","expires":{"seconds":1667989878,"nanos":425668242}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk4Nzh9.4IsLSAkFLxx59mU3e0f5U_9_LpBRFH3SaJzJeu5ZyJIswSrzcW4Kn_eLUUhQTIGwxnWroiwIVV4rbWJS3Kj1rw","expires":{"seconds":1667989878,"nanos":788544166},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"73336","client_tx_packets":"684","server_drops":"6","server_rx_bytes":"32584","server_rx_packets":"690","server_tx_bytes":"32334","server_tx_packets":"684"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk4Nzh9.QqtcjzEe1j8llVTyqYRE-e_Cehv4TeqnFBI8r4WroV_36zNTebalPVziZrp13dQeWlCo2EohDOq36uGqJcPckw","expires":{"seconds":1667989878,"nanos":806544350}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5ODc4fQ.WMPAHhltZCFNAyXpWU0W1fmXxXM8wbBuWxXZq11lnKDOhSN9s0vtYxeYAsKYA4IEuQpxelHOx_eCWYYDkhh3Dw","expires":{"seconds":1667989878,"nanos":840655145}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5ODc4fQ.byCQSpcYyxizGLeYsynzGCLdtc4_r7r1qI5OHdKUrrxim5urbMx7CcXToSYNfZiVh-4-cw6a2NuItAL3yYy0sg","expires":{"seconds":1667989878,"nanos":880525123}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk4Nzl9._vDJD-pGPr5tAoQzoYYBP4BiYTH_O5wZaQqjVPyUwkIK7AREnqv7ODtEDzmtwWNrhd2Vbvzax7M1FV8j8iR1_A","expires":{"seconds":1667989879,"nanos":67197870},"metrics":{"client_drops":"6","client_rx_bytes":"32622","client_rx_packets":"690","client_tx_bytes":"32296","client_tx_packets":"684","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"73374","server_tx_packets":"684"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk4Nzl9.dOf_5HaST2e0Kl6xGk1USumhEDZub9DchLyKopAZ5aX4zauIpPRVtowFLtSoDayJl8loIH1ZxRlFVGo0bT81lg","expires":{"seconds":1667989879,"nanos":70075087}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"}
+Nov  9 10:21:19.467[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.3)                 Request excluded IPs - srcIPs: [172.16.1.3/32], dstIPs: [172.16.1.2/32], excluded prefixes: [10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:21:19.467[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.4)                 Added excluded prefixes: [172.16.1.3/32 172.16.1.2/32 10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:21:19.468[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13.2)               request-response-diff={"mechanism":{"parameters":{"inodeURL":"file:///proc/thread-self/ns/net"}}}
+Nov  9 10:21:19.520[36m [INFO] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(2.1)    expiration after 9m58.832901798s at 2022-11-09 10:31:18.353855312 +0000 UTC
+Nov  9 10:23:19.288[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1) ⎆ sdk/pkg/networkservice/utils/metadata/metaDataClient.Request()
+Nov  9 10:23:19.288[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(1.1)   request={"connection":{"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"file:///proc/thread-self/ns/net","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]},{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5ODc4fQ.OhTn5QoSwALY8gzykh3r7xSFqsDEQS5zsy2DzQ-H8XfZZlUlryNhcmuXe3GeWT3mQHUEkA4mOBWQo0VB27iBKw","expires":{"seconds":1667989878,"nanos":353855312}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5ODc4fQ.7w89g5waYLagKoz6BbkRMvmPEuzg1nHz8zd7wJtVrRvuRWXFrdEezIpRI6MMN5oWerSrwEEizUoR2uD3TaC4Qw","expires":{"seconds":1667989878,"nanos":425668242}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk4Nzh9.4IsLSAkFLxx59mU3e0f5U_9_LpBRFH3SaJzJeu5ZyJIswSrzcW4Kn_eLUUhQTIGwxnWroiwIVV4rbWJS3Kj1rw","expires":{"seconds":1667989878,"nanos":788544166},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"73336","client_tx_packets":"684","server_drops":"6","server_rx_bytes":"32584","server_rx_packets":"690","server_tx_bytes":"32334","server_tx_packets":"684"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk4Nzh9.QqtcjzEe1j8llVTyqYRE-e_Cehv4TeqnFBI8r4WroV_36zNTebalPVziZrp13dQeWlCo2EohDOq36uGqJcPckw","expires":{"seconds":1667989878,"nanos":806544350}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5ODc4fQ.WMPAHhltZCFNAyXpWU0W1fmXxXM8wbBuWxXZq11lnKDOhSN9s0vtYxeYAsKYA4IEuQpxelHOx_eCWYYDkhh3Dw","expires":{"seconds":1667989878,"nanos":840655145}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5ODc4fQ.byCQSpcYyxizGLeYsynzGCLdtc4_r7r1qI5OHdKUrrxim5urbMx7CcXToSYNfZiVh-4-cw6a2NuItAL3yYy0sg","expires":{"seconds":1667989878,"nanos":880525123}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5ODk4Nzl9._vDJD-pGPr5tAoQzoYYBP4BiYTH_O5wZaQqjVPyUwkIK7AREnqv7ODtEDzmtwWNrhd2Vbvzax7M1FV8j8iR1_A","expires":{"seconds":1667989879,"nanos":67197870},"metrics":{"client_drops":"6","client_rx_bytes":"32622","client_rx_packets":"690","client_tx_bytes":"32296","client_tx_packets":"684","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"73374","server_tx_packets":"684"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5ODk4Nzl9.dOf_5HaST2e0Kl6xGk1USumhEDZub9DchLyKopAZ5aX4zauIpPRVtowFLtSoDayJl8loIH1ZxRlFVGo0bT81lg","expires":{"seconds":1667989879,"nanos":70075087}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"},"mechanism_preferences":[{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}}]}
+Nov  9 10:23:19.289[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(2)  ⎆ sdk/pkg/networkservice/common/refresh/refreshClient.Request()
+Nov  9 10:23:19.289[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(3)   ⎆ sdk/pkg/networkservice/common/clienturl/clientURLClient.Request()
+Nov  9 10:23:19.289[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(3.1)     passed clientURL: unix:///var/lib/networkservicemesh/nsm.io.sock
+Nov  9 10:23:19.290[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(4)    ⎆ sdk/pkg/networkservice/common/clientconn/clientConnClient.Request()
+Nov  9 10:23:19.290[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(5)     ⎆ sdk/pkg/networkservice/common/heal/healClient.Request()
+Nov  9 10:23:19.291[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [heal:eventLoop] [type:networkService] [0m(5.1)       received eventIn: <nil>, err: rpc error: code = Canceled desc = context canceled
+Nov  9 10:23:19.291[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(6)      ⎆ sdk/pkg/networkservice/common/dial/dialClient.Request()
+Nov  9 10:23:19.291[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7)       ⎆ sdk/pkg/networkservice/common/clientinfo/clientInfo.Request()
+Nov  9 10:23:19.292[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.1)         Environment variable NODE_NAME is not set. Skipping.
+Nov  9 10:23:19.292[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.2)         The label podName was already assigned to productpage-v1-689464fb8b-rt62b. Skipping.
+Nov  9 10:23:19.292[33m [WARN] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(7.3)         Environment variable CLUSTER_NAME is not set. Skipping.
+Nov  9 10:23:19.292[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(8)        ⎆ sdk/pkg/networkservice/common/upstreamrefresh/upstreamRefreshClient.Request()
+Nov  9 10:23:19.292[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(9)         ⎆ sdk-sriov/pkg/networkservice/common/token/multitoken/tokenClient.Request()
+Nov  9 10:23:19.293[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(10)          ⎆ sdk/pkg/networkservice/common/mechanisms/mechanismsClient.Request()
+Nov  9 10:23:19.293[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(11)           ⎆ sdk/pkg/networkservice/core/next/nextClient.Request()
+Nov  9 10:23:19.293[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(12)            ⎆ sdk/pkg/networkservice/common/mechanisms/kernel/kernelMechanismClient.Request()
+Nov  9 10:23:19.296[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(12.1)              request-diff={"mechanism_preferences":{"0":{"parameters":{"inodeURL":"file:///proc/thread-self/ns/net"}}}}
+Nov  9 10:23:19.297[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13)             ⎆ sdk/pkg/networkservice/common/mechanisms/sendfd/sendFDClient.Request()
+Nov  9 10:23:19.298[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13.1)               request-diff={"connection":{"mechanism":{"parameters":{"inodeURL":"inode://4/4026538174"}}},"mechanism_preferences":{"0":{"parameters":{"inodeURL":"inode://4/4026538174"}}}}
+Nov  9 10:23:19.298[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(14)              ⎆ sdk/pkg/networkservice/connectioncontext/dnscontext/dnsContextClient.Request()
+Nov  9 10:23:19.299[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(15)               ⎆ sdk/pkg/networkservice/common/excludedprefixes/excludedPrefixesClient.Request()
+Nov  9 10:23:19.299[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.1)                 Adding new excluded IPs to the request: [172.16.1.3/32 172.16.1.2/32 10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:23:19.299[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.2)                 Excluded prefixes from request - [10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:23:19.299[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(16)                ⎆ sdk/pkg/networkservice/common/authorize/authorizeClient.Request()
+Nov  9 10:23:19.300[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(17)                 ⎆ sdk/pkg/networkservice/common/trimpath/trimpathClient.Request()
+Nov  9 10:23:19.301[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(18)                  ⎆ sdk/pkg/networkservice/common/connect/connectClient.Request()
+Nov  9 10:23:20.741[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(18.1)                    request-response={"id":"productpage-v1-689464fb8b-rt62b-0","network_service":"autoscale-istio-proxy@my.cluster2","mechanism":{"cls":"LOCAL","type":"KERNEL","parameters":{"inodeURL":"inode://4/4026538174","name":"nsm-1"}},"context":{"ip_context":{"src_ip_addrs":["172.16.1.3/32"],"dst_ip_addrs":["172.16.1.2/32"],"src_routes":[{"prefix":"172.16.1.2/32"}],"dst_routes":[{"prefix":"172.16.1.3/32"}],"excluded_prefixes":["10.96.0.0/16","10.244.0.0/16"]},"dns_context":{"configs":[{"dns_server_ips":["172.16.1.2"]},{"dns_server_ips":["10.96.0.10"],"search_domains":["default.svc.cluster.local","svc.cluster.local","cluster.local"]}]},"MTU":1440},"labels":{"app":"productpage","nodeName":"kind-1-worker","podName":"productpage-v1-689464fb8b-rt62b"},"path":{"path_segments":[{"name":"productpage-v1-689464fb8b-rt62b","id":"productpage-v1-689464fb8b-rt62b-0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvZGVmYXVsdC9wb2QvcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciXSwiZXhwIjoxNjY3OTg5OTk5fQ.C3buJ-5F_G3VIB0z47dzcLoe3w7nVtcCPEVpzwAFWS4SbGtxXc4m49jlGgv59g2_ersbEIQ1VONSxGYE7DrO3w","expires":{"seconds":1667989999,"nanos":301508214}},{"name":"nsmgr-8bfqw","id":"bfa7c431-01fd-408a-9365-eb05ec06a5b1","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOGJmcXciLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIxL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtc25rZ3IiXSwiZXhwIjoxNjY3OTg5OTk5fQ.Oe8jJ4QG6ywr2PFVxmoLNbGeU-AbLMlTlZw8hyV5Igq_UVbN1m8nuRMIUlFjewT52h8gjeLm0E1naAzhpcEmJQ","expires":{"seconds":1667989999,"nanos":357323696}},{"name":"forwarder-vpp-snkgr","id":"a404aa99-5866-4443-b965-52b7099721c4","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1zbmtnciIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCJdLCJleHAiOjE2Njc5ODk5OTl9.UmhvD4auIGoYRZzmWNQ1fOmaVKvoAF6B1tIVBpkN9RDd2BlJDLHfO_iPjhNqkYRZyZaSactXIG12fRFLvgrTwg","expires":{"seconds":1667989999,"nanos":719518326},"metrics":{"client_drops":"0","client_rx_bytes":"0","client_rx_packets":"0","client_tx_bytes":"132304","client_tx_packets":"1251","server_drops":"6","server_rx_bytes":"57532","server_rx_packets":"1257","server_tx_bytes":"57282","server_tx_packets":"1251"}},{"name":"nsmgr-proxy-84499bbc69-h8hnx","id":"69e385fc-3138-47f4-a8ff-3132d67b0891","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjEvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODQ0OTliYmM2OS1oOGhueCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiJdLCJleHAiOjE2Njc5ODk5OTl9.1m_vFR58tco4NTlXqsG0b_l_j9x83Cj_Ktsin1fccnua4Rhra4cdzRNZSF_fcAJwJy6Ynu4k7xC60ZI_35v5EQ","expires":{"seconds":1667989999,"nanos":741803910}},{"name":"nsmgr-proxy-84c66cb54d-7jcq6","id":"bccf157c-8a77-4fbf-93cf-8cb7c2f65729","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItcHJveHktODRjNjZjYjU0ZC03amNxNiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiXSwiZXhwIjoxNjY3OTg5OTk5fQ.1yMqqk7MfAhJpyDmUkjxm1Fgbb0rI2Qb32JURPMwBT_6fCLeqtmddkZMpivvU8cJ0Ad9VobEZaRo8ToboJ5E1A","expires":{"seconds":1667989999,"nanos":815446013}},{"name":"nsmgr-8z829","id":"27f70d8d-e2dd-4046-9ae7-597f15c5faaf","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvbnNtZ3ItOHo4MjkiLCJhdWQiOlsic3BpZmZlOi8vbnNtLmNsdXN0ZXIyL25zL25zbS1zeXN0ZW0vcG9kL2ZvcndhcmRlci12cHAtZzd2ZnQiXSwiZXhwIjoxNjY3OTg5OTk5fQ.Mh6ORrn15EC_YLCyqtwu0PXNxjMoPS2iyEaUUh0ONZyzpu4lb5hcAIDxrZZJIB_qI5-vpjOKMPhNpZL5to4akQ","expires":{"seconds":1667989999,"nanos":921686728}},{"name":"forwarder-vpp-g7vft","id":"93c77616-20e0-4032-aad7-349278769b5c","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiJdLCJleHAiOjE2Njc5OTAwMDB9.cLrhT0qQYl0dovQmb4_zlx-aw7Vg1oiYJnLOF5ZD10vLomjmTNPVZkCn3Qh70tTQxtOuQ2vMfufbwIvVRRCpSQ","expires":{"seconds":1667990000,"nanos":145683643},"metrics":{"client_drops":"7","client_rx_bytes":"57574","client_rx_packets":"1257","client_tx_bytes":"57200","client_tx_packets":"1250","server_drops":"0","server_rx_bytes":"0","server_rx_packets":"0","server_tx_bytes":"132238","server_tx_packets":"1250"}},{"name":"proxy-productpage-v1-689464fb8b-rt62b","id":"a7dbd07a-bc6a-41da-95c5-424c513a8ee0","token":"eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvZGVmYXVsdC9wb2QvcHJveHktcHJvZHVjdHBhZ2UtdjEtNjg5NDY0ZmI4Yi1ydDYyYiIsImF1ZCI6WyJzcGlmZmU6Ly9uc20uY2x1c3RlcjIvbnMvbnNtLXN5c3RlbS9wb2QvZm9yd2FyZGVyLXZwcC1nN3ZmdCJdLCJleHAiOjE2Njc5OTAwMDB9.ojK6Av1BqmTatB0Z-bIallIb_In6fDVoE3rVyHaeBSFmnHiAfKwnrMOOFTdkcpX3YneJSlYoLMklWknFyOxS6w","expires":{"seconds":1667990000,"nanos":148707844}}]},"network_service_endpoint_name":"proxy-productpage-v1-689464fb8b-rt62b@my.cluster2","payload":"IP"}
+Nov  9 10:23:20.748[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.3)                 Request excluded IPs - srcIPs: [172.16.1.3/32], dstIPs: [172.16.1.2/32], excluded prefixes: [10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:23:20.748[37m [DEBU] [id:productpage-v1-689464fb8b-rt62b-0] [ExcludedPrefixesClient:Request] [type:networkService] [0m(15.4)                 Added excluded prefixes: [172.16.1.3/32 172.16.1.2/32 10.96.0.0/16 10.244.0.0/16]
+Nov  9 10:23:20.749[37m [TRAC] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(13.2)               request-response-diff={"mechanism":{"parameters":{"inodeURL":"file:///proc/thread-self/ns/net"}}}
+Nov  9 10:23:20.759[36m [INFO] [id:productpage-v1-689464fb8b-rt62b-0] [type:networkService] [0m(2.1)    expiration after 9m58.542140956s at 2022-11-09 10:33:19.301508214 +0000 UTC
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:28 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 172.16.1.2:53: EOF
+2022/11/09 10:23:29 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:48364->10.96.0.10:53: i/o timeout
+2022/11/09 10:23:29 [WARN]  [fanoutHandler:ServeDNS] got an error during exchanging with address 10.96.0.10:53: read tcp 10.244.1.9:48366->10.96.0.10:53: i/o timeout
