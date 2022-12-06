@@ -1,0 +1,276 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5318"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e2649a7414f24",
+                "namespace": "local-path-storage",
+                "uid": "4c648f0b-1e27-4fd3-89cc-44d6702265df",
+                "resourceVersion": "486",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "461"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:50Z",
+            "count": 2,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e264cda7daaf9",
+                "namespace": "local-path-storage",
+                "uid": "8d6ef72e-1990-4b69-b0a7-38a342414b61",
+                "resourceVersion": "538",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "474"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/2 nodes are available: 2 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e264df8af62d2",
+                "namespace": "local-path-storage",
+                "uid": "0bd32b5c-0124-4647-89d6-2d4161e357a2",
+                "resourceVersion": "571",
+                "creationTimestamp": "2022-12-06T08:17:08Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "539"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned local-path-storage/local-path-provisioner-547f784dff-fr4h6 to kind-1-control-plane",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:08Z",
+            "lastTimestamp": "2022-12-06T08:17:08Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e264f4b1361f4",
+                "namespace": "local-path-storage",
+                "uid": "a4f5610d-7541-4f61-9eab-55521fb9590d",
+                "resourceVersion": "584",
+                "creationTimestamp": "2022-12-06T08:17:13Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "567",
+                "fieldPath": "spec.containers{local-path-provisioner}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"docker.io/rancher/local-path-provisioner:v0.0.14\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:13Z",
+            "lastTimestamp": "2022-12-06T08:17:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e26554cc8721c",
+                "namespace": "local-path-storage",
+                "uid": "1b6433d5-2db4-4c48-9ee3-a6fac93ea8d0",
+                "resourceVersion": "624",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "567",
+                "fieldPath": "spec.containers{local-path-provisioner}"
+            },
+            "reason": "Created",
+            "message": "Created container local-path-provisioner",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6.172e26555e5aa1a3",
+                "namespace": "local-path-storage",
+                "uid": "5f2e7804-225f-4af6-9286-05f46807d980",
+                "resourceVersion": "629",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "apiVersion": "v1",
+                "resourceVersion": "567",
+                "fieldPath": "spec.containers{local-path-provisioner}"
+            },
+            "reason": "Started",
+            "message": "Started container local-path-provisioner",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff.172e2649a509190f",
+                "namespace": "local-path-storage",
+                "uid": "46cfc99a-f48f-4994-9df1-6a005ebadbc0",
+                "resourceVersion": "468",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner-547f784dff",
+                "uid": "c125a59e-d6ba-49cb-a0e2-7c899df9f411",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "437"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: local-path-provisioner-547f784dff-fr4h6",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-path-provisioner.172e2649990bccb1",
+                "namespace": "local-path-storage",
+                "uid": "d3154378-5333-4235-ae66-ad756ddbdff2",
+                "resourceVersion": "442",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "local-path-storage",
+                "name": "local-path-provisioner",
+                "uid": "bb261b6b-c822-4baf-a3fc-66aae5604cd7",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "382"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set local-path-provisioner-547f784dff to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "rancher.io-local-path.172e26556622b1f8",
+                "namespace": "local-path-storage",
+                "uid": "7dae613c-6964-4417-a6a4-cbb8abfb82ae",
+                "resourceVersion": "632",
+                "creationTimestamp": "2022-12-06T08:17:40Z"
+            },
+            "involvedObject": {
+                "kind": "Endpoints",
+                "namespace": "local-path-storage",
+                "name": "rancher.io-local-path",
+                "uid": "3c41f68b-a011-4ea7-9bff-d85cd05b2275",
+                "apiVersion": "v1",
+                "resourceVersion": "631"
+            },
+            "reason": "LeaderElection",
+            "message": "local-path-provisioner-547f784dff-fr4h6_51a55063-8a86-4b6d-80cd-1d54120b616e became leader",
+            "source": {
+                "component": "rancher.io/local-path_local-path-provisioner-547f784dff-fr4h6_51a55063-8a86-4b6d-80cd-1d54120b616e"
+            },
+            "firstTimestamp": "2022-12-06T08:17:40Z",
+            "lastTimestamp": "2022-12-06T08:17:40Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

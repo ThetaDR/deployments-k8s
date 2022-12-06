@@ -1,0 +1,198 @@
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "5312"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "alpine",
+                "namespace": "default",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "resourceVersion": "4365",
+                "generation": 2,
+                "creationTimestamp": "2022-12-06T08:43:52Z",
+                "labels": {
+                    "app": "alpine"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "2",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"deployment.kubernetes.io/revision\":\"1\"},\"generation\":1,\"labels\":{\"app\":\"alpine\"},\"name\":\"alpine\",\"namespace\":\"default\",\"resourceVersion\":\"4245\",\"uid\":\"691bd979-072c-432c-ae19-999fd7224651\"},\"spec\":{\"progressDeadlineSeconds\":600,\"replicas\":1,\"revisionHistoryLimit\":10,\"selector\":{\"matchLabels\":{\"app\":\"alpine\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"annotations\":{\"linkerd.io/inject\":\"enabled\"},\"labels\":{\"app\":\"alpine\"}},\"spec\":{\"containers\":[{\"image\":\"alpine:3.15.0\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"alpine\",\"stdin\":true,\"terminationMessagePath\":\"/dev/termination-log\",\"terminationMessagePolicy\":\"File\",\"tty\":true}],\"dnsPolicy\":\"ClusterFirst\",\"restartPolicy\":\"Always\",\"schedulerName\":\"default-scheduler\",\"securityContext\":{},\"terminationGracePeriodSeconds\":30}}},\"status\":{\"availableReplicas\":1,\"conditions\":[{\"message\":\"Deployment has minimum availability.\",\"reason\":\"MinimumReplicasAvailable\",\"status\":\"True\",\"type\":\"Available\"},{\"message\":\"ReplicaSet \\\"alpine-bc578d674\\\" has successfully progressed.\",\"reason\":\"NewReplicaSetAvailable\",\"status\":\"True\",\"type\":\"Progressing\"}],\"observedGeneration\":1,\"readyReplicas\":1,\"replicas\":1,\"updatedReplicas\":1}}\n"
+                }
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "alpine"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "alpine"
+                        },
+                        "annotations": {
+                            "linkerd.io/inject": "enabled"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "alpine",
+                                "image": "alpine:3.15.0",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "stdin": true,
+                                "tty": true
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "25%",
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 2,
+                "replicas": 1,
+                "updatedReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "True",
+                        "lastUpdateTime": "2022-12-06T08:44:02Z",
+                        "lastTransitionTime": "2022-12-06T08:44:02Z",
+                        "reason": "MinimumReplicasAvailable",
+                        "message": "Deployment has minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "True",
+                        "lastUpdateTime": "2022-12-06T08:44:23Z",
+                        "lastTransitionTime": "2022-12-06T08:43:52Z",
+                        "reason": "NewReplicaSetAvailable",
+                        "message": "ReplicaSet \"alpine-78f4f84cdc\" has successfully progressed."
+                    }
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "name": "greeting",
+                "namespace": "default",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "resourceVersion": "4355",
+                "generation": 2,
+                "creationTimestamp": "2022-12-06T08:43:47Z",
+                "labels": {
+                    "app": "greeting"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "2",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"deployment.kubernetes.io/revision\":\"1\"},\"generation\":1,\"labels\":{\"app\":\"greeting\"},\"name\":\"greeting\",\"namespace\":\"default\",\"resourceVersion\":\"4233\",\"uid\":\"d0c229be-ad80-458a-8e3b-ae969fc765bf\"},\"spec\":{\"progressDeadlineSeconds\":600,\"replicas\":1,\"revisionHistoryLimit\":10,\"selector\":{\"matchLabels\":{\"app\":\"greeting\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"annotations\":{\"linkerd.io/inject\":\"enabled\"},\"labels\":{\"app\":\"greeting\"}},\"spec\":{\"containers\":[{\"args\":[\"-text=\\\"hello world from istio\\\"\",\"-listen=:9080\"],\"image\":\"hashicorp/http-echo:alpine\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"server\",\"ports\":[{\"containerPort\":9080,\"name\":\"http\",\"protocol\":\"TCP\"}],\"terminationMessagePath\":\"/dev/termination-log\",\"terminationMessagePolicy\":\"File\"}],\"dnsPolicy\":\"ClusterFirst\",\"restartPolicy\":\"Always\",\"schedulerName\":\"default-scheduler\",\"securityContext\":{},\"serviceAccount\":\"greeting-sa\",\"serviceAccountName\":\"greeting-sa\",\"terminationGracePeriodSeconds\":30}}},\"status\":{\"availableReplicas\":1,\"conditions\":[{\"message\":\"Deployment has minimum availability.\",\"reason\":\"MinimumReplicasAvailable\",\"status\":\"True\",\"type\":\"Available\"},{\"message\":\"ReplicaSet \\\"greeting-5d648687f7\\\" has successfully progressed.\",\"reason\":\"NewReplicaSetAvailable\",\"status\":\"True\",\"type\":\"Progressing\"}],\"observedGeneration\":1,\"readyReplicas\":1,\"replicas\":1,\"updatedReplicas\":1}}\n"
+                }
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "greeting"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "greeting"
+                        },
+                        "annotations": {
+                            "linkerd.io/inject": "enabled"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "server",
+                                "image": "hashicorp/http-echo:alpine",
+                                "args": [
+                                    "-text=\"hello world from istio\"",
+                                    "-listen=:9080"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "http",
+                                        "containerPort": 9080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "greeting-sa",
+                        "serviceAccount": "greeting-sa",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": "25%",
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 2,
+                "replicas": 1,
+                "updatedReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "True",
+                        "lastUpdateTime": "2022-12-06T08:43:58Z",
+                        "lastTransitionTime": "2022-12-06T08:43:58Z",
+                        "reason": "MinimumReplicasAvailable",
+                        "message": "Deployment has minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "True",
+                        "lastUpdateTime": "2022-12-06T08:44:22Z",
+                        "lastTransitionTime": "2022-12-06T08:43:47Z",
+                        "reason": "NewReplicaSetAvailable",
+                        "message": "ReplicaSet \"greeting-999995b5b\" has successfully progressed."
+                    }
+                ]
+            }
+        }
+    ]
+}

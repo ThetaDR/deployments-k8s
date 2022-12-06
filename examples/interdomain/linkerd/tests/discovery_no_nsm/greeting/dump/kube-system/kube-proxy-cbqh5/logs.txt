@@ -1,0 +1,23 @@
+==== START logs for container kube-proxy of pod kube-system/kube-proxy-cbqh5 ====
+I1206 08:17:39.498277       1 node.go:172] Successfully retrieved node IP: 172.19.0.3
+I1206 08:17:39.498380       1 server_others.go:140] Detected node IP 172.19.0.3
+I1206 08:17:39.853595       1 server_others.go:206] kube-proxy running in dual-stack mode, IPv4-primary
+I1206 08:17:39.853663       1 server_others.go:212] Using iptables Proxier.
+I1206 08:17:39.853677       1 server_others.go:219] creating dualStackProxier for iptables.
+W1206 08:17:39.853692       1 server_others.go:512] detect-local-mode set to ClusterCIDR, but no IPv6 cluster CIDR defined, , defaulting to no-op detect-local for IPv6
+I1206 08:17:39.854945       1 server.go:643] Version: v1.21.1
+I1206 08:17:39.856264       1 conntrack.go:100] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+I1206 08:17:39.856360       1 conntrack.go:100] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+I1206 08:17:39.856578       1 config.go:315] Starting service config controller
+I1206 08:17:39.856769       1 shared_informer.go:240] Waiting for caches to sync for service config
+I1206 08:17:39.856846       1 config.go:224] Starting endpoint slice config controller
+I1206 08:17:39.857062       1 shared_informer.go:240] Waiting for caches to sync for endpoint slice config
+W1206 08:17:39.866691       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+W1206 08:17:39.879776       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+I1206 08:17:39.957614       1 shared_informer.go:247] Caches are synced for service config 
+I1206 08:17:39.957614       1 shared_informer.go:247] Caches are synced for endpoint slice config 
+W1206 08:27:02.883028       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+W1206 08:35:49.887032       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+W1206 08:41:41.890706       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+W1206 08:51:15.892679       1 warnings.go:70] discovery.k8s.io/v1beta1 EndpointSlice is deprecated in v1.21+, unavailable in v1.25+; use discovery.k8s.io/v1 EndpointSlice
+==== END logs for container kube-proxy of pod kube-system/kube-proxy-cbqh5 ====

@@ -1,0 +1,87 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5312"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "greeting",
+                "namespace": "default",
+                "uid": "8086e859-7108-4485-ba87-5293fb6d331b",
+                "resourceVersion": "4168",
+                "creationTimestamp": "2022-12-06T08:43:47Z",
+                "labels": {
+                    "app": "greeting",
+                    "service": "greeting"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"greeting\",\"service\":\"greeting\"},\"name\":\"greeting\",\"namespace\":\"default\"},\"spec\":{\"ports\":[{\"name\":\"http\",\"port\":9080}],\"selector\":{\"app\":\"greeting\"}}}\n"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "http",
+                        "protocol": "TCP",
+                        "port": 9080,
+                        "targetPort": 9080
+                    }
+                ],
+                "selector": {
+                    "app": "greeting"
+                },
+                "clusterIP": "10.96.148.171",
+                "clusterIPs": [
+                    "10.96.148.171"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "kubernetes",
+                "namespace": "default",
+                "uid": "aece0d3b-ef34-46b1-9f99-1a6ef2ba794e",
+                "resourceVersion": "212",
+                "creationTimestamp": "2022-12-06T08:16:33Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 6443
+                    }
+                ],
+                "clusterIP": "10.96.0.1",
+                "clusterIPs": [
+                    "10.96.0.1"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

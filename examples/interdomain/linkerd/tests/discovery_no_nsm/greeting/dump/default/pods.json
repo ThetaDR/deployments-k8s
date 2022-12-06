@@ -1,0 +1,1077 @@
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5312"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s",
+                "generateName": "alpine-78f4f84cdc-",
+                "namespace": "default",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "resourceVersion": "4350",
+                "creationTimestamp": "2022-12-06T08:44:15Z",
+                "labels": {
+                    "app": "alpine",
+                    "linkerd.io/control-plane-ns": "linkerd",
+                    "linkerd.io/proxy-deployment": "alpine",
+                    "linkerd.io/workload-ns": "default",
+                    "pod-template-hash": "78f4f84cdc"
+                },
+                "annotations": {
+                    "linkerd.io/created-by": "linkerd/proxy-injector stable-2.12.2",
+                    "linkerd.io/inject": "enabled",
+                    "linkerd.io/proxy-version": "stable-2.12.2",
+                    "linkerd.io/trust-root-sha256": "fe048ae3d043435f4abbd8b33a3f1c72b8579bf35f75190328526b060e8befd3"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "alpine-78f4f84cdc",
+                        "uid": "41aa7af1-cd9c-4472-9529-9ffd8de1cda5",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "kube-api-access-7vjkk",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "linkerd-proxy-init-xtables-lock",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "linkerd-identity-end-entity",
+                        "emptyDir": {
+                            "medium": "Memory"
+                        }
+                    },
+                    {
+                        "name": "linkerd-identity-token",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "audience": "identity.l5d.io",
+                                        "expirationSeconds": 86400,
+                                        "path": "linkerd-identity-token"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "name": "linkerd-init",
+                        "image": "cr.l5d.io/linkerd/proxy-init:v2.0.0",
+                        "args": [
+                            "--incoming-proxy-port",
+                            "4143",
+                            "--outgoing-proxy-port",
+                            "4140",
+                            "--proxy-uid",
+                            "2102",
+                            "--inbound-ports-to-ignore",
+                            "4190,4191,4567,4568",
+                            "--outbound-ports-to-ignore",
+                            "4567,4568"
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "20Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "20Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "linkerd-proxy-init-xtables-lock",
+                                "mountPath": "/run"
+                            },
+                            {
+                                "name": "kube-api-access-7vjkk",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_ADMIN",
+                                    "NET_RAW"
+                                ]
+                            },
+                            "privileged": false,
+                            "runAsUser": 65534,
+                            "runAsNonRoot": true,
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "linkerd-proxy",
+                        "image": "cr.l5d.io/linkerd/proxy:stable-2.12.2",
+                        "ports": [
+                            {
+                                "name": "linkerd-proxy",
+                                "containerPort": 4143,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "linkerd-admin",
+                                "containerPort": 4191,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "_pod_name",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_pod_ns",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_pod_nodeName",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_LOG",
+                                "value": "warn,linkerd=info"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_LOG_FORMAT",
+                                "value": "plain"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_SVC_ADDR",
+                                "value": "linkerd-dst-headless.linkerd.svc.cluster.local.:8086"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_PROFILE_NETWORKS",
+                                "value": "10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,192.168.0.0/16"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_SVC_ADDR",
+                                "value": "linkerd-policy.linkerd.svc.cluster.local.:8090"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_WORKLOAD",
+                                "value": "$(_pod_ns):$(_pod_name)"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_DEFAULT_POLICY",
+                                "value": "all-unauthenticated"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_CLUSTER_NETWORKS",
+                                "value": "10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,192.168.0.0/16"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_CONNECT_TIMEOUT",
+                                "value": "100ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_CONNECT_TIMEOUT",
+                                "value": "1000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_CONTROL_LISTEN_ADDR",
+                                "value": "0.0.0.0:4190"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_ADMIN_LISTEN_ADDR",
+                                "value": "0.0.0.0:4191"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_LISTEN_ADDR",
+                                "value": "127.0.0.1:4140"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_LISTEN_ADDR",
+                                "value": "0.0.0.0:4143"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_IPS",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.podIPs"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_PORTS"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_PROFILE_SUFFIXES",
+                                "value": "svc.cluster.local."
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_ACCEPT_KEEPALIVE",
+                                "value": "10000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_CONNECT_KEEPALIVE",
+                                "value": "10000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_PORTS_DISABLE_PROTOCOL_DETECTION",
+                                "value": "25,587,3306,4444,5432,6379,9300,11211"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_CONTEXT",
+                                "value": "{\"ns\":\"$(_pod_ns)\", \"nodeName\":\"$(_pod_nodeName)\"}\n"
+                            },
+                            {
+                                "name": "_pod_sa",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_l5d_ns",
+                                "value": "linkerd"
+                            },
+                            {
+                                "name": "_l5d_trustdomain",
+                                "value": "cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_DIR",
+                                "value": "/var/run/linkerd/identity/end-entity"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_TRUST_ANCHORS",
+                                "value": "-----BEGIN CERTIFICATE-----\nMIIBiTCCAS6gAwIBAgIBATAKBggqhkjOPQQDAjAcMRowGAYDVQQDExFpZGVudGl0\neS5saW5rZXJkLjAeFw0yMjEyMDYwODI1NDVaFw0yMzEyMDYwODI2MDVaMBwxGjAY\nBgNVBAMTEWlkZW50aXR5LmxpbmtlcmQuMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\nQgAEMtGmQzpVdfYPBNfin65hB44iriC0fPBaqeozbd3v79E5wVdMZoxN9WBrExJQ\nL2bigHoEJNdgCVuMBBQo774W36NhMF8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdJQQW\nMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW\nBBQJS5ArrD0bgwnYkOnjxKbdpiwAkzAKBggqhkjOPQQDAgNJADBGAiEA44i1jVYb\nqrhHXx04tjg7NIh4lfYQ+RD70xukkrEcXCgCIQDavOLtSbJi41ReqsC055dD8O/w\nmFPBGUYtv4GXM4BgPw==\n-----END CERTIFICATE-----\n"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_TOKEN_FILE",
+                                "value": "/var/run/secrets/tokens/linkerd-identity-token"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_SVC_ADDR",
+                                "value": "linkerd-identity-headless.linkerd.svc.cluster.local.:8080"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_LOCAL_NAME",
+                                "value": "$(_pod_sa).$(_pod_ns).serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_SVC_NAME",
+                                "value": "linkerd-identity.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_SVC_NAME",
+                                "value": "linkerd-destination.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_SVC_NAME",
+                                "value": "linkerd-destination.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "linkerd-identity-end-entity",
+                                "mountPath": "/var/run/linkerd/identity/end-entity"
+                            },
+                            {
+                                "name": "linkerd-identity-token",
+                                "mountPath": "/var/run/secrets/tokens"
+                            },
+                            {
+                                "name": "kube-api-access-7vjkk",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/live",
+                                "port": 4191,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 10,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 4191,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 2,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "lifecycle": {
+                            "postStart": {
+                                "exec": {
+                                    "command": [
+                                        "/usr/lib/linkerd/linkerd-await",
+                                        "--timeout=2m"
+                                    ]
+                                }
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "runAsUser": 2102,
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    },
+                    {
+                        "name": "alpine",
+                        "image": "alpine:3.15.0",
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "kube-api-access-7vjkk",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "stdin": true,
+                        "tty": true
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "nodeName": "kind-1-worker",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:19Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:22Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:22Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:15Z"
+                    }
+                ],
+                "hostIP": "172.19.0.3",
+                "podIP": "10.244.1.16",
+                "podIPs": [
+                    {
+                        "ip": "10.244.1.16"
+                    }
+                ],
+                "startTime": "2022-12-06T08:44:15Z",
+                "initContainerStatuses": [
+                    {
+                        "name": "linkerd-init",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2022-12-06T08:44:18Z",
+                                "finishedAt": "2022-12-06T08:44:18Z",
+                                "containerID": "containerd://0eebdcfb117703567f0406c1b79aaa750f47c9d7f488a52e31465ed03a2d9953"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "cr.l5d.io/linkerd/proxy-init:v2.0.0",
+                        "imageID": "cr.l5d.io/linkerd/proxy-init@sha256:7d5e66b9e176b1ebbdd7f40b6385d1885e82c80a06f4c6af868247bb1dffe262",
+                        "containerID": "containerd://0eebdcfb117703567f0406c1b79aaa750f47c9d7f488a52e31465ed03a2d9953"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "name": "alpine",
+                        "state": {
+                            "running": {
+                                "startedAt": "2022-12-06T08:44:22Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "docker.io/library/alpine:3.15.0",
+                        "imageID": "docker.io/library/alpine@sha256:21a3deaa0d32a8057914f36584b5288d2e5ecc984380bc0118285c70fa8c9300",
+                        "containerID": "containerd://f3a63ebdf85b06ff39d9c00058ae7fd12e4b882235e03e460fa0831537985790",
+                        "started": true
+                    },
+                    {
+                        "name": "linkerd-proxy",
+                        "state": {
+                            "running": {
+                                "startedAt": "2022-12-06T08:44:20Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "cr.l5d.io/linkerd/proxy:stable-2.12.2",
+                        "imageID": "cr.l5d.io/linkerd/proxy@sha256:787db5055b2a46a3c4318ef3b632461261f81254c8e47bf4b9b8dab2c42575e4",
+                        "containerID": "containerd://62595362a0521c5edb328b3afab516e8eae4237c6e5e39098ffa46757dd3e582",
+                        "started": true
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z",
+                "generateName": "greeting-999995b5b-",
+                "namespace": "default",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "resourceVersion": "4338",
+                "creationTimestamp": "2022-12-06T08:44:15Z",
+                "labels": {
+                    "app": "greeting",
+                    "linkerd.io/control-plane-ns": "linkerd",
+                    "linkerd.io/proxy-deployment": "greeting",
+                    "linkerd.io/workload-ns": "default",
+                    "pod-template-hash": "999995b5b"
+                },
+                "annotations": {
+                    "linkerd.io/created-by": "linkerd/proxy-injector stable-2.12.2",
+                    "linkerd.io/inject": "enabled",
+                    "linkerd.io/proxy-version": "stable-2.12.2",
+                    "linkerd.io/trust-root-sha256": "fe048ae3d043435f4abbd8b33a3f1c72b8579bf35f75190328526b060e8befd3"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "greeting-999995b5b",
+                        "uid": "12265723-4549-4bde-b95f-bdc3c9aa2164",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "kube-api-access-fn8pt",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "linkerd-proxy-init-xtables-lock",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "linkerd-identity-end-entity",
+                        "emptyDir": {
+                            "medium": "Memory"
+                        }
+                    },
+                    {
+                        "name": "linkerd-identity-token",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "audience": "identity.l5d.io",
+                                        "expirationSeconds": 86400,
+                                        "path": "linkerd-identity-token"
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "name": "linkerd-init",
+                        "image": "cr.l5d.io/linkerd/proxy-init:v2.0.0",
+                        "args": [
+                            "--incoming-proxy-port",
+                            "4143",
+                            "--outgoing-proxy-port",
+                            "4140",
+                            "--proxy-uid",
+                            "2102",
+                            "--inbound-ports-to-ignore",
+                            "4190,4191,4567,4568",
+                            "--outbound-ports-to-ignore",
+                            "4567,4568"
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "20Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "20Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "linkerd-proxy-init-xtables-lock",
+                                "mountPath": "/run"
+                            },
+                            {
+                                "name": "kube-api-access-fn8pt",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_ADMIN",
+                                    "NET_RAW"
+                                ]
+                            },
+                            "privileged": false,
+                            "runAsUser": 65534,
+                            "runAsNonRoot": true,
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "linkerd-proxy",
+                        "image": "cr.l5d.io/linkerd/proxy:stable-2.12.2",
+                        "ports": [
+                            {
+                                "name": "linkerd-proxy",
+                                "containerPort": 4143,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "linkerd-admin",
+                                "containerPort": 4191,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "_pod_name",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_pod_ns",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_pod_nodeName",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_LOG",
+                                "value": "warn,linkerd=info"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_LOG_FORMAT",
+                                "value": "plain"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_SVC_ADDR",
+                                "value": "linkerd-dst-headless.linkerd.svc.cluster.local.:8086"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_PROFILE_NETWORKS",
+                                "value": "10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,192.168.0.0/16"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_SVC_ADDR",
+                                "value": "linkerd-policy.linkerd.svc.cluster.local.:8090"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_WORKLOAD",
+                                "value": "$(_pod_ns):$(_pod_name)"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_DEFAULT_POLICY",
+                                "value": "all-unauthenticated"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_CLUSTER_NETWORKS",
+                                "value": "10.0.0.0/8,100.64.0.0/10,172.16.0.0/12,192.168.0.0/16"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_CONNECT_TIMEOUT",
+                                "value": "100ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_CONNECT_TIMEOUT",
+                                "value": "1000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_CONTROL_LISTEN_ADDR",
+                                "value": "0.0.0.0:4190"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_ADMIN_LISTEN_ADDR",
+                                "value": "0.0.0.0:4191"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_LISTEN_ADDR",
+                                "value": "127.0.0.1:4140"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_LISTEN_ADDR",
+                                "value": "0.0.0.0:4143"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_IPS",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.podIPs"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_PORTS",
+                                "value": "9080"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_PROFILE_SUFFIXES",
+                                "value": "svc.cluster.local."
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_ACCEPT_KEEPALIVE",
+                                "value": "10000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_OUTBOUND_CONNECT_KEEPALIVE",
+                                "value": "10000ms"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_INBOUND_PORTS_DISABLE_PROTOCOL_DETECTION",
+                                "value": "25,587,3306,4444,5432,6379,9300,11211"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_CONTEXT",
+                                "value": "{\"ns\":\"$(_pod_ns)\", \"nodeName\":\"$(_pod_nodeName)\"}\n"
+                            },
+                            {
+                                "name": "_pod_sa",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.serviceAccountName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "_l5d_ns",
+                                "value": "linkerd"
+                            },
+                            {
+                                "name": "_l5d_trustdomain",
+                                "value": "cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_DIR",
+                                "value": "/var/run/linkerd/identity/end-entity"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_TRUST_ANCHORS",
+                                "value": "-----BEGIN CERTIFICATE-----\nMIIBiTCCAS6gAwIBAgIBATAKBggqhkjOPQQDAjAcMRowGAYDVQQDExFpZGVudGl0\neS5saW5rZXJkLjAeFw0yMjEyMDYwODI1NDVaFw0yMzEyMDYwODI2MDVaMBwxGjAY\nBgNVBAMTEWlkZW50aXR5LmxpbmtlcmQuMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\nQgAEMtGmQzpVdfYPBNfin65hB44iriC0fPBaqeozbd3v79E5wVdMZoxN9WBrExJQ\nL2bigHoEJNdgCVuMBBQo774W36NhMF8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdJQQW\nMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW\nBBQJS5ArrD0bgwnYkOnjxKbdpiwAkzAKBggqhkjOPQQDAgNJADBGAiEA44i1jVYb\nqrhHXx04tjg7NIh4lfYQ+RD70xukkrEcXCgCIQDavOLtSbJi41ReqsC055dD8O/w\nmFPBGUYtv4GXM4BgPw==\n-----END CERTIFICATE-----\n"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_TOKEN_FILE",
+                                "value": "/var/run/secrets/tokens/linkerd-identity-token"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_SVC_ADDR",
+                                "value": "linkerd-identity-headless.linkerd.svc.cluster.local.:8080"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_LOCAL_NAME",
+                                "value": "$(_pod_sa).$(_pod_ns).serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_IDENTITY_SVC_NAME",
+                                "value": "linkerd-identity.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_DESTINATION_SVC_NAME",
+                                "value": "linkerd-destination.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            },
+                            {
+                                "name": "LINKERD2_PROXY_POLICY_SVC_NAME",
+                                "value": "linkerd-destination.linkerd.serviceaccount.identity.linkerd.cluster.local"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "linkerd-identity-end-entity",
+                                "mountPath": "/var/run/linkerd/identity/end-entity"
+                            },
+                            {
+                                "name": "linkerd-identity-token",
+                                "mountPath": "/var/run/secrets/tokens"
+                            },
+                            {
+                                "name": "kube-api-access-fn8pt",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/live",
+                                "port": 4191,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 10,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 4191,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 2,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "lifecycle": {
+                            "postStart": {
+                                "exec": {
+                                    "command": [
+                                        "/usr/lib/linkerd/linkerd-await",
+                                        "--timeout=2m"
+                                    ]
+                                }
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "runAsUser": 2102,
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    },
+                    {
+                        "name": "server",
+                        "image": "hashicorp/http-echo:alpine",
+                        "args": [
+                            "-text=\"hello world from istio\"",
+                            "-listen=:9080"
+                        ],
+                        "ports": [
+                            {
+                                "name": "http",
+                                "containerPort": 9080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "kube-api-access-fn8pt",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "greeting-sa",
+                "serviceAccount": "greeting-sa",
+                "nodeName": "kind-1-worker",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:19Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:22Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:22Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:44:15Z"
+                    }
+                ],
+                "hostIP": "172.19.0.3",
+                "podIP": "10.244.1.17",
+                "podIPs": [
+                    {
+                        "ip": "10.244.1.17"
+                    }
+                ],
+                "startTime": "2022-12-06T08:44:15Z",
+                "initContainerStatuses": [
+                    {
+                        "name": "linkerd-init",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2022-12-06T08:44:18Z",
+                                "finishedAt": "2022-12-06T08:44:18Z",
+                                "containerID": "containerd://037c80e17fc72b78ca384f756069b1fa227acfc3658b2ae516cb39e9780afc8f"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "cr.l5d.io/linkerd/proxy-init:v2.0.0",
+                        "imageID": "cr.l5d.io/linkerd/proxy-init@sha256:7d5e66b9e176b1ebbdd7f40b6385d1885e82c80a06f4c6af868247bb1dffe262",
+                        "containerID": "containerd://037c80e17fc72b78ca384f756069b1fa227acfc3658b2ae516cb39e9780afc8f"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "name": "linkerd-proxy",
+                        "state": {
+                            "running": {
+                                "startedAt": "2022-12-06T08:44:20Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "cr.l5d.io/linkerd/proxy:stable-2.12.2",
+                        "imageID": "cr.l5d.io/linkerd/proxy@sha256:787db5055b2a46a3c4318ef3b632461261f81254c8e47bf4b9b8dab2c42575e4",
+                        "containerID": "containerd://c56acdff1342f45a94962ecf1c82e6dd46a63b4055b1ca2bb30d919510085484",
+                        "started": true
+                    },
+                    {
+                        "name": "server",
+                        "state": {
+                            "running": {
+                                "startedAt": "2022-12-06T08:44:22Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "docker.io/hashicorp/http-echo:alpine",
+                        "imageID": "docker.io/hashicorp/http-echo@sha256:dfa17aed969ae47c8dd6b970f5d39333c68173ed4e88cf0512e7a8f247277056",
+                        "containerID": "containerd://ec1de711c24c8a694ccad7cb72b5a2abfb8443d05f64b62e60cf71898c8b7562",
+                        "started": true
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        }
+    ]
+}

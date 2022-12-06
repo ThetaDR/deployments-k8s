@@ -1,0 +1,1178 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5314"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e2649a5807e2e",
+                "namespace": "kube-system",
+                "uid": "30077351-b263-4870-af28-a8e38ae7c55e",
+                "resourceVersion": "485",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "464"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:50Z",
+            "count": 2,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e264cd780a9e8",
+                "namespace": "kube-system",
+                "uid": "dfbcfd6d-3646-437f-a9aa-a0abf5d7619c",
+                "resourceVersion": "529",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "470"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/2 nodes are available: 2 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e264df8b11b46",
+                "namespace": "kube-system",
+                "uid": "2274db2a-eb26-44b4-ac32-da193d5a4424",
+                "resourceVersion": "574",
+                "creationTimestamp": "2022-12-06T08:17:08Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "533"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/coredns-558bd4d5db-6wd9d to kind-1-control-plane",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:08Z",
+            "lastTimestamp": "2022-12-06T08:17:08Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e264ef6885536",
+                "namespace": "kube-system",
+                "uid": "5f6ce635-dd09-4d7f-857a-0620d1a556ed",
+                "resourceVersion": "579",
+                "creationTimestamp": "2022-12-06T08:17:12Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "569",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"k8s.gcr.io/coredns/coredns:v1.8.0\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:12Z",
+            "lastTimestamp": "2022-12-06T08:17:12Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e2655508dac21",
+                "namespace": "kube-system",
+                "uid": "caf62364-2fc2-4622-bf4c-111b4c414997",
+                "resourceVersion": "625",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "569",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Created",
+            "message": "Created container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-6wd9d.172e265561ae84a7",
+                "namespace": "kube-system",
+                "uid": "410a2a13-c967-4d5d-8d78-42a195edcb7b",
+                "resourceVersion": "630",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-6wd9d",
+                "uid": "bf795734-d6b2-4b2f-907e-eae6cc09e05f",
+                "apiVersion": "v1",
+                "resourceVersion": "569",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Started",
+            "message": "Started container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e2649a379aeff",
+                "namespace": "kube-system",
+                "uid": "bd31ceb0-5cf5-4723-b870-55d9661adb25",
+                "resourceVersion": "484",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "459"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:50Z",
+            "count": 2,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e264cd0467cfa",
+                "namespace": "kube-system",
+                "uid": "10224313-9f5a-4575-aca9-f413c8df0b17",
+                "resourceVersion": "525",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "466"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/2 nodes are available: 2 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e264df84beb0f",
+                "namespace": "kube-system",
+                "uid": "ea6495d4-d6ed-4c9c-b824-1f0855ae9b7b",
+                "resourceVersion": "570",
+                "creationTimestamp": "2022-12-06T08:17:08Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "526"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/coredns-558bd4d5db-pgfxq to kind-1-control-plane",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:08Z",
+            "lastTimestamp": "2022-12-06T08:17:08Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e264f529a5da4",
+                "namespace": "kube-system",
+                "uid": "9ebf42b7-4d5a-4c5d-abea-4c10a9fb8ad6",
+                "resourceVersion": "586",
+                "creationTimestamp": "2022-12-06T08:17:13Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "568",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"k8s.gcr.io/coredns/coredns:v1.8.0\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:13Z",
+            "lastTimestamp": "2022-12-06T08:17:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e265545819197",
+                "namespace": "kube-system",
+                "uid": "9e414c83-b349-49c0-b0b9-a1c45c2e3cf6",
+                "resourceVersion": "622",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "568",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Created",
+            "message": "Created container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db-pgfxq.172e2655575eb1ba",
+                "namespace": "kube-system",
+                "uid": "a2885f17-ce37-43be-80c6-aa57144a048a",
+                "resourceVersion": "627",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db-pgfxq",
+                "uid": "dcee8321-67ae-4527-b636-0f254a031fac",
+                "apiVersion": "v1",
+                "resourceVersion": "568",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Started",
+            "message": "Started container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db.172e2649a3840562",
+                "namespace": "kube-system",
+                "uid": "4c14aaa2-1016-4db4-b931-16e241b1a22a",
+                "resourceVersion": "463",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db",
+                "uid": "d29f8684-d0de-4270-9a5c-3baa11653633",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "435"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: coredns-558bd4d5db-pgfxq",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-558bd4d5db.172e2649a511d64f",
+                "namespace": "kube-system",
+                "uid": "0ded1ae0-e7e5-40dc-8353-91ddc5b29581",
+                "resourceVersion": "472",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "kube-system",
+                "name": "coredns-558bd4d5db",
+                "uid": "d29f8684-d0de-4270-9a5c-3baa11653633",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "435"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: coredns-558bd4d5db-6wd9d",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns.172e264999154845",
+                "namespace": "kube-system",
+                "uid": "d9671716-0a19-4b9b-9845-92a96dd117f3",
+                "resourceVersion": "451",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "kube-system",
+                "name": "coredns",
+                "uid": "5840de51-434e-42be-adb4-7f450c3e3830",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "281"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set coredns-558bd4d5db to 2",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "etcd-kind-1-control-plane.172e2656ce0e072a",
+                "namespace": "kube-system",
+                "uid": "558b4289-5799-4b53-b4b9-8e4ec66c4fe7",
+                "resourceVersion": "655",
+                "creationTimestamp": "2022-12-06T08:17:46Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "etcd-kind-1-control-plane",
+                "uid": "bf98829d5fc19f2016b96600f7f3d45c",
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{etcd}"
+            },
+            "reason": "Unhealthy",
+            "message": "Liveness probe failed: HTTP probe failed with statuscode: 503",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:46Z",
+            "lastTimestamp": "2022-12-06T08:17:46Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-5svhf.172e264ce3087d61",
+                "namespace": "kube-system",
+                "uid": "5b999c60-2d3f-42f4-8c12-8059f243db69",
+                "resourceVersion": "550",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-5svhf",
+                "uid": "cb6d4122-3986-4087-9701-c7305bc1bc37",
+                "apiVersion": "v1",
+                "resourceVersion": "531"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/kindnet-5svhf to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-5svhf.172e264d4501f03b",
+                "namespace": "kube-system",
+                "uid": "f64622b7-1170-4021-8964-a53a4a8ee760",
+                "resourceVersion": "559",
+                "creationTimestamp": "2022-12-06T08:17:05Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-5svhf",
+                "uid": "cb6d4122-3986-4087-9701-c7305bc1bc37",
+                "apiVersion": "v1",
+                "resourceVersion": "544",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"docker.io/kindest/kindnetd:v20210326-1e038dc5\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:05Z",
+            "lastTimestamp": "2022-12-06T08:17:05Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-5svhf.172e26554201c3ae",
+                "namespace": "kube-system",
+                "uid": "20a6b1a7-68b4-4f7b-b7ab-25c99a4f4c02",
+                "resourceVersion": "621",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-5svhf",
+                "uid": "cb6d4122-3986-4087-9701-c7305bc1bc37",
+                "apiVersion": "v1",
+                "resourceVersion": "544",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Created",
+            "message": "Created container kindnet-cni",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-5svhf.172e2655544681bd",
+                "namespace": "kube-system",
+                "uid": "2fee8a9e-181e-4788-a299-a14c1996e734",
+                "resourceVersion": "626",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-5svhf",
+                "uid": "cb6d4122-3986-4087-9701-c7305bc1bc37",
+                "apiVersion": "v1",
+                "resourceVersion": "544",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Started",
+            "message": "Started container kindnet-cni",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-6hhgv.172e26499b7c7987",
+                "namespace": "kube-system",
+                "uid": "62a3a33f-9e4c-491d-aebe-4c49c984d1ed",
+                "resourceVersion": "457",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-6hhgv",
+                "uid": "f98f6814-5ad3-43c0-8136-6b0f3235ed39",
+                "apiVersion": "v1",
+                "resourceVersion": "434"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/kindnet-6hhgv to kind-1-control-plane",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-6hhgv.172e264a02872c24",
+                "namespace": "kube-system",
+                "uid": "d3316bbe-c294-4c19-8392-76d128ee531d",
+                "resourceVersion": "487",
+                "creationTimestamp": "2022-12-06T08:16:51Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-6hhgv",
+                "uid": "f98f6814-5ad3-43c0-8136-6b0f3235ed39",
+                "apiVersion": "v1",
+                "resourceVersion": "443",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"docker.io/kindest/kindnetd:v20210326-1e038dc5\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:51Z",
+            "lastTimestamp": "2022-12-06T08:16:51Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-6hhgv.172e264c6a255a2b",
+                "namespace": "kube-system",
+                "uid": "7c3e699c-d15e-4fe5-89d1-5cd300c2e6d2",
+                "resourceVersion": "509",
+                "creationTimestamp": "2022-12-06T08:17:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-6hhgv",
+                "uid": "f98f6814-5ad3-43c0-8136-6b0f3235ed39",
+                "apiVersion": "v1",
+                "resourceVersion": "443",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Created",
+            "message": "Created container kindnet-cni",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:01Z",
+            "lastTimestamp": "2022-12-06T08:17:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet-6hhgv.172e264c7904c861",
+                "namespace": "kube-system",
+                "uid": "3f96be3c-87c1-4541-8f7b-87c6a99a42eb",
+                "resourceVersion": "512",
+                "creationTimestamp": "2022-12-06T08:17:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kindnet-6hhgv",
+                "uid": "f98f6814-5ad3-43c0-8136-6b0f3235ed39",
+                "apiVersion": "v1",
+                "resourceVersion": "443",
+                "fieldPath": "spec.containers{kindnet-cni}"
+            },
+            "reason": "Started",
+            "message": "Started container kindnet-cni",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:01Z",
+            "lastTimestamp": "2022-12-06T08:17:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet.172e264999b602c8",
+                "namespace": "kube-system",
+                "uid": "689abbc1-2cdd-48e5-a379-d329bb52e100",
+                "resourceVersion": "454",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "DaemonSet",
+                "namespace": "kube-system",
+                "name": "kindnet",
+                "uid": "e51333e8-f0d1-4b18-acd1-7893cd9af759",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "371"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: kindnet-6hhgv",
+            "source": {
+                "component": "daemonset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kindnet.172e264cda77fa42",
+                "namespace": "kube-system",
+                "uid": "ec42515b-842a-49b1-ab84-c909164e6896",
+                "resourceVersion": "535",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "DaemonSet",
+                "namespace": "kube-system",
+                "name": "kindnet",
+                "uid": "e51333e8-f0d1-4b18-acd1-7893cd9af759",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "518"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: kindnet-5svhf",
+            "source": {
+                "component": "daemonset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-apiserver-kind-1-control-plane.172e26574e83b178",
+                "namespace": "kube-system",
+                "uid": "1ac1e013-5fdb-4e4c-9c90-fb957904a2d8",
+                "resourceVersion": "667",
+                "creationTimestamp": "2022-12-06T08:17:48Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-apiserver-kind-1-control-plane",
+                "uid": "3cbec47f86a423b67ed0fc0bf798403d",
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{kube-apiserver}"
+            },
+            "reason": "Unhealthy",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 500",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:48Z",
+            "lastTimestamp": "2022-12-06T08:17:48Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-controller-manager.172e26460601b213",
+                "namespace": "kube-system",
+                "uid": "d1a18840-9f59-4ace-a616-b0295aacec32",
+                "resourceVersion": "225",
+                "creationTimestamp": "2022-12-06T08:16:33Z"
+            },
+            "involvedObject": {
+                "kind": "Lease",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "uid": "4ac72d26-2c51-4b72-bf27-b4666a6163c1",
+                "apiVersion": "coordination.k8s.io/v1",
+                "resourceVersion": "224"
+            },
+            "reason": "LeaderElection",
+            "message": "kind-1-control-plane_626e389b-c83f-423b-af4d-a1e062c0fbc6 became leader",
+            "source": {
+                "component": "kube-controller-manager"
+            },
+            "firstTimestamp": "2022-12-06T08:16:33Z",
+            "lastTimestamp": "2022-12-06T08:16:33Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-cbqh5.172e264ce2dfeb81",
+                "namespace": "kube-system",
+                "uid": "fef67599-b679-49b9-a905-46f6870fe996",
+                "resourceVersion": "546",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-cbqh5",
+                "uid": "3b74435d-0106-4253-a7b4-193bfc2ce4ee",
+                "apiVersion": "v1",
+                "resourceVersion": "530"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/kube-proxy-cbqh5 to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-cbqh5.172e264d3150a937",
+                "namespace": "kube-system",
+                "uid": "8582f42e-043a-4913-8ef2-0573c832c93e",
+                "resourceVersion": "557",
+                "creationTimestamp": "2022-12-06T08:17:04Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-cbqh5",
+                "uid": "3b74435d-0106-4253-a7b4-193bfc2ce4ee",
+                "apiVersion": "v1",
+                "resourceVersion": "543",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"k8s.gcr.io/kube-proxy:v1.21.1\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:04Z",
+            "lastTimestamp": "2022-12-06T08:17:04Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-cbqh5.172e265530e1cb41",
+                "namespace": "kube-system",
+                "uid": "f3fae767-c5e0-4daf-984f-8729aff494fd",
+                "resourceVersion": "619",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-cbqh5",
+                "uid": "3b74435d-0106-4253-a7b4-193bfc2ce4ee",
+                "apiVersion": "v1",
+                "resourceVersion": "543",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container kube-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-cbqh5.172e265545a6b262",
+                "namespace": "kube-system",
+                "uid": "7e88d2f2-3f53-4105-bdb6-61a1c5631d1a",
+                "resourceVersion": "623",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-cbqh5",
+                "uid": "3b74435d-0106-4253-a7b4-193bfc2ce4ee",
+                "apiVersion": "v1",
+                "resourceVersion": "543",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container kube-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-wfrs2.172e26499b767295",
+                "namespace": "kube-system",
+                "uid": "1bda751d-eed1-4881-98bc-0fe8341bb58c",
+                "resourceVersion": "453",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-wfrs2",
+                "uid": "54411678-1915-477d-9b4b-4ea485426e24",
+                "apiVersion": "v1",
+                "resourceVersion": "438"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/kube-proxy-wfrs2 to kind-1-control-plane",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-wfrs2.172e2649d5489175",
+                "namespace": "kube-system",
+                "uid": "774bba38-ee40-4f9e-8c4a-f7d3c2f9fb43",
+                "resourceVersion": "480",
+                "creationTimestamp": "2022-12-06T08:16:50Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-wfrs2",
+                "uid": "54411678-1915-477d-9b4b-4ea485426e24",
+                "apiVersion": "v1",
+                "resourceVersion": "445",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"k8s.gcr.io/kube-proxy:v1.21.1\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:50Z",
+            "lastTimestamp": "2022-12-06T08:16:50Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-wfrs2.172e264c6d77e185",
+                "namespace": "kube-system",
+                "uid": "8bf9dbc2-7e6b-4b29-a8f4-8e199a00a377",
+                "resourceVersion": "510",
+                "creationTimestamp": "2022-12-06T08:17:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-wfrs2",
+                "uid": "54411678-1915-477d-9b4b-4ea485426e24",
+                "apiVersion": "v1",
+                "resourceVersion": "445",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container kube-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:01Z",
+            "lastTimestamp": "2022-12-06T08:17:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy-wfrs2.172e264c74ab3e15",
+                "namespace": "kube-system",
+                "uid": "41f440bb-4a70-4dfc-8391-24f70ac1887a",
+                "resourceVersion": "511",
+                "creationTimestamp": "2022-12-06T08:17:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "kube-proxy-wfrs2",
+                "uid": "54411678-1915-477d-9b4b-4ea485426e24",
+                "apiVersion": "v1",
+                "resourceVersion": "445",
+                "fieldPath": "spec.containers{kube-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container kube-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:01Z",
+            "lastTimestamp": "2022-12-06T08:17:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy.172e264999accf8b",
+                "namespace": "kube-system",
+                "uid": "c322903c-fe0f-4125-bd24-2a6da1aa02e4",
+                "resourceVersion": "448",
+                "creationTimestamp": "2022-12-06T08:16:49Z"
+            },
+            "involvedObject": {
+                "kind": "DaemonSet",
+                "namespace": "kube-system",
+                "name": "kube-proxy",
+                "uid": "8b7e2073-9a7b-4878-8374-d19cbffa6bfa",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "292"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: kube-proxy-wfrs2",
+            "source": {
+                "component": "daemonset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:49Z",
+            "lastTimestamp": "2022-12-06T08:16:49Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-proxy.172e264cdaa65eb9",
+                "namespace": "kube-system",
+                "uid": "89efa9e0-dc5a-487b-8462-d761d716146a",
+                "resourceVersion": "542",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "DaemonSet",
+                "namespace": "kube-system",
+                "name": "kube-proxy",
+                "uid": "8b7e2073-9a7b-4878-8374-d19cbffa6bfa",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "516"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: kube-proxy-cbqh5",
+            "source": {
+                "component": "daemonset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-scheduler.172e2646b14cb278",
+                "namespace": "kube-system",
+                "uid": "c43a17c4-aaf2-4c0c-ac20-b582a29a5a0c",
+                "resourceVersion": "319",
+                "creationTimestamp": "2022-12-06T08:16:36Z"
+            },
+            "involvedObject": {
+                "kind": "Lease",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "uid": "1d397eb3-235a-41af-92b2-5247007dc0b2",
+                "apiVersion": "coordination.k8s.io/v1",
+                "resourceVersion": "318"
+            },
+            "reason": "LeaderElection",
+            "message": "kind-1-control-plane_1455617b-f851-452e-a573-b597f07f8204 became leader",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:16:36Z",
+            "lastTimestamp": "2022-12-06T08:16:36Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

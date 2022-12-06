@@ -1,0 +1,2024 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5312"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27c8f9b096c1",
+                "namespace": "default",
+                "uid": "dea2c627-39c9-4789-9ec8-d4602947fc2e",
+                "resourceVersion": "4286",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4275"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned default/alpine-78f4f84cdc-zw94s to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27c92aacb9db",
+                "namespace": "default",
+                "uid": "fb7195b0-27a9-4702-9629-f20848aaa0db",
+                "resourceVersion": "4300",
+                "creationTimestamp": "2022-12-06T08:44:16Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:16Z",
+            "lastTimestamp": "2022-12-06T08:44:16Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27c98e70eb5e",
+                "namespace": "default",
+                "uid": "93ea0582-dee0-42d4-a05b-119b9d022c9f",
+                "resourceVersion": "4308",
+                "creationTimestamp": "2022-12-06T08:44:18Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:18Z",
+            "lastTimestamp": "2022-12-06T08:44:18Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27c998640229",
+                "namespace": "default",
+                "uid": "4bd90139-1e9f-4fb5-8e8c-dcd93e9e0bee",
+                "resourceVersion": "4310",
+                "creationTimestamp": "2022-12-06T08:44:18Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:18Z",
+            "lastTimestamp": "2022-12-06T08:44:18Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27c9d4de2305",
+                "namespace": "default",
+                "uid": "cd00a0d6-e18e-4bff-b190-64dc126c2f2e",
+                "resourceVersion": "4315",
+                "creationTimestamp": "2022-12-06T08:44:19Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:19Z",
+            "lastTimestamp": "2022-12-06T08:44:19Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27ca1e7d19a7",
+                "namespace": "default",
+                "uid": "ebfb5c0d-6569-4ced-8c26-0cdb2f024d81",
+                "resourceVersion": "4325",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27ca279ee587",
+                "namespace": "default",
+                "uid": "5ff80e84-37ff-46ac-87c4-524c30763594",
+                "resourceVersion": "4328",
+                "creationTimestamp": "2022-12-06T08:44:21Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:21Z",
+            "lastTimestamp": "2022-12-06T08:44:21Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27ca2a6cdf0f",
+                "namespace": "default",
+                "uid": "7d696030-c5b6-4d84-9c7e-1f220c80e176",
+                "resourceVersion": "4329",
+                "creationTimestamp": "2022-12-06T08:44:21Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"alpine:3.15.0\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:21Z",
+            "lastTimestamp": "2022-12-06T08:44:21Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27ca80579d50",
+                "namespace": "default",
+                "uid": "1d98e9e3-75e8-4ee1-a6af-a20d40d72ce7",
+                "resourceVersion": "4333",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Created",
+            "message": "Created container alpine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc-zw94s.172e27ca89355a69",
+                "namespace": "default",
+                "uid": "4f8545f1-1900-4708-97b2-2e9bf8fc76c4",
+                "resourceVersion": "4336",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc-zw94s",
+                "uid": "c3f82c3a-193a-4f81-82b4-c4b96cf03ef6",
+                "apiVersion": "v1",
+                "resourceVersion": "4278",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Started",
+            "message": "Started container alpine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc.172e27c8f7e5bc75",
+                "namespace": "default",
+                "uid": "a0a3c476-9394-4be9-8185-439806a691c9",
+                "resourceVersion": "4281",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "alpine-78f4f84cdc",
+                "uid": "41aa7af1-cd9c-4472-9529-9ffd8de1cda5",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4270"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: alpine-78f4f84cdc-zw94s",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27c3762d0768",
+                "namespace": "default",
+                "uid": "3a8caa29-1177-43c3-b137-c0a69900f579",
+                "resourceVersion": "4208",
+                "creationTimestamp": "2022-12-06T08:43:52Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4203"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned default/alpine-bc578d674-jm7p2 to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:43:52Z",
+            "lastTimestamp": "2022-12-06T08:43:52Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27c3a2728d4f",
+                "namespace": "default",
+                "uid": "b186033e-834f-42d4-9836-1b340f615cd3",
+                "resourceVersion": "4213",
+                "creationTimestamp": "2022-12-06T08:43:53Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4205",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"alpine:3.15.0\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:43:52Z",
+            "lastTimestamp": "2022-12-06T08:43:52Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27c57c97e284",
+                "namespace": "default",
+                "uid": "94b3a953-03ac-4599-90a3-f7b997c65295",
+                "resourceVersion": "4237",
+                "creationTimestamp": "2022-12-06T08:44:00Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4205",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"alpine:3.15.0\" in 7.954820648s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:00Z",
+            "lastTimestamp": "2022-12-06T08:44:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27c5ab7760aa",
+                "namespace": "default",
+                "uid": "7ee6afeb-b598-4cc7-9216-7a518333f33d",
+                "resourceVersion": "4238",
+                "creationTimestamp": "2022-12-06T08:44:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4205",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Created",
+            "message": "Created container alpine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:01Z",
+            "lastTimestamp": "2022-12-06T08:44:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27c5b3ed923d",
+                "namespace": "default",
+                "uid": "47535cb9-6b01-42dd-b72b-8e92fd1e1123",
+                "resourceVersion": "4240",
+                "creationTimestamp": "2022-12-06T08:44:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4205",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Started",
+            "message": "Started container alpine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:01Z",
+            "lastTimestamp": "2022-12-06T08:44:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674-jm7p2.172e27cac6da92e5",
+                "namespace": "default",
+                "uid": "e8e8c6ce-1952-4223-8ec0-0fd3602f631e",
+                "resourceVersion": "4361",
+                "creationTimestamp": "2022-12-06T08:44:23Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "alpine-bc578d674-jm7p2",
+                "uid": "80ceda93-3178-4475-9341-96bc5fb3d451",
+                "apiVersion": "v1",
+                "resourceVersion": "4205",
+                "fieldPath": "spec.containers{alpine}"
+            },
+            "reason": "Killing",
+            "message": "Stopping container alpine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:23Z",
+            "lastTimestamp": "2022-12-06T08:44:23Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674.172e27c37498eafd",
+                "namespace": "default",
+                "uid": "08a44bbd-d432-41ca-8635-da8cae0f072c",
+                "resourceVersion": "4207",
+                "creationTimestamp": "2022-12-06T08:43:52Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "alpine-bc578d674",
+                "uid": "e510760f-3fa1-4460-a87e-c2ee6d5b07d1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4200"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: alpine-bc578d674-jm7p2",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:43:52Z",
+            "lastTimestamp": "2022-12-06T08:43:52Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674.172e27cac6dd4828",
+                "namespace": "default",
+                "uid": "9d63b263-973e-4874-b703-6031478a7a89",
+                "resourceVersion": "4360",
+                "creationTimestamp": "2022-12-06T08:44:23Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "alpine-bc578d674",
+                "uid": "e510760f-3fa1-4460-a87e-c2ee6d5b07d1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4356"
+            },
+            "reason": "SuccessfulDelete",
+            "message": "Deleted pod: alpine-bc578d674-jm7p2",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:23Z",
+            "lastTimestamp": "2022-12-06T08:44:23Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine.172e27c36ce4ab54",
+                "namespace": "default",
+                "uid": "82dc77ee-7b54-4c0e-b000-36c497bbdbb6",
+                "resourceVersion": "4202",
+                "creationTimestamp": "2022-12-06T08:43:52Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "alpine",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4199"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set alpine-bc578d674 to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:43:52Z",
+            "lastTimestamp": "2022-12-06T08:43:52Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine.172e27c36d64bcd6",
+                "namespace": "default",
+                "uid": "55e3ce22-60c2-4086-9358-e5560ed24ff4",
+                "resourceVersion": "4204",
+                "creationTimestamp": "2022-12-06T08:43:52Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "alpine",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4199"
+            },
+            "reason": "InjectionSkipped",
+            "message": "Linkerd sidecar proxy injection skipped: neither the namespace nor the pod have the annotation \"linkerd.io/inject:enabled\"",
+            "source": {
+                "component": "linkerd-proxy-injector"
+            },
+            "firstTimestamp": "2022-12-06T08:43:52Z",
+            "lastTimestamp": "2022-12-06T08:43:52Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine.172e27c8f49ca279",
+                "namespace": "default",
+                "uid": "04192828-a116-4c7e-8998-259c1da91406",
+                "resourceVersion": "4271",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "alpine",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4269"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set alpine-78f4f84cdc to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine.172e27c8f5f2cb38",
+                "namespace": "default",
+                "uid": "d480dc58-abee-4e6c-96e1-de64cb6d69ac",
+                "resourceVersion": "4276",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "alpine",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4269"
+            },
+            "reason": "Injected",
+            "message": "Linkerd sidecar proxy injected",
+            "source": {
+                "component": "linkerd-proxy-injector"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "alpine.172e27caab4c2c6a",
+                "namespace": "default",
+                "uid": "4ebe8e5d-b0f1-44c5-be6f-1071625a11b0",
+                "resourceVersion": "4357",
+                "creationTimestamp": "2022-12-06T08:44:23Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "alpine",
+                "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4292"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled down replica set alpine-bc578d674 to 0",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:23Z",
+            "lastTimestamp": "2022-12-06T08:44:23Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "default.172e27ca24ce2e43",
+                "namespace": "default",
+                "uid": "3b6252e8-a6aa-4198-920a-a87d4776cb26",
+                "resourceVersion": "4327",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "ServiceAccount",
+                "namespace": "default",
+                "name": "default",
+                "apiVersion": "v1"
+            },
+            "reason": "IssuedLeafCertificate",
+            "message": "issued certificate for default.default.serviceaccount.identity.linkerd.cluster.local until 2022-12-07 08:44:40 +0000 UTC: ba7dca9b9822f857c1c7a7ce4722d92621a0931610cbc7e3736d2907e4a805c1",
+            "source": {
+                "component": "linkerd-identity"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27c27d88a6c5",
+                "namespace": "default",
+                "uid": "bde7085b-5ff7-4635-844e-ed8544fbb1b9",
+                "resourceVersion": "4188",
+                "creationTimestamp": "2022-12-06T08:43:48Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4180"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned default/greeting-5d648687f7-zd84h to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:43:48Z",
+            "lastTimestamp": "2022-12-06T08:43:48Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27c2a9994388",
+                "namespace": "default",
+                "uid": "4a92765d-c216-48b5-a0e8-b3c0bf2b841f",
+                "resourceVersion": "4192",
+                "creationTimestamp": "2022-12-06T08:43:48Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4183",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"hashicorp/http-echo:alpine\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:43:48Z",
+            "lastTimestamp": "2022-12-06T08:43:48Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27c465677130",
+                "namespace": "default",
+                "uid": "a0718f0b-5d93-4e0b-b451-198d4e0a7de8",
+                "resourceVersion": "4221",
+                "creationTimestamp": "2022-12-06T08:43:56Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4183",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"hashicorp/http-echo:alpine\" in 7.445773438s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:43:56Z",
+            "lastTimestamp": "2022-12-06T08:43:56Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27c4b430e97a",
+                "namespace": "default",
+                "uid": "384478d8-bf75-4207-b2e6-955df4c4ba3f",
+                "resourceVersion": "4224",
+                "creationTimestamp": "2022-12-06T08:43:57Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4183",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Created",
+            "message": "Created container server",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:43:57Z",
+            "lastTimestamp": "2022-12-06T08:43:57Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27c4bf1aba59",
+                "namespace": "default",
+                "uid": "dc0f6b70-b4d2-4d75-af33-5957132ab065",
+                "resourceVersion": "4226",
+                "creationTimestamp": "2022-12-06T08:43:57Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4183",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Started",
+            "message": "Started container server",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:43:57Z",
+            "lastTimestamp": "2022-12-06T08:43:57Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7-zd84h.172e27ca97a29912",
+                "namespace": "default",
+                "uid": "555e9129-10e2-4df4-987a-305c7d2e933d",
+                "resourceVersion": "4347",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-5d648687f7-zd84h",
+                "uid": "fc2352e4-bee2-4a08-99da-a808ff498a3a",
+                "apiVersion": "v1",
+                "resourceVersion": "4183",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Killing",
+            "message": "Stopping container server",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7.172e27c2792f4ab6",
+                "namespace": "default",
+                "uid": "b3fcefa3-d9ae-4e10-a140-e8b73e09dca9",
+                "resourceVersion": "4185",
+                "creationTimestamp": "2022-12-06T08:43:48Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "greeting-5d648687f7",
+                "uid": "577ca22e-ff99-4e34-a6cd-777748cb4ae1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4177"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: greeting-5d648687f7-zd84h",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:43:48Z",
+            "lastTimestamp": "2022-12-06T08:43:48Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7.172e27ca97c5f026",
+                "namespace": "default",
+                "uid": "f88caaa4-c980-47c2-a341-009ee642f74f",
+                "resourceVersion": "4349",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "greeting-5d648687f7",
+                "uid": "577ca22e-ff99-4e34-a6cd-777748cb4ae1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4342"
+            },
+            "reason": "SuccessfulDelete",
+            "message": "Deleted pod: greeting-5d648687f7-zd84h",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27c8fd33c8fd",
+                "namespace": "default",
+                "uid": "a8d74a78-748e-4cd8-b242-7c048eb409f2",
+                "resourceVersion": "4291",
+                "creationTimestamp": "2022-12-06T08:44:16Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4284"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned default/greeting-999995b5b-g9r8z to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27c92d972225",
+                "namespace": "default",
+                "uid": "6aaf972f-2be6-424d-966c-35d8ae4e7822",
+                "resourceVersion": "4301",
+                "creationTimestamp": "2022-12-06T08:44:16Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:16Z",
+            "lastTimestamp": "2022-12-06T08:44:16Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27c98becb5c1",
+                "namespace": "default",
+                "uid": "cc0d0f10-804e-4f3d-a009-0dea38097c5a",
+                "resourceVersion": "4307",
+                "creationTimestamp": "2022-12-06T08:44:18Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:18Z",
+            "lastTimestamp": "2022-12-06T08:44:18Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27c9962c19ae",
+                "namespace": "default",
+                "uid": "3f5cad9b-0889-406c-84f7-e7788b3f412f",
+                "resourceVersion": "4309",
+                "creationTimestamp": "2022-12-06T08:44:18Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:18Z",
+            "lastTimestamp": "2022-12-06T08:44:18Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27c9d550098e",
+                "namespace": "default",
+                "uid": "cca17504-751e-4b48-9dfa-4168d96c67cd",
+                "resourceVersion": "4316",
+                "creationTimestamp": "2022-12-06T08:44:19Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:19Z",
+            "lastTimestamp": "2022-12-06T08:44:19Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27ca13eecd6b",
+                "namespace": "default",
+                "uid": "3fd27915-37e2-44ad-8592-214379d10c55",
+                "resourceVersion": "4322",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27ca1c7e75dd",
+                "namespace": "default",
+                "uid": "12af49a6-c6d6-4d69-9d7e-9c300b1218ce",
+                "resourceVersion": "4324",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27ca1fc0642f",
+                "namespace": "default",
+                "uid": "c782c825-5548-4722-b99f-36b4ec48ee3a",
+                "resourceVersion": "4326",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"hashicorp/http-echo:alpine\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27ca7d2cc5ae",
+                "namespace": "default",
+                "uid": "6c5a52a3-a426-4a1b-b552-864fd4471d27",
+                "resourceVersion": "4332",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Created",
+            "message": "Created container server",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b-g9r8z.172e27ca85c3bbda",
+                "namespace": "default",
+                "uid": "bed37a90-f846-446c-841b-7282b580ca89",
+                "resourceVersion": "4335",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "default",
+                "name": "greeting-999995b5b-g9r8z",
+                "uid": "d6e26d72-6846-4e69-86e6-33435b3c4acd",
+                "apiVersion": "v1",
+                "resourceVersion": "4285",
+                "fieldPath": "spec.containers{server}"
+            },
+            "reason": "Started",
+            "message": "Started container server",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b.172e27c8fa42f2e9",
+                "namespace": "default",
+                "uid": "72d2c4f3-aa94-4223-b8e3-e32f4304ec2c",
+                "resourceVersion": "4287",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "default",
+                "name": "greeting-999995b5b",
+                "uid": "12265723-4549-4bde-b95f-bdc3c9aa2164",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4274"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: greeting-999995b5b-g9r8z",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting-sa.172e27ca1b115c7b",
+                "namespace": "default",
+                "uid": "65a79ffe-798a-4330-94c2-ac0d87c73a1f",
+                "resourceVersion": "4323",
+                "creationTimestamp": "2022-12-06T08:44:20Z"
+            },
+            "involvedObject": {
+                "kind": "ServiceAccount",
+                "namespace": "default",
+                "name": "greeting-sa",
+                "apiVersion": "v1"
+            },
+            "reason": "IssuedLeafCertificate",
+            "message": "issued certificate for greeting-sa.default.serviceaccount.identity.linkerd.cluster.local until 2022-12-07 08:44:40 +0000 UTC: d700909bf51f4cc328d28b80e800825c8e3b877ce20208067c7d752996309268",
+            "source": {
+                "component": "linkerd-identity"
+            },
+            "firstTimestamp": "2022-12-06T08:44:20Z",
+            "lastTimestamp": "2022-12-06T08:44:20Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting.172e27c273b7ec74",
+                "namespace": "default",
+                "uid": "a884b5de-4ea4-4696-9bd6-bbdfb8b3260d",
+                "resourceVersion": "4179",
+                "creationTimestamp": "2022-12-06T08:43:47Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "greeting",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4174"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set greeting-5d648687f7 to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:43:47Z",
+            "lastTimestamp": "2022-12-06T08:43:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting.172e27c2786468f3",
+                "namespace": "default",
+                "uid": "77e063ae-4bb4-42e9-aa68-4c7d8e4d96e4",
+                "resourceVersion": "4181",
+                "creationTimestamp": "2022-12-06T08:43:48Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "greeting",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4178"
+            },
+            "reason": "InjectionSkipped",
+            "message": "Linkerd sidecar proxy injection skipped: neither the namespace nor the pod have the annotation \"linkerd.io/inject:enabled\"",
+            "source": {
+                "component": "linkerd-proxy-injector"
+            },
+            "firstTimestamp": "2022-12-06T08:43:47Z",
+            "lastTimestamp": "2022-12-06T08:43:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting.172e27c8f796af5a",
+                "namespace": "default",
+                "uid": "de8ca4e5-8673-4202-9eb0-2db08ae454af",
+                "resourceVersion": "4279",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "greeting",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4273"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set greeting-999995b5b to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting.172e27c8f915e56a",
+                "namespace": "default",
+                "uid": "7947c811-d1f9-4d72-bfc7-bfc34cc35239",
+                "resourceVersion": "4283",
+                "creationTimestamp": "2022-12-06T08:44:15Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "greeting",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4273"
+            },
+            "reason": "Injected",
+            "message": "Linkerd sidecar proxy injected",
+            "source": {
+                "component": "linkerd-proxy-injector"
+            },
+            "firstTimestamp": "2022-12-06T08:44:15Z",
+            "lastTimestamp": "2022-12-06T08:44:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "greeting.172e27ca96cfe9b5",
+                "namespace": "default",
+                "uid": "9477a47d-fef4-4b85-b1c7-e9267a0da626",
+                "resourceVersion": "4345",
+                "creationTimestamp": "2022-12-06T08:44:22Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "default",
+                "name": "greeting",
+                "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "4298"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled down replica set greeting-5d648687f7 to 0",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:44:22Z",
+            "lastTimestamp": "2022-12-06T08:44:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e2640a2ff177f",
+                "namespace": "default",
+                "uid": "ccd05751-986f-496b-8567-7b1207df8e77",
+                "resourceVersion": "259",
+                "creationTimestamp": "2022-12-06T08:16:33Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasSufficientMemory",
+            "message": "Node kind-1-control-plane status is now: NodeHasSufficientMemory",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:10Z",
+            "lastTimestamp": "2022-12-06T08:16:11Z",
+            "count": 7,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e2640a2ff3f06",
+                "namespace": "default",
+                "uid": "059167e4-9fe5-445b-a60b-0b0e9cdaf804",
+                "resourceVersion": "263",
+                "creationTimestamp": "2022-12-06T08:16:34Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasNoDiskPressure",
+            "message": "Node kind-1-control-plane status is now: NodeHasNoDiskPressure",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:10Z",
+            "lastTimestamp": "2022-12-06T08:16:11Z",
+            "count": 7,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e2640a2ff5adb",
+                "namespace": "default",
+                "uid": "72bdcbe2-deec-419e-a5db-9d10cce495ee",
+                "resourceVersion": "248",
+                "creationTimestamp": "2022-12-06T08:16:33Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasSufficientPID",
+            "message": "Node kind-1-control-plane status is now: NodeHasSufficientPID",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:10Z",
+            "lastTimestamp": "2022-12-06T08:16:11Z",
+            "count": 6,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e26490d742637",
+                "namespace": "default",
+                "uid": "f1ea5619-8850-401e-b899-a823326e957e",
+                "resourceVersion": "387",
+                "creationTimestamp": "2022-12-06T08:16:47Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "Starting",
+            "message": "Starting kubelet.",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:47Z",
+            "lastTimestamp": "2022-12-06T08:16:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e26491448c752",
+                "namespace": "default",
+                "uid": "8c93f72d-f9fc-4fed-8462-08c9520a6b0c",
+                "resourceVersion": "390",
+                "creationTimestamp": "2022-12-06T08:16:47Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasSufficientMemory",
+            "message": "Node kind-1-control-plane status is now: NodeHasSufficientMemory",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:47Z",
+            "lastTimestamp": "2022-12-06T08:16:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e26491448fc4a",
+                "namespace": "default",
+                "uid": "715ccb61-751d-4f96-bb69-53c132268a24",
+                "resourceVersion": "391",
+                "creationTimestamp": "2022-12-06T08:16:47Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasNoDiskPressure",
+            "message": "Node kind-1-control-plane status is now: NodeHasNoDiskPressure",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:47Z",
+            "lastTimestamp": "2022-12-06T08:16:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e264914491a94",
+                "namespace": "default",
+                "uid": "f44d0cd2-fa1c-4e3b-9267-4deaae2ddf99",
+                "resourceVersion": "392",
+                "creationTimestamp": "2022-12-06T08:16:47Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeHasSufficientPID",
+            "message": "Node kind-1-control-plane status is now: NodeHasSufficientPID",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:47Z",
+            "lastTimestamp": "2022-12-06T08:16:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e26491ad3a2cc",
+                "namespace": "default",
+                "uid": "de997ffa-0924-4c60-9b38-57e5aaa33dc6",
+                "resourceVersion": "394",
+                "creationTimestamp": "2022-12-06T08:16:47Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeAllocatableEnforced",
+            "message": "Updated Node Allocatable limit across pods",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:16:47Z",
+            "lastTimestamp": "2022-12-06T08:16:47Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e2649818eec73",
+                "namespace": "default",
+                "uid": "4e3e562f-cfd3-4a7b-8d7f-00fae25abc0a",
+                "resourceVersion": "404",
+                "creationTimestamp": "2022-12-06T08:16:48Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "2e44b30b-b63f-4011-8ff3-ea12106b1e9b",
+                "apiVersion": "v1"
+            },
+            "reason": "RegisteredNode",
+            "message": "Node kind-1-control-plane event: Registered Node kind-1-control-plane in Controller",
+            "source": {
+                "component": "node-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:16:48Z",
+            "lastTimestamp": "2022-12-06T08:16:48Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e264c84d7c757",
+                "namespace": "default",
+                "uid": "1dac45d3-ff38-43f3-ba72-2ea2af1296af",
+                "resourceVersion": "513",
+                "creationTimestamp": "2022-12-06T08:17:01Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "Starting",
+            "message": "Starting kube-proxy.",
+            "source": {
+                "component": "kube-proxy",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:01Z",
+            "lastTimestamp": "2022-12-06T08:17:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-control-plane.172e264dc3b6c469",
+                "namespace": "default",
+                "uid": "c9afc6cb-b472-48b5-a612-fd1e700b767e",
+                "resourceVersion": "562",
+                "creationTimestamp": "2022-12-06T08:17:07Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-control-plane",
+                "uid": "kind-1-control-plane"
+            },
+            "reason": "NodeReady",
+            "message": "Node kind-1-control-plane status is now: NodeReady",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-control-plane"
+            },
+            "firstTimestamp": "2022-12-06T08:17:07Z",
+            "lastTimestamp": "2022-12-06T08:17:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264cc7565893",
+                "namespace": "default",
+                "uid": "5994a3f3-dc0c-4bc1-b6fc-7e91440044ac",
+                "resourceVersion": "519",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "Starting",
+            "message": "Starting kubelet.",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264ccc6357a5",
+                "namespace": "default",
+                "uid": "37ed6611-ef86-496c-bd09-001ba88df0d1",
+                "resourceVersion": "527",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "NodeHasSufficientMemory",
+            "message": "Node kind-1-worker status is now: NodeHasSufficientMemory",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264ccc638449",
+                "namespace": "default",
+                "uid": "264fdc5e-47b4-422c-9572-e2e8b3af05b9",
+                "resourceVersion": "541",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "NodeHasNoDiskPressure",
+            "message": "Node kind-1-worker status is now: NodeHasNoDiskPressure",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264ccc639857",
+                "namespace": "default",
+                "uid": "76875d19-4074-4325-bff4-04538c0b2056",
+                "resourceVersion": "548",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "NodeHasSufficientPID",
+            "message": "Node kind-1-worker status is now: NodeHasSufficientPID",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264cd3428279",
+                "namespace": "default",
+                "uid": "a9dee5ac-f8bb-4627-96ef-ad98681d9e2e",
+                "resourceVersion": "551",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "NodeAllocatableEnforced",
+            "message": "Updated Node Allocatable limit across pods",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e264cffc39c27",
+                "namespace": "default",
+                "uid": "0fe0bc5e-ffbc-4770-9f4c-2b7724f5d8ee",
+                "resourceVersion": "554",
+                "creationTimestamp": "2022-12-06T08:17:03Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "91083588-1d6c-4f50-809e-35e4ee484f9c",
+                "apiVersion": "v1"
+            },
+            "reason": "RegisteredNode",
+            "message": "Node kind-1-worker event: Registered Node kind-1-worker in Controller",
+            "source": {
+                "component": "node-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:17:03Z",
+            "lastTimestamp": "2022-12-06T08:17:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e26555bf59bcd",
+                "namespace": "default",
+                "uid": "22e56951-50ee-463f-afcb-94a66892ca6c",
+                "resourceVersion": "628",
+                "creationTimestamp": "2022-12-06T08:17:39Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "Starting",
+            "message": "Starting kube-proxy.",
+            "source": {
+                "component": "kube-proxy",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:39Z",
+            "lastTimestamp": "2022-12-06T08:17:39Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kind-1-worker.172e2656387d5e65",
+                "namespace": "default",
+                "uid": "e8dc4af5-efaf-4598-a4ec-3b598eecc78e",
+                "resourceVersion": "647",
+                "creationTimestamp": "2022-12-06T08:17:43Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "kind-1-worker",
+                "uid": "kind-1-worker"
+            },
+            "reason": "NodeReady",
+            "message": "Node kind-1-worker status is now: NodeReady",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:17:43Z",
+            "lastTimestamp": "2022-12-06T08:17:43Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5321"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "local-path-provisioner-547f784dff-fr4h6",
+                "generateName": "local-path-provisioner-547f784dff-",
+                "namespace": "local-path-storage",
+                "uid": "32d6de99-a1a2-46d4-975f-00a2543757c5",
+                "resourceVersion": "644",
+                "creationTimestamp": "2022-12-06T08:16:49Z",
+                "labels": {
+                    "app": "local-path-provisioner",
+                    "pod-template-hash": "547f784dff"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "local-path-provisioner-547f784dff",
+                        "uid": "c125a59e-d6ba-49cb-a0e2-7c899df9f411",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "config-volume",
+                        "configMap": {
+                            "name": "local-path-config",
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-g6n7h",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "local-path-provisioner",
+                        "image": "docker.io/rancher/local-path-provisioner:v0.0.14",
+                        "command": [
+                            "local-path-provisioner",
+                            "--debug",
+                            "start",
+                            "--helper-image",
+                            "k8s.gcr.io/build-image/debian-base:v2.1.0",
+                            "--config",
+                            "/etc/config/config.json"
+                        ],
+                        "env": [
+                            {
+                                "name": "POD_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "mountPath": "/etc/config/"
+                            },
+                            {
+                                "name": "kube-api-access-g6n7h",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "local-path-provisioner-service-account",
+                "serviceAccount": "local-path-provisioner-service-account",
+                "nodeName": "kind-1-control-plane",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node-role.kubernetes.io/master",
+                        "operator": "Equal",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:17:08Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:17:40Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:17:40Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2022-12-06T08:17:07Z"
+                    }
+                ],
+                "hostIP": "172.19.0.2",
+                "podIP": "10.244.0.3",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.3"
+                    }
+                ],
+                "startTime": "2022-12-06T08:17:08Z",
+                "containerStatuses": [
+                    {
+                        "name": "local-path-provisioner",
+                        "state": {
+                            "running": {
+                                "startedAt": "2022-12-06T08:17:39Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "docker.io/rancher/local-path-provisioner:v0.0.14",
+                        "imageID": "sha256:e422121c9c5f97623245b7e600eeb5e223ee623f21fa04da985ae71057d8d70b",
+                        "containerID": "containerd://2ddfd158a4b99c1971345a915c85d539f9275afb993bb91c7155745b8a1db668",
+                        "started": true
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        }
+    ]
+}

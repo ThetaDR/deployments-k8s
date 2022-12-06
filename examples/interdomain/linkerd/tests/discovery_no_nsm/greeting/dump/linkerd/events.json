@@ -1,0 +1,1951 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5315"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26c9c437a1ba",
+                "namespace": "linkerd",
+                "uid": "eff32bb8-ed64-469f-967c-9cf8033ad30a",
+                "resourceVersion": "1652",
+                "creationTimestamp": "2022-12-06T08:25:59Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1641"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned linkerd/linkerd-destination-6d9f54b659-lq9dw to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:25:59Z",
+            "lastTimestamp": "2022-12-06T08:25:59Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26ca0ba6f657",
+                "namespace": "linkerd",
+                "uid": "17ed9b48-29d6-4110-9ff2-158cbd8780ed",
+                "resourceVersion": "1679",
+                "creationTimestamp": "2022-12-06T08:26:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:01Z",
+            "lastTimestamp": "2022-12-06T08:26:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26ccb2ec0e34",
+                "namespace": "linkerd",
+                "uid": "791787d6-3d7e-466f-a7aa-8a4f66d2282c",
+                "resourceVersion": "1703",
+                "creationTimestamp": "2022-12-06T08:26:12Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\" in 11.396223896s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:12Z",
+            "lastTimestamp": "2022-12-06T08:26:12Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26cce9cce0b3",
+                "namespace": "linkerd",
+                "uid": "55fb8e48-8fbd-4c18-b4aa-0ef9003353ec",
+                "resourceVersion": "1712",
+                "creationTimestamp": "2022-12-06T08:26:13Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:13Z",
+            "lastTimestamp": "2022-12-06T08:26:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26ccf3bee1f1",
+                "namespace": "linkerd",
+                "uid": "85aa4540-a837-4573-bbec-dd6b841919f0",
+                "resourceVersion": "1714",
+                "creationTimestamp": "2022-12-06T08:26:13Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:13Z",
+            "lastTimestamp": "2022-12-06T08:26:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26cd29f65bfc",
+                "namespace": "linkerd",
+                "uid": "bcdc42d2-a709-4c01-b6c3-3df1423c7da7",
+                "resourceVersion": "1716",
+                "creationTimestamp": "2022-12-06T08:26:14Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:14Z",
+            "lastTimestamp": "2022-12-06T08:26:14Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d18efca0a0",
+                "namespace": "linkerd",
+                "uid": "114ebeb8-0b84-4127-8b71-d85b3e2a5f86",
+                "resourceVersion": "1771",
+                "creationTimestamp": "2022-12-06T08:26:33Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\" in 18.874746998s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:33Z",
+            "lastTimestamp": "2022-12-06T08:26:33Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d204a7ddb2",
+                "namespace": "linkerd",
+                "uid": "68b73600-45b6-4014-ad3c-1d7770240bb3",
+                "resourceVersion": "1778",
+                "creationTimestamp": "2022-12-06T08:26:35Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:35Z",
+            "lastTimestamp": "2022-12-06T08:26:35Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d2101da67d",
+                "namespace": "linkerd",
+                "uid": "f2872377-514b-46fc-9eb8-f75795deda0c",
+                "resourceVersion": "1779",
+                "creationTimestamp": "2022-12-06T08:26:35Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:35Z",
+            "lastTimestamp": "2022-12-06T08:26:35Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d94ea07eea",
+                "namespace": "linkerd",
+                "uid": "3d847da1-5ba0-4674-9a5f-5bd7772864d6",
+                "resourceVersion": "1856",
+                "creationTimestamp": "2022-12-06T08:27:06Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{destination}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/controller:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:06Z",
+            "lastTimestamp": "2022-12-06T08:27:06Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d99390d3a2",
+                "namespace": "linkerd",
+                "uid": "7054204c-d427-4e55-bf80-0bbd420f8649",
+                "resourceVersion": "1861",
+                "creationTimestamp": "2022-12-06T08:27:07Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{destination}"
+            },
+            "reason": "Created",
+            "message": "Created container destination",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:07Z",
+            "lastTimestamp": "2022-12-06T08:27:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d99a918a93",
+                "namespace": "linkerd",
+                "uid": "9ee0a847-2757-48af-9cc6-8533bc714b9e",
+                "resourceVersion": "1862",
+                "creationTimestamp": "2022-12-06T08:27:07Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{destination}"
+            },
+            "reason": "Started",
+            "message": "Started container destination",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:07Z",
+            "lastTimestamp": "2022-12-06T08:27:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d99aa75006",
+                "namespace": "linkerd",
+                "uid": "b17c2251-36b8-49be-add2-af3e873fe86b",
+                "resourceVersion": "1863",
+                "creationTimestamp": "2022-12-06T08:27:07Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{sp-validator}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/controller:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:07Z",
+            "lastTimestamp": "2022-12-06T08:27:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d9d74f4959",
+                "namespace": "linkerd",
+                "uid": "4022fea0-5dc2-4392-b184-87f23bd434a3",
+                "resourceVersion": "1869",
+                "creationTimestamp": "2022-12-06T08:27:08Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{sp-validator}"
+            },
+            "reason": "Created",
+            "message": "Created container sp-validator",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:08Z",
+            "lastTimestamp": "2022-12-06T08:27:08Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d9dfcda706",
+                "namespace": "linkerd",
+                "uid": "b5f82614-115b-4425-9940-5337bd87b975",
+                "resourceVersion": "1871",
+                "creationTimestamp": "2022-12-06T08:27:09Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{sp-validator}"
+            },
+            "reason": "Started",
+            "message": "Started container sp-validator",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:09Z",
+            "lastTimestamp": "2022-12-06T08:27:09Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26d9dffa236d",
+                "namespace": "linkerd",
+                "uid": "6e37e258-d4ea-4ee0-b642-03112d59a801",
+                "resourceVersion": "1872",
+                "creationTimestamp": "2022-12-06T08:27:09Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{policy}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/policy-controller:stable-2.12.2\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:09Z",
+            "lastTimestamp": "2022-12-06T08:27:09Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26db92dd9689",
+                "namespace": "linkerd",
+                "uid": "d073d54b-5ca8-42e1-83fd-b67b747e2fbd",
+                "resourceVersion": "1886",
+                "creationTimestamp": "2022-12-06T08:27:16Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{policy}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/policy-controller:stable-2.12.2\" in 7.296179249s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:16Z",
+            "lastTimestamp": "2022-12-06T08:27:16Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26dbd8a00669",
+                "namespace": "linkerd",
+                "uid": "3ad27479-34f7-44d4-9f1a-7854b1b01951",
+                "resourceVersion": "1890",
+                "creationTimestamp": "2022-12-06T08:27:17Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{policy}"
+            },
+            "reason": "Created",
+            "message": "Created container policy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:17Z",
+            "lastTimestamp": "2022-12-06T08:27:17Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659-lq9dw.172e26dbe343431c",
+                "namespace": "linkerd",
+                "uid": "c09f3285-62d3-4233-b77f-fbaf7cb3bdeb",
+                "resourceVersion": "1892",
+                "creationTimestamp": "2022-12-06T08:27:17Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659-lq9dw",
+                "uid": "b5d6ae9e-44a6-46db-bf5d-15f9616bb21c",
+                "apiVersion": "v1",
+                "resourceVersion": "1644",
+                "fieldPath": "spec.containers{policy}"
+            },
+            "reason": "Started",
+            "message": "Started container policy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:17Z",
+            "lastTimestamp": "2022-12-06T08:27:17Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination-6d9f54b659.172e26c9b9123157",
+                "namespace": "linkerd",
+                "uid": "1c5210cd-f666-497a-ba3e-8fe0e9645563",
+                "resourceVersion": "1645",
+                "creationTimestamp": "2022-12-06T08:25:59Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "linkerd",
+                "name": "linkerd-destination-6d9f54b659",
+                "uid": "9f3cd9de-bd69-49f0-84b2-48e3016a2d23",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1639"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: linkerd-destination-6d9f54b659-lq9dw",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:25:59Z",
+            "lastTimestamp": "2022-12-06T08:25:59Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination.172e26c9b726397b",
+                "namespace": "linkerd",
+                "uid": "dbbfcda0-fd9d-4ef6-9963-9eb20963ce2a",
+                "resourceVersion": "1642",
+                "creationTimestamp": "2022-12-06T08:25:59Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "linkerd",
+                "name": "linkerd-destination",
+                "uid": "6bc9891e-ee44-419b-9a0b-cc94dacae3e1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1638"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set linkerd-destination-6d9f54b659 to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:25:59Z",
+            "lastTimestamp": "2022-12-06T08:25:59Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-destination.172e26d926f46c77",
+                "namespace": "linkerd",
+                "uid": "a2862d85-37ce-423b-8c62-8f7a5bdacc31",
+                "resourceVersion": "1852",
+                "creationTimestamp": "2022-12-06T08:27:06Z"
+            },
+            "involvedObject": {
+                "kind": "ServiceAccount",
+                "namespace": "linkerd",
+                "name": "linkerd-destination",
+                "apiVersion": "v1"
+            },
+            "reason": "IssuedLeafCertificate",
+            "message": "issued certificate for linkerd-destination.linkerd.serviceaccount.identity.linkerd.cluster.local until 2022-12-07 08:27:25 +0000 UTC: 1b5e606a056e0ef085e88ca81e963ceb7d309e5b16371672b09cf1e0a6a804d3",
+            "source": {
+                "component": "linkerd-identity"
+            },
+            "firstTimestamp": "2022-12-06T08:27:05Z",
+            "lastTimestamp": "2022-12-06T08:27:05Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595-5l2hb.172e2747a933591c",
+                "namespace": "linkerd",
+                "uid": "b2d305c7-53d8-432c-bcc7-0f59faff53fa",
+                "resourceVersion": "3045",
+                "creationTimestamp": "2022-12-06T08:35:00Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595-5l2hb",
+                "uid": "f72310d1-3fea-4212-8e12-0e153e2b57a2",
+                "apiVersion": "v1",
+                "resourceVersion": "3041"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned linkerd/linkerd-heartbeat-27838595-5l2hb to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:35:00Z",
+            "lastTimestamp": "2022-12-06T08:35:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595-5l2hb.172e2747d5d92c9d",
+                "namespace": "linkerd",
+                "uid": "9c032f4f-0458-4c8a-ad2a-105634175f94",
+                "resourceVersion": "3050",
+                "creationTimestamp": "2022-12-06T08:35:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595-5l2hb",
+                "uid": "f72310d1-3fea-4212-8e12-0e153e2b57a2",
+                "apiVersion": "v1",
+                "resourceVersion": "3042",
+                "fieldPath": "spec.containers{heartbeat}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/controller:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:35:01Z",
+            "lastTimestamp": "2022-12-06T08:35:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595-5l2hb.172e274809813796",
+                "namespace": "linkerd",
+                "uid": "23a8cf0f-b14f-4bd8-99a0-000e8f8385f7",
+                "resourceVersion": "3051",
+                "creationTimestamp": "2022-12-06T08:35:02Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595-5l2hb",
+                "uid": "f72310d1-3fea-4212-8e12-0e153e2b57a2",
+                "apiVersion": "v1",
+                "resourceVersion": "3042",
+                "fieldPath": "spec.containers{heartbeat}"
+            },
+            "reason": "Created",
+            "message": "Created container heartbeat",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:35:02Z",
+            "lastTimestamp": "2022-12-06T08:35:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595-5l2hb.172e274811fbdc21",
+                "namespace": "linkerd",
+                "uid": "7fcbafcb-ace4-4bde-999e-d97376b850e2",
+                "resourceVersion": "3052",
+                "creationTimestamp": "2022-12-06T08:35:02Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595-5l2hb",
+                "uid": "f72310d1-3fea-4212-8e12-0e153e2b57a2",
+                "apiVersion": "v1",
+                "resourceVersion": "3042",
+                "fieldPath": "spec.containers{heartbeat}"
+            },
+            "reason": "Started",
+            "message": "Started container heartbeat",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:35:02Z",
+            "lastTimestamp": "2022-12-06T08:35:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595.172e2747a6b78acd",
+                "namespace": "linkerd",
+                "uid": "9be89ebb-b0d1-4763-b468-8ee1e69ce29e",
+                "resourceVersion": "3043",
+                "creationTimestamp": "2022-12-06T08:35:00Z"
+            },
+            "involvedObject": {
+                "kind": "Job",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595",
+                "uid": "8de9f2a4-a099-4d2c-907d-5e443d6d9426",
+                "apiVersion": "batch/v1",
+                "resourceVersion": "3038"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: linkerd-heartbeat-27838595-5l2hb",
+            "source": {
+                "component": "job-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:35:00Z",
+            "lastTimestamp": "2022-12-06T08:35:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat-27838595.172e27485a5d0054",
+                "namespace": "linkerd",
+                "uid": "a34f3ee4-53ce-4895-97f5-72643d14e3d4",
+                "resourceVersion": "3059",
+                "creationTimestamp": "2022-12-06T08:35:03Z"
+            },
+            "involvedObject": {
+                "kind": "Job",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat-27838595",
+                "uid": "8de9f2a4-a099-4d2c-907d-5e443d6d9426",
+                "apiVersion": "batch/v1",
+                "resourceVersion": "3044"
+            },
+            "reason": "Completed",
+            "message": "Job completed",
+            "source": {
+                "component": "job-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:35:03Z",
+            "lastTimestamp": "2022-12-06T08:35:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat.172e2747a125865c",
+                "namespace": "linkerd",
+                "uid": "db8a7af0-952c-40c6-82c7-213aeeb2e70d",
+                "resourceVersion": "3040",
+                "creationTimestamp": "2022-12-06T08:35:00Z"
+            },
+            "involvedObject": {
+                "kind": "CronJob",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat",
+                "uid": "caf586bb-edb4-42e6-882e-2c24f1f6631b",
+                "apiVersion": "batch/v1",
+                "resourceVersion": "1649"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created job linkerd-heartbeat-27838595",
+            "source": {
+                "component": "cronjob-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:35:00Z",
+            "lastTimestamp": "2022-12-06T08:35:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat.172e27486551e6f7",
+                "namespace": "linkerd",
+                "uid": "510798df-d6db-4655-9fe4-654dd8a48685",
+                "resourceVersion": "3061",
+                "creationTimestamp": "2022-12-06T08:35:03Z"
+            },
+            "involvedObject": {
+                "kind": "CronJob",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat",
+                "uid": "caf586bb-edb4-42e6-882e-2c24f1f6631b",
+                "apiVersion": "batch/v1",
+                "resourceVersion": "3039"
+            },
+            "reason": "SawCompletedJob",
+            "message": "Saw completed job: linkerd-heartbeat-27838595, status: Complete",
+            "source": {
+                "component": "cronjob-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:35:03Z",
+            "lastTimestamp": "2022-12-06T08:35:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-heartbeat.172e27486f209632",
+                "namespace": "linkerd",
+                "uid": "fb03d7ef-c01a-4b15-8d96-40124dfb5d36",
+                "resourceVersion": "3064",
+                "creationTimestamp": "2022-12-06T08:35:03Z"
+            },
+            "involvedObject": {
+                "kind": "CronJob",
+                "namespace": "linkerd",
+                "name": "linkerd-heartbeat",
+                "uid": "caf586bb-edb4-42e6-882e-2c24f1f6631b",
+                "apiVersion": "batch/v1",
+                "resourceVersion": "3062"
+            },
+            "reason": "SuccessfulDelete",
+            "message": "Deleted job linkerd-heartbeat-27838595",
+            "source": {
+                "component": "cronjob-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:35:03Z",
+            "lastTimestamp": "2022-12-06T08:35:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26c96e3cd05f",
+                "namespace": "linkerd",
+                "uid": "eb676095-b0c9-4ecc-8d8b-861e9f310bc8",
+                "resourceVersion": "1611",
+                "creationTimestamp": "2022-12-06T08:25:58Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1603"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned linkerd/linkerd-identity-66f769767c-w5ws2 to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:25:58Z",
+            "lastTimestamp": "2022-12-06T08:25:58Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26c9baf89b1b",
+                "namespace": "linkerd",
+                "uid": "8a72d4a9-710e-4557-bf75-2d1e5922f6f0",
+                "resourceVersion": "1651",
+                "creationTimestamp": "2022-12-06T08:25:59Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:25:59Z",
+            "lastTimestamp": "2022-12-06T08:25:59Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cc0de4336e",
+                "namespace": "linkerd",
+                "uid": "804cecd4-67b3-4116-9590-3cf0d72daa8b",
+                "resourceVersion": "1696",
+                "creationTimestamp": "2022-12-06T08:26:09Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\" in 9.981070867s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:09Z",
+            "lastTimestamp": "2022-12-06T08:26:09Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cc6553f707",
+                "namespace": "linkerd",
+                "uid": "130839fb-10e0-405f-928e-0362783b9a0b",
+                "resourceVersion": "1698",
+                "creationTimestamp": "2022-12-06T08:26:11Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:11Z",
+            "lastTimestamp": "2022-12-06T08:26:11Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cc75e28bd9",
+                "namespace": "linkerd",
+                "uid": "0ddf06f7-741c-4aef-818a-7a4c3bf8259a",
+                "resourceVersion": "1701",
+                "creationTimestamp": "2022-12-06T08:26:11Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:11Z",
+            "lastTimestamp": "2022-12-06T08:26:11Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26ccb2187a37",
+                "namespace": "linkerd",
+                "uid": "c50665c5-a93d-42ed-8e31-b6091f73949a",
+                "resourceVersion": "1702",
+                "creationTimestamp": "2022-12-06T08:26:12Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{identity}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/controller:stable-2.12.2\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:12Z",
+            "lastTimestamp": "2022-12-06T08:26:12Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cf17c0598f",
+                "namespace": "linkerd",
+                "uid": "3a9845c6-cd44-4e61-b1d7-138701b224a6",
+                "resourceVersion": "1748",
+                "creationTimestamp": "2022-12-06T08:26:22Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{identity}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/controller:stable-2.12.2\" in 10.295317674s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:22Z",
+            "lastTimestamp": "2022-12-06T08:26:22Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cf774a953a",
+                "namespace": "linkerd",
+                "uid": "0ca4b259-c48f-4264-8e28-a93869e9dbbe",
+                "resourceVersion": "1755",
+                "creationTimestamp": "2022-12-06T08:26:24Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{identity}"
+            },
+            "reason": "Created",
+            "message": "Created container identity",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:24Z",
+            "lastTimestamp": "2022-12-06T08:26:24Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cf7fb91bef",
+                "namespace": "linkerd",
+                "uid": "3ebe8559-8af2-4957-b20a-9e9e1627579d",
+                "resourceVersion": "1756",
+                "creationTimestamp": "2022-12-06T08:26:24Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{identity}"
+            },
+            "reason": "Started",
+            "message": "Started container identity",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:24Z",
+            "lastTimestamp": "2022-12-06T08:26:24Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26cf7fd898a1",
+                "namespace": "linkerd",
+                "uid": "b4650d23-9b4a-44e1-a382-a84a9ffe4c3b",
+                "resourceVersion": "1757",
+                "creationTimestamp": "2022-12-06T08:26:24Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:24Z",
+            "lastTimestamp": "2022-12-06T08:26:24Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26d29342a99e",
+                "namespace": "linkerd",
+                "uid": "a37f7e7d-96f1-4b59-a358-f4cb4d8f7fc4",
+                "resourceVersion": "1787",
+                "creationTimestamp": "2022-12-06T08:26:37Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\" in 13.210597829s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:37Z",
+            "lastTimestamp": "2022-12-06T08:26:37Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26d2c65483ae",
+                "namespace": "linkerd",
+                "uid": "80bbfd7a-6b91-4b2f-83de-5e5a0c5da2c7",
+                "resourceVersion": "1790",
+                "creationTimestamp": "2022-12-06T08:26:38Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:38Z",
+            "lastTimestamp": "2022-12-06T08:26:38Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c-w5ws2.172e26d2ce947f4a",
+                "namespace": "linkerd",
+                "uid": "2b5ddce3-d016-4617-b80b-5fa7825092ff",
+                "resourceVersion": "1793",
+                "creationTimestamp": "2022-12-06T08:26:38Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c-w5ws2",
+                "uid": "74971bab-739e-42c4-aae9-8a662522ddec",
+                "apiVersion": "v1",
+                "resourceVersion": "1605",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:38Z",
+            "lastTimestamp": "2022-12-06T08:26:38Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-66f769767c.172e26c967b79674",
+                "namespace": "linkerd",
+                "uid": "705b6984-4a30-46c3-a14e-62958f88032f",
+                "resourceVersion": "1606",
+                "creationTimestamp": "2022-12-06T08:25:58Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "linkerd",
+                "name": "linkerd-identity-66f769767c",
+                "uid": "4f067779-884c-4575-a625-32ccc1156deb",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1600"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: linkerd-identity-66f769767c-w5ws2",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:25:58Z",
+            "lastTimestamp": "2022-12-06T08:25:58Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity.172e26c963b3c174",
+                "namespace": "linkerd",
+                "uid": "55afb6d8-bf0d-45c9-8171-c56e91af3db9",
+                "resourceVersion": "1601",
+                "creationTimestamp": "2022-12-06T08:25:58Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "linkerd",
+                "name": "linkerd-identity",
+                "uid": "f2ecbccb-38e1-46ab-90f7-79d4330c70c7",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1599"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set linkerd-identity-66f769767c to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:25:58Z",
+            "lastTimestamp": "2022-12-06T08:25:58Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity.172e26d2cc6e078e",
+                "namespace": "linkerd",
+                "uid": "2825a75c-482d-4d57-a59f-3eb7a09091d4",
+                "resourceVersion": "1792",
+                "creationTimestamp": "2022-12-06T08:26:38Z"
+            },
+            "involvedObject": {
+                "kind": "ServiceAccount",
+                "namespace": "linkerd",
+                "name": "linkerd-identity",
+                "apiVersion": "v1"
+            },
+            "reason": "IssuedLeafCertificate",
+            "message": "issued certificate for linkerd-identity.linkerd.serviceaccount.identity.linkerd.cluster.local until 2022-12-07 08:26:58 +0000 UTC: 00dbe19a660ba385c45b8aaf657a2d381588e8ff0ffcb03c1a88e418c6ad696d",
+            "source": {
+                "component": "linkerd-identity"
+            },
+            "firstTimestamp": "2022-12-06T08:26:38Z",
+            "lastTimestamp": "2022-12-06T08:26:38Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26c9dc72af53",
+                "namespace": "linkerd",
+                "uid": "37a68ad2-93c9-43ea-8ba3-905640901d98",
+                "resourceVersion": "1665",
+                "creationTimestamp": "2022-12-06T08:26:00Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1660"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned linkerd/linkerd-proxy-injector-5f8cc9d559-dgmq9 to kind-1-worker",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2022-12-06T08:26:00Z",
+            "lastTimestamp": "2022-12-06T08:26:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26ca2d367a0d",
+                "namespace": "linkerd",
+                "uid": "030a4fac-1786-4fc5-95cf-d633ad6a16d7",
+                "resourceVersion": "1680",
+                "creationTimestamp": "2022-12-06T08:26:01Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:01Z",
+            "lastTimestamp": "2022-12-06T08:26:01Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26cd352f48ea",
+                "namespace": "linkerd",
+                "uid": "9a9f5492-f14d-4b23-96f7-90609c843fc8",
+                "resourceVersion": "1728",
+                "creationTimestamp": "2022-12-06T08:26:14Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy-init:v2.0.0\" in 13.018620616s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:14Z",
+            "lastTimestamp": "2022-12-06T08:26:14Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26cd7006f016",
+                "namespace": "linkerd",
+                "uid": "cff86b81-f564-4792-9564-0ea5a50882e3",
+                "resourceVersion": "1732",
+                "creationTimestamp": "2022-12-06T08:26:15Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:15Z",
+            "lastTimestamp": "2022-12-06T08:26:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26cd7bb076c2",
+                "namespace": "linkerd",
+                "uid": "dc3258bb-2f81-429d-a978-0d77bb26a255",
+                "resourceVersion": "1733",
+                "creationTimestamp": "2022-12-06T08:26:15Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.initContainers{linkerd-init}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-init",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:15Z",
+            "lastTimestamp": "2022-12-06T08:26:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26cda1a54f3f",
+                "namespace": "linkerd",
+                "uid": "ed9672df-99a7-4034-b02c-666d5b0c1f62",
+                "resourceVersion": "1734",
+                "creationTimestamp": "2022-12-06T08:26:16Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulling",
+            "message": "Pulling image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\"",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:16Z",
+            "lastTimestamp": "2022-12-06T08:26:16Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d21e00e047",
+                "namespace": "linkerd",
+                "uid": "c8287000-eab5-4741-b7a2-2f2f1a7041f7",
+                "resourceVersion": "1781",
+                "creationTimestamp": "2022-12-06T08:26:35Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Pulled",
+            "message": "Successfully pulled image \"cr.l5d.io/linkerd/proxy:stable-2.12.2\" in 19.26621964s",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:35Z",
+            "lastTimestamp": "2022-12-06T08:26:35Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d25a59d1fc",
+                "namespace": "linkerd",
+                "uid": "db7f0f0e-dde4-43c2-b04e-e2c77208ba37",
+                "resourceVersion": "1784",
+                "creationTimestamp": "2022-12-06T08:26:36Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Created",
+            "message": "Created container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:36Z",
+            "lastTimestamp": "2022-12-06T08:26:36Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d261d50496",
+                "namespace": "linkerd",
+                "uid": "6431eb07-3816-4ada-9bf5-3a78d31f41eb",
+                "resourceVersion": "1785",
+                "creationTimestamp": "2022-12-06T08:26:36Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{linkerd-proxy}"
+            },
+            "reason": "Started",
+            "message": "Started container linkerd-proxy",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:26:36Z",
+            "lastTimestamp": "2022-12-06T08:26:36Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d93000325f",
+                "namespace": "linkerd",
+                "uid": "bd8732dc-3a1e-4c13-a87a-a1ecb6ed062a",
+                "resourceVersion": "1853",
+                "creationTimestamp": "2022-12-06T08:27:06Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{proxy-injector}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"cr.l5d.io/linkerd/controller:stable-2.12.2\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:06Z",
+            "lastTimestamp": "2022-12-06T08:27:06Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d9848300dc",
+                "namespace": "linkerd",
+                "uid": "45e491ba-afca-4986-abb1-c1a240174209",
+                "resourceVersion": "1858",
+                "creationTimestamp": "2022-12-06T08:27:07Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{proxy-injector}"
+            },
+            "reason": "Created",
+            "message": "Created container proxy-injector",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:07Z",
+            "lastTimestamp": "2022-12-06T08:27:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d98f151a49",
+                "namespace": "linkerd",
+                "uid": "1e3aca2f-c9c2-4500-81c0-6d7430443097",
+                "resourceVersion": "1860",
+                "creationTimestamp": "2022-12-06T08:27:07Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{proxy-injector}"
+            },
+            "reason": "Started",
+            "message": "Started container proxy-injector",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:07Z",
+            "lastTimestamp": "2022-12-06T08:27:07Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d9c5e2ef43",
+                "namespace": "linkerd",
+                "uid": "155e834c-0422-4e14-8e86-10d2c2292d74",
+                "resourceVersion": "1934",
+                "creationTimestamp": "2022-12-06T08:27:08Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{proxy-injector}"
+            },
+            "reason": "Unhealthy",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 502",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:08Z",
+            "lastTimestamp": "2022-12-06T08:27:30Z",
+            "count": 4,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26dc7d008a7f",
+                "namespace": "linkerd",
+                "uid": "c8b3909e-0db3-4ae2-ba8f-c8c66343e451",
+                "resourceVersion": "1933",
+                "creationTimestamp": "2022-12-06T08:27:20Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559-dgmq9",
+                "uid": "d2765e85-e91e-4a84-a8f9-cd067b93aa5e",
+                "apiVersion": "v1",
+                "resourceVersion": "1663",
+                "fieldPath": "spec.containers{proxy-injector}"
+            },
+            "reason": "Unhealthy",
+            "message": "Liveness probe failed: HTTP probe failed with statuscode: 502",
+            "source": {
+                "component": "kubelet",
+                "host": "kind-1-worker"
+            },
+            "firstTimestamp": "2022-12-06T08:27:20Z",
+            "lastTimestamp": "2022-12-06T08:27:30Z",
+            "count": 2,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector-5f8cc9d559.172e26c9dbe74bf2",
+                "namespace": "linkerd",
+                "uid": "82251fe6-e5f3-4a00-9bea-90633b4a634d",
+                "resourceVersion": "1664",
+                "creationTimestamp": "2022-12-06T08:26:00Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector-5f8cc9d559",
+                "uid": "326af52d-e6d9-48f8-90d7-63969283aae1",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1657"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: linkerd-proxy-injector-5f8cc9d559-dgmq9",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:26:00Z",
+            "lastTimestamp": "2022-12-06T08:26:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector.172e26c9d55f0bcb",
+                "namespace": "linkerd",
+                "uid": "6eabf7ee-76f6-4e55-979b-d9b9d7c0e2f4",
+                "resourceVersion": "1659",
+                "creationTimestamp": "2022-12-06T08:26:00Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector",
+                "uid": "ce0fcf4f-1ef6-47e9-a401-40b460af6af6",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "1656"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set linkerd-proxy-injector-5f8cc9d559 to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2022-12-06T08:26:00Z",
+            "lastTimestamp": "2022-12-06T08:26:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector.172e26d926ddca24",
+                "namespace": "linkerd",
+                "uid": "275b8600-0853-4f05-bd0c-024d1c1c73b8",
+                "resourceVersion": "1851",
+                "creationTimestamp": "2022-12-06T08:27:05Z"
+            },
+            "involvedObject": {
+                "kind": "ServiceAccount",
+                "namespace": "linkerd",
+                "name": "linkerd-proxy-injector",
+                "apiVersion": "v1"
+            },
+            "reason": "IssuedLeafCertificate",
+            "message": "issued certificate for linkerd-proxy-injector.linkerd.serviceaccount.identity.linkerd.cluster.local until 2022-12-07 08:27:25 +0000 UTC: 5e67edb79c7bc36b492a7ab69ea4e1145e9c98a6d0d1dc91473a91c45c18dc01",
+            "source": {
+                "component": "linkerd-identity"
+            },
+            "firstTimestamp": "2022-12-06T08:27:05Z",
+            "lastTimestamp": "2022-12-06T08:27:05Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

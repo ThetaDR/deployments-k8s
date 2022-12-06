@@ -1,0 +1,354 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "5316"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "linkerd-dst",
+                "namespace": "linkerd",
+                "uid": "ad2dd4ad-ca29-4366-8f4e-753c48f0668d",
+                "resourceVersion": "1610",
+                "creationTimestamp": "2022-12-06T08:25:58Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "destination",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"destination\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-dst\",\"namespace\":\"linkerd\"},\"spec\":{\"ports\":[{\"name\":\"grpc\",\"port\":8086,\"targetPort\":8086}],\"selector\":{\"linkerd.io/control-plane-component\":\"destination\"},\"type\":\"ClusterIP\"}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "grpc",
+                        "protocol": "TCP",
+                        "port": 8086,
+                        "targetPort": 8086
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "destination"
+                },
+                "clusterIP": "10.96.221.145",
+                "clusterIPs": [
+                    "10.96.221.145"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-dst-headless",
+                "namespace": "linkerd",
+                "uid": "e8b0a98a-4a8b-4322-ad05-548b6d7f8f3e",
+                "resourceVersion": "1616",
+                "creationTimestamp": "2022-12-06T08:25:58Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "destination",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"destination\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-dst-headless\",\"namespace\":\"linkerd\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"grpc\",\"port\":8086,\"targetPort\":8086}],\"selector\":{\"linkerd.io/control-plane-component\":\"destination\"}}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "grpc",
+                        "protocol": "TCP",
+                        "port": 8086,
+                        "targetPort": 8086
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "destination"
+                },
+                "clusterIP": "None",
+                "clusterIPs": [
+                    "None"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity",
+                "namespace": "linkerd",
+                "uid": "d4e78bcc-4e92-4b63-b59e-c7182cb3e5c3",
+                "resourceVersion": "1593",
+                "creationTimestamp": "2022-12-06T08:25:57Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "identity",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"identity\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-identity\",\"namespace\":\"linkerd\"},\"spec\":{\"ports\":[{\"name\":\"grpc\",\"port\":8080,\"targetPort\":8080}],\"selector\":{\"linkerd.io/control-plane-component\":\"identity\"},\"type\":\"ClusterIP\"}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "grpc",
+                        "protocol": "TCP",
+                        "port": 8080,
+                        "targetPort": 8080
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "identity"
+                },
+                "clusterIP": "10.96.1.86",
+                "clusterIPs": [
+                    "10.96.1.86"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-identity-headless",
+                "namespace": "linkerd",
+                "uid": "7207e0e8-a9a6-4203-92b6-c1912ae0ad46",
+                "resourceVersion": "1596",
+                "creationTimestamp": "2022-12-06T08:25:58Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "identity",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"identity\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-identity-headless\",\"namespace\":\"linkerd\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"grpc\",\"port\":8080,\"targetPort\":8080}],\"selector\":{\"linkerd.io/control-plane-component\":\"identity\"}}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "grpc",
+                        "protocol": "TCP",
+                        "port": 8080,
+                        "targetPort": 8080
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "identity"
+                },
+                "clusterIP": "None",
+                "clusterIPs": [
+                    "None"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-policy",
+                "namespace": "linkerd",
+                "uid": "a49a68a9-1bd1-48ed-9dfd-9341c483acfa",
+                "resourceVersion": "1627",
+                "creationTimestamp": "2022-12-06T08:25:58Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "destination",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"destination\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-policy\",\"namespace\":\"linkerd\"},\"spec\":{\"clusterIP\":\"None\",\"ports\":[{\"name\":\"grpc\",\"port\":8090,\"targetPort\":8090}],\"selector\":{\"linkerd.io/control-plane-component\":\"destination\"}}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "grpc",
+                        "protocol": "TCP",
+                        "port": 8090,
+                        "targetPort": 8090
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "destination"
+                },
+                "clusterIP": "None",
+                "clusterIPs": [
+                    "None"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-policy-validator",
+                "namespace": "linkerd",
+                "uid": "9f0c6e01-f95e-464c-b505-152c62859c92",
+                "resourceVersion": "1634",
+                "creationTimestamp": "2022-12-06T08:25:59Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "destination",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"destination\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-policy-validator\",\"namespace\":\"linkerd\"},\"spec\":{\"ports\":[{\"name\":\"policy-https\",\"port\":443,\"targetPort\":\"policy-https\"}],\"selector\":{\"linkerd.io/control-plane-component\":\"destination\"},\"type\":\"ClusterIP\"}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "policy-https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": "policy-https"
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "destination"
+                },
+                "clusterIP": "10.96.43.161",
+                "clusterIPs": [
+                    "10.96.43.161"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-proxy-injector",
+                "namespace": "linkerd",
+                "uid": "a88d0d69-605c-4eaa-bcbb-c452e0573d07",
+                "resourceVersion": "1670",
+                "creationTimestamp": "2022-12-06T08:26:00Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "proxy-injector",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "config.linkerd.io/opaque-ports": "443",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"config.linkerd.io/opaque-ports\":\"443\",\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"proxy-injector\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-proxy-injector\",\"namespace\":\"linkerd\"},\"spec\":{\"ports\":[{\"name\":\"proxy-injector\",\"port\":443,\"targetPort\":\"proxy-injector\"}],\"selector\":{\"linkerd.io/control-plane-component\":\"proxy-injector\"},\"type\":\"ClusterIP\"}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "proxy-injector",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": "proxy-injector"
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "proxy-injector"
+                },
+                "clusterIP": "10.96.220.60",
+                "clusterIPs": [
+                    "10.96.220.60"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "linkerd-sp-validator",
+                "namespace": "linkerd",
+                "uid": "64bbbeaa-4112-402f-8d00-d41da1c42c44",
+                "resourceVersion": "1623",
+                "creationTimestamp": "2022-12-06T08:25:58Z",
+                "labels": {
+                    "linkerd.io/control-plane-component": "destination",
+                    "linkerd.io/control-plane-ns": "linkerd"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"linkerd.io/created-by\":\"linkerd/cli stable-2.12.2\"},\"labels\":{\"linkerd.io/control-plane-component\":\"destination\",\"linkerd.io/control-plane-ns\":\"linkerd\"},\"name\":\"linkerd-sp-validator\",\"namespace\":\"linkerd\"},\"spec\":{\"ports\":[{\"name\":\"sp-validator\",\"port\":443,\"targetPort\":\"sp-validator\"}],\"selector\":{\"linkerd.io/control-plane-component\":\"destination\"},\"type\":\"ClusterIP\"}}\n",
+                    "linkerd.io/created-by": "linkerd/cli stable-2.12.2"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "sp-validator",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": "sp-validator"
+                    }
+                ],
+                "selector": {
+                    "linkerd.io/control-plane-component": "destination"
+                },
+                "clusterIP": "10.96.113.71",
+                "clusterIPs": [
+                    "10.96.113.71"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

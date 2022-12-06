@@ -1,0 +1,834 @@
+==== START logs for container etcd of pod kube-system/etcd-kind-1-control-plane ====
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2022-12-06 08:16:23.275687 I | etcdmain: etcd Version: 3.4.13
+2022-12-06 08:16:23.275886 I | etcdmain: Git SHA: ae9734ed2
+2022-12-06 08:16:23.275891 I | etcdmain: Go Version: go1.12.17
+2022-12-06 08:16:23.275895 I | etcdmain: Go OS/Arch: linux/amd64
+2022-12-06 08:16:23.275900 I | etcdmain: setting maximum number of CPUs to 4, total number of available CPUs is 4
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2022-12-06 08:16:23.276038 I | embed: peerTLS: cert = /etc/kubernetes/pki/etcd/peer.crt, key = /etc/kubernetes/pki/etcd/peer.key, trusted-ca = /etc/kubernetes/pki/etcd/ca.crt, client-cert-auth = true, crl-file = 
+2022-12-06 08:16:23.277003 I | embed: name = kind-1-control-plane
+2022-12-06 08:16:23.277023 I | embed: data dir = /var/lib/etcd
+2022-12-06 08:16:23.277028 I | embed: member dir = /var/lib/etcd/member
+2022-12-06 08:16:23.277033 I | embed: heartbeat = 100ms
+2022-12-06 08:16:23.277038 I | embed: election = 1000ms
+2022-12-06 08:16:23.277043 I | embed: snapshot count = 10000
+2022-12-06 08:16:23.277057 I | embed: advertise client URLs = https://172.19.0.2:2379
+2022-12-06 08:16:23.385925 I | etcdserver: starting member d7380397c3ec4b90 in cluster 17d3753d35ddbc03
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 switched to configuration voters=()
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 became follower at term 0
+raft2022/12/06 08:16:23 INFO: newRaft d7380397c3ec4b90 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 became follower at term 1
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 switched to configuration voters=(15508149267212290960)
+2022-12-06 08:16:23.438592 W | auth: simple token is not cryptographically signed
+2022-12-06 08:16:23.489482 I | etcdserver: starting server... [version: 3.4.13, cluster version: to_be_decided]
+2022-12-06 08:16:23.490130 I | etcdserver: d7380397c3ec4b90 as single-node; fast-forwarding 9 ticks (election ticks 10)
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 switched to configuration voters=(15508149267212290960)
+2022-12-06 08:16:23.491062 I | etcdserver/membership: added member d7380397c3ec4b90 [https://172.19.0.2:2380] to cluster 17d3753d35ddbc03
+2022-12-06 08:16:23.493905 I | embed: ClientTLS: cert = /etc/kubernetes/pki/etcd/server.crt, key = /etc/kubernetes/pki/etcd/server.key, trusted-ca = /etc/kubernetes/pki/etcd/ca.crt, client-cert-auth = true, crl-file = 
+2022-12-06 08:16:23.494065 I | embed: listening for peers on 172.19.0.2:2380
+2022-12-06 08:16:23.494338 I | embed: listening for metrics on http://127.0.0.1:2381
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 is starting a new election at term 1
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 became candidate at term 2
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 received MsgVoteResp from d7380397c3ec4b90 at term 2
+raft2022/12/06 08:16:23 INFO: d7380397c3ec4b90 became leader at term 2
+raft2022/12/06 08:16:23 INFO: raft.node: d7380397c3ec4b90 elected leader d7380397c3ec4b90 at term 2
+2022-12-06 08:16:23.888405 I | etcdserver: setting up the initial cluster version to 3.4
+2022-12-06 08:16:23.910810 N | etcdserver/membership: set the initial cluster version to 3.4
+2022-12-06 08:16:23.910942 I | etcdserver: published {Name:kind-1-control-plane ClientURLs:[https://172.19.0.2:2379]} to cluster 17d3753d35ddbc03
+2022-12-06 08:16:23.910964 I | etcdserver/api: enabled capabilities for version 3.4
+2022-12-06 08:16:23.911047 I | embed: ready to serve client requests
+2022-12-06 08:16:23.911349 I | embed: ready to serve client requests
+2022-12-06 08:16:23.916343 I | embed: serving client requests on 172.19.0.2:2379
+2022-12-06 08:16:23.916951 I | embed: serving client requests on 127.0.0.1:2379
+2022-12-06 08:16:28.721963 W | etcdserver: read-only range request "key:\"/registry/csinodes/kind-1-control-plane\" " with result "range_response_count:0 size:4" took too long (147.263604ms) to execute
+2022-12-06 08:16:28.722351 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:0 size:4" took too long (141.205404ms) to execute
+2022-12-06 08:16:28.724665 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:4" took too long (122.225302ms) to execute
+2022-12-06 08:16:28.728041 W | etcdserver: read-only range request "key:\"/registry/services/specs/\" range_end:\"/registry/services/specs0\" " with result "range_response_count:0 size:4" took too long (125.082094ms) to execute
+2022-12-06 08:16:28.938646 W | etcdserver: read-only range request "key:\"/registry/ranges/serviceips\" " with result "range_response_count:1 size:114" took too long (163.352313ms) to execute
+2022-12-06 08:16:28.938899 W | etcdserver: read-only range request "key:\"/registry/ranges/servicenodeports\" " with result "range_response_count:1 size:119" took too long (158.847815ms) to execute
+2022-12-06 08:16:28.939269 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:4" took too long (163.826038ms) to execute
+2022-12-06 08:16:28.941103 W | etcdserver: read-only range request "key:\"/registry/configmaps/kube-system/extension-apiserver-authentication\" " with result "range_response_count:0 size:4" took too long (128.689568ms) to execute
+2022-12-06 08:16:29.147939 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:4" took too long (100.00804ms) to execute
+2022-12-06 08:16:32.979779 W | etcdserver: read-only range request "key:\"/registry/rolebindings/kube-system/system::leader-locking-kube-scheduler\" " with result "range_response_count:0 size:5" took too long (131.94866ms) to execute
+2022-12-06 08:16:32.979841 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (132.78054ms) to execute
+2022-12-06 08:16:32.980041 W | etcdserver: read-only range request "key:\"/registry/events/default/kind-1-control-plane.172e2640a2ff3f06\" " with result "range_response_count:0 size:5" took too long (120.350002ms) to execute
+2022-12-06 08:16:35.005703 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/horizontal-pod-autoscaler\" " with result "range_response_count:1 size:218" took too long (101.05733ms) to execute
+2022-12-06 08:16:35.006550 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/horizontal-pod-autoscaler\" " with result "range_response_count:1 size:218" took too long (100.389746ms) to execute
+2022-12-06 08:16:35.204863 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:1 size:351" took too long (111.995502ms) to execute
+2022-12-06 08:16:35.429788 W | etcdserver: request "header:<ID:5444998075047566783 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/default/kind-1-control-plane.172e2640a2ff177f\" mod_revision:231 > success:<request_put:<key:\"/registry/events/default/kind-1-control-plane.172e2640a2ff177f\" value_size:602 lease:5444998075047566703 >> failure:<request_range:<key:\"/registry/events/default/kind-1-control-plane.172e2640a2ff177f\" > >>" with result "size:16" took too long (110.153185ms) to execute
+2022-12-06 08:16:35.429980 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/certificate-controller\" " with result "range_response_count:1 size:263" took too long (117.836759ms) to execute
+2022-12-06 08:16:35.430180 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/job-controller\" " with result "range_response_count:1 size:195" took too long (117.966616ms) to execute
+2022-12-06 08:16:37.271256 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/ttl-controller\" " with result "range_response_count:1 size:195" took too long (106.091048ms) to execute
+2022-12-06 08:16:37.271419 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/persistent-volume-binder\" " with result "range_response_count:0 size:5" took too long (105.651866ms) to execute
+2022-12-06 08:16:37.543264 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/root-ca-cert-publisher\" " with result "range_response_count:0 size:5" took too long (254.919696ms) to execute
+2022-12-06 08:16:37.543724 W | etcdserver: request "header:<ID:5444998075047566916 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/serviceaccounts/kube-system/ttl-controller\" mod_revision:325 > success:<request_put:<key:\"/registry/serviceaccounts/kube-system/ttl-controller\" value_size:164 >> failure:<request_range:<key:\"/registry/serviceaccounts/kube-system/ttl-controller\" > >>" with result "size:16" took too long (122.613859ms) to execute
+2022-12-06 08:16:37.763117 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/generic-garbage-collector\" " with result "range_response_count:0 size:5" took too long (161.169937ms) to execute
+2022-12-06 08:16:38.004727 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/generic-garbage-collector\" " with result "range_response_count:1 size:218" took too long (141.931484ms) to execute
+2022-12-06 08:16:38.004851 W | etcdserver: request "header:<ID:5444998075047566939 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/secrets/kube-system/generic-garbage-collector-token-gtzcr\" mod_revision:0 > success:<request_put:<key:\"/registry/secrets/kube-system/generic-garbage-collector-token-gtzcr\" value_size:2681 >> failure:<>>" with result "size:16" took too long (139.031197ms) to execute
+2022-12-06 08:16:38.005150 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:1 size:351" took too long (138.535176ms) to execute
+2022-12-06 08:16:38.430030 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/pv-protection-controller\" " with result "range_response_count:1 size:216" took too long (116.138754ms) to execute
+2022-12-06 08:16:38.596036 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/pod-garbage-collector\" " with result "range_response_count:1 size:210" took too long (120.310925ms) to execute
+2022-12-06 08:16:38.804845 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:1 size:351" took too long (115.18804ms) to execute
+2022-12-06 08:16:49.095849 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-node-lease/default\" " with result "range_response_count:1 size:189" took too long (113.647396ms) to execute
+2022-12-06 08:16:49.095920 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/ttl-controller\" " with result "range_response_count:1 size:239" took too long (113.168012ms) to execute
+2022-12-06 08:16:49.109937 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/certificate-controller\" " with result "range_response_count:1 size:263" took too long (113.283615ms) to execute
+2022-12-06 08:16:49.114303 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/daemon-set-controller\" " with result "range_response_count:1 size:260" took too long (107.477072ms) to execute
+2022-12-06 08:16:49.117705 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/endpoint-controller\" " with result "range_response_count:1 size:254" took too long (115.664998ms) to execute
+2022-12-06 08:16:49.118673 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/clusterrole-aggregation-controller\" " with result "range_response_count:1 size:299" took too long (119.803762ms) to execute
+2022-12-06 08:16:49.128707 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/default/default\" " with result "range_response_count:1 size:173" took too long (132.029327ms) to execute
+2022-12-06 08:16:49.130088 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/deployment-controller\" " with result "range_response_count:1 size:260" took too long (107.196418ms) to execute
+2022-12-06 08:16:49.287528 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/deployment-controller\" " with result "range_response_count:1 size:260" took too long (137.812456ms) to execute
+2022-12-06 08:16:49.287716 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/kube-controller-manager-kind-1-control-plane\" " with result "range_response_count:1 size:6966" took too long (107.808003ms) to execute
+2022-12-06 08:16:49.479563 W | etcdserver: read-only range request "key:\"/registry/clusterroles/admin\" " with result "range_response_count:1 size:2119" took too long (126.524874ms) to execute
+2022-12-06 08:16:49.680849 W | etcdserver: read-only range request "key:\"/registry/replicasets/kube-system/coredns-558bd4d5db\" " with result "range_response_count:1 size:3686" took too long (100.270707ms) to execute
+2022-12-06 08:16:49.681858 W | etcdserver: read-only range request "key:\"/registry/replicasets/local-path-storage/local-path-provisioner-547f784dff\" " with result "range_response_count:1 size:2830" took too long (101.275496ms) to execute
+2022-12-06 08:16:52.073634 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:16:55.066156 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:16:55.395684 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/kube-scheduler-kind-1-control-plane\" " with result "range_response_count:1 size:4206" took too long (123.642832ms) to execute
+2022-12-06 08:16:56.917248 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (190.737543ms) to execute
+2022-12-06 08:16:56.917523 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (322.234432ms) to execute
+2022-12-06 08:16:57.372645 W | etcdserver: request "header:<ID:5444998075047567246 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:389 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:566 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (157.200282ms) to execute
+2022-12-06 08:16:57.963046 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (236.732779ms) to execute
+2022-12-06 08:16:57.963381 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (691.797218ms) to execute
+2022-12-06 08:16:57.963656 W | etcdserver: read-only range request "key:\"/registry/minions/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (564.215621ms) to execute
+2022-12-06 08:16:58.553836 W | etcdserver: read-only range request "key:\"/registry/minions/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (151.46159ms) to execute
+2022-12-06 08:16:59.170323 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (235.755339ms) to execute
+2022-12-06 08:16:59.170692 W | etcdserver: read-only range request "key:\"/registry/minions/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (270.661012ms) to execute
+2022-12-06 08:16:59.170890 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (332.017531ms) to execute
+2022-12-06 08:17:00.045297 W | etcdserver: read-only range request "key:\"/registry/minions/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (644.007159ms) to execute
+2022-12-06 08:17:00.045812 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (318.192165ms) to execute
+2022-12-06 08:17:00.046083 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (186.220336ms) to execute
+2022-12-06 08:17:00.512643 W | etcdserver: read-only range request "key:\"/registry/minions/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (109.474322ms) to execute
+2022-12-06 08:17:03.271050 W | etcdserver: read-only range request "key:\"/registry/events/default/kind-1-worker.172e264ccc6357a5\" " with result "range_response_count:1 size:655" took too long (107.962936ms) to execute
+2022-12-06 08:17:03.271482 W | etcdserver: read-only range request "key:\"/registry/csinodes/kind-1-worker\" " with result "range_response_count:0 size:5" took too long (102.20264ms) to execute
+2022-12-06 08:17:03.271998 W | etcdserver: read-only range request "key:\"/registry/resourcequotas/kube-system/\" range_end:\"/registry/resourcequotas/kube-system0\" " with result "range_response_count:0 size:5" took too long (102.578813ms) to execute
+2022-12-06 08:17:03.453797 W | etcdserver: read-only range request "key:\"/registry/masterleases/172.19.0.2\" " with result "range_response_count:1 size:129" took too long (132.73513ms) to execute
+2022-12-06 08:17:03.466735 W | etcdserver: read-only range request "key:\"/registry/daemonsets/kube-system/kube-proxy\" " with result "range_response_count:1 size:3015" took too long (103.229981ms) to execute
+2022-12-06 08:17:05.066409 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:17:08.029145 W | etcdserver: request "header:<ID:5444998075047567375 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:560 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:443 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (331.106326ms) to execute
+2022-12-06 08:17:08.117147 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (390.464709ms) to execute
+2022-12-06 08:17:08.724210 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (608.165867ms) to execute
+2022-12-06 08:17:08.724616 W | etcdserver: request "header:<ID:5444998075047567380 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/kube-system/coredns-558bd4d5db-pgfxq.172e264df84beb0f\" mod_revision:0 > success:<request_put:<key:\"/registry/events/kube-system/coredns-558bd4d5db-pgfxq.172e264df84beb0f\" value_size:692 lease:5444998075047566703 >> failure:<>>" with result "size:16" took too long (293.655996ms) to execute
+2022-12-06 08:17:08.724868 W | etcdserver: read-only range request "key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" " with result "range_response_count:1 size:2965" took too long (589.769812ms) to execute
+2022-12-06 08:17:08.725320 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/coredns\" " with result "range_response_count:1 size:217" took too long (446.167769ms) to execute
+2022-12-06 08:17:08.725560 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/coredns\" " with result "range_response_count:1 size:217" took too long (446.410103ms) to execute
+2022-12-06 08:17:08.726159 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/local-path-storage/local-path-provisioner-service-account\" " with result "range_response_count:1 size:879" took too long (447.089473ms) to execute
+2022-12-06 08:17:09.254775 W | etcdserver: read-only range request "key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" " with result "range_response_count:1 size:3891" took too long (524.491566ms) to execute
+2022-12-06 08:17:09.255139 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" " with result "range_response_count:1 size:3825" took too long (524.749181ms) to execute
+2022-12-06 08:17:09.255437 W | etcdserver: request "header:<ID:5444998075047567388 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/kube-system/coredns-558bd4d5db-6wd9d.172e264df8b11b46\" mod_revision:0 > success:<request_put:<key:\"/registry/events/kube-system/coredns-558bd4d5db-6wd9d.172e264df8b11b46\" value_size:692 lease:5444998075047566703 >> failure:<>>" with result "size:16" took too long (222.725008ms) to execute
+2022-12-06 08:17:09.255701 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-6wd9d\" " with result "range_response_count:1 size:3825" took too long (446.536466ms) to execute
+2022-12-06 08:17:09.833050 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (105.223193ms) to execute
+2022-12-06 08:17:09.833126 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" " with result "range_response_count:1 size:3825" took too long (548.246903ms) to execute
+2022-12-06 08:17:10.613727 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (568.923639ms) to execute
+2022-12-06 08:17:10.613917 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (751.282671ms) to execute
+2022-12-06 08:17:11.227287 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (415.85151ms) to execute
+2022-12-06 08:17:11.227452 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (500.7179ms) to execute
+2022-12-06 08:17:13.062438 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (335.715268ms) to execute
+2022-12-06 08:17:13.063368 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6307" took too long (284.591022ms) to execute
+2022-12-06 08:17:13.506104 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (259.579618ms) to execute
+2022-12-06 08:17:13.583437 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (314.262892ms) to execute
+2022-12-06 08:17:13.880554 W | etcdserver: read-only range request "key:\"/registry/services/specs/default/kubernetes\" " with result "range_response_count:1 size:665" took too long (291.29226ms) to execute
+2022-12-06 08:17:13.880842 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (159.526724ms) to execute
+2022-12-06 08:17:15.050327 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (323.498399ms) to execute
+2022-12-06 08:17:15.067071 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:17:15.836009 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (110.202718ms) to execute
+2022-12-06 08:17:18.860676 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (106.70599ms) to execute
+2022-12-06 08:17:18.860948 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (140.825437ms) to execute
+2022-12-06 08:17:19.294674 W | etcdserver: request "header:<ID:5444998075047567444 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/minions/kind-1-worker\" mod_revision:582 > success:<request_put:<key:\"/registry/minions/kind-1-worker\" value_size:3158 >> failure:<request_range:<key:\"/registry/minions/kind-1-worker\" > >>" with result "size:16" took too long (235.649548ms) to execute
+2022-12-06 08:17:20.108046 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (249.373329ms) to execute
+2022-12-06 08:17:21.897738 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (168.067103ms) to execute
+2022-12-06 08:17:21.898027 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (137.451605ms) to execute
+2022-12-06 08:17:23.527847 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6546" took too long (436.460287ms) to execute
+2022-12-06 08:17:23.528024 W | etcdserver: request "header:<ID:5444998075047567458 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:581 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:545 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (189.167651ms) to execute
+2022-12-06 08:17:23.528315 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (258.586301ms) to execute
+2022-12-06 08:17:24.001277 W | etcdserver: request "header:<ID:5444998075047567465 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:585 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047567463 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (366.647621ms) to execute
+2022-12-06 08:17:24.001816 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (275.286078ms) to execute
+2022-12-06 08:17:25.323246 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:17:25.835747 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (110.501223ms) to execute
+2022-12-06 08:17:27.719018 W | etcdserver: read-only range request "key:\"/registry/services/specs/\" range_end:\"/registry/services/specs0\" count_only:true " with result "range_response_count:0 size:7" took too long (658.803999ms) to execute
+2022-12-06 08:17:27.719191 W | etcdserver: request "header:<ID:5444998075047567483 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:590 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:567 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (148.13919ms) to execute
+2022-12-06 08:17:28.544104 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (496.317288ms) to execute
+2022-12-06 08:17:29.512916 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (785.02936ms) to execute
+2022-12-06 08:17:29.513049 W | etcdserver: request "header:<ID:5444998075047567488 > lease_revoke:<id:4b9084e681e5603b>" with result "size:28" took too long (381.168723ms) to execute
+2022-12-06 08:17:29.514097 W | etcdserver: read-only range request "key:\"/registry/validatingwebhookconfigurations/\" range_end:\"/registry/validatingwebhookconfigurations0\" count_only:true " with result "range_response_count:0 size:5" took too long (602.451745ms) to execute
+2022-12-06 08:17:29.514784 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:1 size:351" took too long (311.769304ms) to execute
+2022-12-06 08:17:29.514929 W | etcdserver: read-only range request "key:\"/registry/statefulsets/\" range_end:\"/registry/statefulsets0\" count_only:true " with result "range_response_count:0 size:5" took too long (192.799048ms) to execute
+2022-12-06 08:17:29.515700 W | etcdserver: read-only range request "key:\"/registry/runtimeclasses/\" range_end:\"/registry/runtimeclasses0\" count_only:true " with result "range_response_count:0 size:5" took too long (209.68322ms) to execute
+2022-12-06 08:17:29.515785 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (518.697264ms) to execute
+2022-12-06 08:17:30.539445 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (812.599877ms) to execute
+2022-12-06 08:17:30.539684 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (682.013411ms) to execute
+2022-12-06 08:17:30.539892 W | etcdserver: read-only range request "key:\"/registry/prioritylevelconfigurations/exempt\" " with result "range_response_count:1 size:371" took too long (1.006988823s) to execute
+2022-12-06 08:17:31.593951 W | etcdserver: read-only range request "key:\"/registry/rolebindings/\" range_end:\"/registry/rolebindings0\" count_only:true " with result "range_response_count:0 size:7" took too long (903.166693ms) to execute
+2022-12-06 08:17:31.594849 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (868.016817ms) to execute
+2022-12-06 08:17:32.621667 W | etcdserver: read-only range request "key:\"/registry/validatingwebhookconfigurations/\" range_end:\"/registry/validatingwebhookconfigurations0\" count_only:true " with result "range_response_count:0 size:5" took too long (142.250695ms) to execute
+2022-12-06 08:17:32.621749 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (894.820395ms) to execute
+2022-12-06 08:17:32.999899 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (272.789465ms) to execute
+2022-12-06 08:17:34.147705 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6546" took too long (576.730821ms) to execute
+2022-12-06 08:17:34.393583 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (241.729536ms) to execute
+2022-12-06 08:17:34.394005 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (777.478959ms) to execute
+2022-12-06 08:17:34.394284 W | etcdserver: read-only range request "key:\"/registry/clusterroles/\" range_end:\"/registry/clusterroles0\" count_only:true " with result "range_response_count:0 size:7" took too long (559.76788ms) to execute
+2022-12-06 08:17:34.394571 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (667.094905ms) to execute
+2022-12-06 08:17:34.394668 W | etcdserver: read-only range request "key:\"/registry/mutatingwebhookconfigurations/\" range_end:\"/registry/mutatingwebhookconfigurations0\" count_only:true " with result "range_response_count:0 size:5" took too long (816.120573ms) to execute
+2022-12-06 08:17:35.010488 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (283.597331ms) to execute
+2022-12-06 08:17:35.010856 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (365.215893ms) to execute
+2022-12-06 08:17:35.183847 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:17:37.139024 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (412.857359ms) to execute
+2022-12-06 08:17:37.139793 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (105.675441ms) to execute
+2022-12-06 08:17:39.480912 W | etcdserver: read-only range request "key:\"/registry/apiextensions.k8s.io/customresourcedefinitions/\" range_end:\"/registry/apiextensions.k8s.io/customresourcedefinitions0\" count_only:true " with result "range_response_count:0 size:5" took too long (105.527014ms) to execute
+2022-12-06 08:17:39.728013 W | etcdserver: read-only range request "key:\"/registry/horizontalpodautoscalers/\" range_end:\"/registry/horizontalpodautoscalers0\" count_only:true " with result "range_response_count:0 size:5" took too long (111.707515ms) to execute
+2022-12-06 08:17:39.985329 W | etcdserver: request "header:<ID:5444998075047567559 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/kube-system/coredns-558bd4d5db-pgfxq.172e2655575eb1ba\" mod_revision:0 > success:<request_put:<key:\"/registry/events/kube-system/coredns-558bd4d5db-pgfxq.172e2655575eb1ba\" value_size:689 lease:5444998075047567545 >> failure:<>>" with result "size:16" took too long (108.101792ms) to execute
+2022-12-06 08:17:39.985842 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:0 size:5" took too long (183.500967ms) to execute
+2022-12-06 08:17:39.986283 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (122.941383ms) to execute
+2022-12-06 08:17:41.274601 W | etcdserver: request "header:<ID:5444998075047567575 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/kube-system/kube-proxy-cbqh5\" mod_revision:555 > success:<request_put:<key:\"/registry/pods/kube-system/kube-proxy-cbqh5\" value_size:4535 >> failure:<request_range:<key:\"/registry/pods/kube-system/kube-proxy-cbqh5\" > >>" with result "size:16" took too long (879.483417ms) to execute
+2022-12-06 08:17:41.275068 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" " with result "range_response_count:1 size:4691" took too long (982.941112ms) to execute
+2022-12-06 08:17:41.275340 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (799.683209ms) to execute
+2022-12-06 08:17:41.275895 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (548.9685ms) to execute
+2022-12-06 08:17:42.416365 W | etcdserver: request "header:<ID:5444998075047567580 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-scheduler\" mod_revision:620 > success:<request_put:<key:\"/registry/leases/kube-system/kube-scheduler\" value_size:425 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-scheduler\" > >>" with result "size:16" took too long (733.340506ms) to execute
+2022-12-06 08:17:42.419978 W | etcdserver: read-only range request "key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" " with result "range_response_count:1 size:3891" took too long (1.109644488s) to execute
+2022-12-06 08:17:42.420430 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" count_only:true " with result "range_response_count:0 size:7" took too long (572.196956ms) to execute
+2022-12-06 08:17:42.421417 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (693.088647ms) to execute
+2022-12-06 08:17:42.421914 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (197.522805ms) to execute
+2022-12-06 08:17:43.266783 W | etcdserver: request "header:<ID:5444998075047567588 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" mod_revision:573 > success:<request_put:<key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" value_size:3842 >> failure:<request_range:<key:\"/registry/pods/local-path-storage/local-path-provisioner-547f784dff-fr4h6\" > >>" with result "size:16" took too long (644.154795ms) to execute
+2022-12-06 08:17:43.267381 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (540.06086ms) to execute
+2022-12-06 08:17:43.918705 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" " with result "range_response_count:1 size:4946" took too long (624.599088ms) to execute
+2022-12-06 08:17:45.160116 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (1.434085102s) to execute
+2022-12-06 08:17:45.160200 W | etcdserver: read-only range request "key:\"/registry/services/specs/default/kubernetes\" " with result "range_response_count:1 size:665" took too long (1.865551081s) to execute
+2022-12-06 08:17:45.160498 W | etcdserver: request "header:<ID:5444998075047567596 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" mod_revision:637 > success:<request_put:<key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" value_size:4694 >> failure:<request_range:<key:\"/registry/pods/kube-system/coredns-558bd4d5db-pgfxq\" > >>" with result "size:16" took too long (718.110889ms) to execute
+2022-12-06 08:17:46.066580 W | etcdserver/api/etcdhttp: /health error; QGET failed etcdserver: request timed out (status code 503)
+2022-12-06 08:17:46.176663 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6429" took too long (2.007310399s) to execute
+2022-12-06 08:17:46.176777 W | etcdserver: request "header:<ID:5444998075047567600 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/minions/kind-1-worker\" mod_revision:648 > success:<request_put:<key:\"/registry/minions/kind-1-worker\" value_size:3032 >> failure:<request_range:<key:\"/registry/minions/kind-1-worker\" > >>" with result "size:3106" took too long (825.578214ms) to execute
+2022-12-06 08:17:46.178663 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (994.494675ms) to execute
+2022-12-06 08:17:46.181500 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (1.734404926s) to execute
+2022-12-06 08:17:46.182073 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-6wd9d\" " with result "range_response_count:1 size:4691" took too long (1.006894873s) to execute
+2022-12-06 08:17:46.182653 W | etcdserver: read-only range request "key:\"/registry/masterleases/172.19.0.2\" " with result "range_response_count:1 size:129" took too long (1.010891373s) to execute
+2022-12-06 08:17:46.182972 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (1.735673083s) to execute
+2022-12-06 08:17:46.183193 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (1.717055144s) to execute
+2022-12-06 08:17:47.084785 W | etcdserver: read-only range request "key:\"/registry/storageclasses/\" range_end:\"/registry/storageclasses0\" count_only:true " with result "range_response_count:0 size:7" took too long (1.424256683s) to execute
+2022-12-06 08:17:47.084949 W | etcdserver: request "header:<ID:5444998075047567609 username:\"kube-apiserver-etcd-client\" auth_revision:1 > lease_grant:<ttl:15-second id:4b9084e681e560f8>" with result "size:40" took too long (678.860188ms) to execute
+2022-12-06 08:17:48.219585 W | etcdserver: read-only range request "key:\"/registry/poddisruptionbudgets/\" range_end:\"/registry/poddisruptionbudgets0\" count_only:true " with result "range_response_count:0 size:5" took too long (2.023582406s) to execute
+2022-12-06 08:17:48.219825 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (2.001585039s) to execute
+2022-12-06 08:17:48.220396 W | etcdserver: request "header:<ID:5444998075047567617 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:611 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047567608 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (943.078174ms) to execute
+2022-12-06 08:17:48.223074 W | etcdserver: read-only range request "key:\"/registry/apiextensions.k8s.io/customresourcedefinitions/\" range_end:\"/registry/apiextensions.k8s.io/customresourcedefinitions0\" count_only:true " with result "range_response_count:0 size:5" took too long (1.120672612s) to execute
+2022-12-06 08:17:48.223480 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/coredns-558bd4d5db-6wd9d\" " with result "range_response_count:1 size:4946" took too long (1.106424488s) to execute
+2022-12-06 08:17:48.934943 W | etcdserver: request "header:<ID:5444998075047567624 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/kube-system/kube-apiserver-kind-1-control-plane.172e26574e83b178\" mod_revision:0 > success:<request_put:<key:\"/registry/events/kube-system/kube-apiserver-kind-1-control-plane.172e26574e83b178\" value_size:729 lease:5444998075047567545 >> failure:<>>" with result "size:16" took too long (420.879195ms) to execute
+2022-12-06 08:17:48.935968 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (683.199993ms) to execute
+2022-12-06 08:17:49.609774 W | etcdserver: request "header:<ID:5444998075047567626 > lease_revoke:<id:4b9084e681e5609b>" with result "size:28" took too long (286.427647ms) to execute
+2022-12-06 08:17:49.610854 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (1.353882678s) to execute
+2022-12-06 08:17:50.501275 W | etcdserver: read-only range request "key:\"/registry/persistentvolumes/\" range_end:\"/registry/persistentvolumes0\" count_only:true " with result "range_response_count:0 size:5" took too long (925.075732ms) to execute
+2022-12-06 08:17:50.501473 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (1.386932728s) to execute
+2022-12-06 08:17:50.502182 W | etcdserver: request "header:<ID:5444998075047567632 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/deployments/kube-system/coredns\" mod_revision:659 > success:<request_put:<key:\"/registry/deployments/kube-system/coredns\" value_size:3895 >> failure:<request_range:<key:\"/registry/deployments/kube-system/coredns\" > >>" with result "size:16" took too long (669.772592ms) to execute
+2022-12-06 08:17:50.502649 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (1.385485412s) to execute
+2022-12-06 08:17:50.502911 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (1.386125402s) to execute
+2022-12-06 08:17:50.503213 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/\" range_end:\"/registry/services/endpoints0\" count_only:true " with result "range_response_count:0 size:7" took too long (1.388641041s) to execute
+2022-12-06 08:17:50.504377 W | etcdserver: read-only range request "key:\"/registry/masterleases/\" range_end:\"/registry/masterleases0\" " with result "range_response_count:1 size:129" took too long (1.55470627s) to execute
+2022-12-06 08:17:50.871302 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (1.22192585s) to execute
+2022-12-06 08:17:50.872218 W | etcdserver: request "header:<ID:5444998075047567634 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:658 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:442 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (180.3562ms) to execute
+2022-12-06 08:17:50.877019 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (1.017888245s) to execute
+2022-12-06 08:17:50.880662 W | etcdserver: read-only range request "key:\"/registry/endpointslices/default/kubernetes\" " with result "range_response_count:1 size:477" took too long (359.387652ms) to execute
+2022-12-06 08:17:55.066722 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:05.079196 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:15.066931 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:17.958558 W | etcdserver: read-only range request "key:\"/registry/volumeattachments/\" range_end:\"/registry/volumeattachments0\" count_only:true " with result "range_response_count:0 size:5" took too long (667.078849ms) to execute
+2022-12-06 08:18:17.958885 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (539.988663ms) to execute
+2022-12-06 08:18:17.959264 W | etcdserver: read-only range request "key:\"/registry/cronjobs/\" range_end:\"/registry/cronjobs0\" count_only:true " with result "range_response_count:0 size:5" took too long (436.735087ms) to execute
+2022-12-06 08:18:17.959673 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (711.714195ms) to execute
+2022-12-06 08:18:17.959797 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (233.289181ms) to execute
+2022-12-06 08:18:18.996014 W | etcdserver: request "header:<ID:5444998075047567827 > lease_revoke:<id:4b9084e681e5616c>" with result "size:28" took too long (395.874428ms) to execute
+2022-12-06 08:18:18.996472 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (269.878003ms) to execute
+2022-12-06 08:18:18.996592 W | etcdserver: read-only range request "key:\"/registry/ingress/\" range_end:\"/registry/ingress0\" count_only:true " with result "range_response_count:0 size:5" took too long (152.597736ms) to execute
+2022-12-06 08:18:19.541163 W | etcdserver: read-only range request "key:\"/registry/ingressclasses/\" range_end:\"/registry/ingressclasses0\" count_only:true " with result "range_response_count:0 size:5" took too long (362.413408ms) to execute
+2022-12-06 08:18:19.541268 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:517" took too long (306.527116ms) to execute
+2022-12-06 08:18:20.266729 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (284.408732ms) to execute
+2022-12-06 08:18:20.267339 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (409.781775ms) to execute
+2022-12-06 08:18:20.267751 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (283.233244ms) to execute
+2022-12-06 08:18:20.268276 W | etcdserver: read-only range request "key:\"/registry/clusterrolebindings/\" range_end:\"/registry/clusterrolebindings0\" count_only:true " with result "range_response_count:0 size:7" took too long (512.161601ms) to execute
+2022-12-06 08:18:20.269087 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (537.322611ms) to execute
+2022-12-06 08:18:20.920599 W | etcdserver: request "header:<ID:5444998075047567837 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" mod_revision:721 > success:<request_put:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" value_size:550 >> failure:<request_range:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" > >>" with result "size:16" took too long (385.897213ms) to execute
+2022-12-06 08:18:20.921113 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (194.133287ms) to execute
+2022-12-06 08:18:20.921427 W | etcdserver: read-only range request "key:\"/registry/storageclasses/\" range_end:\"/registry/storageclasses0\" count_only:true " with result "range_response_count:0 size:7" took too long (259.889303ms) to execute
+2022-12-06 08:18:21.708387 W | etcdserver: read-only range request "key:\"/registry/podtemplates/\" range_end:\"/registry/podtemplates0\" count_only:true " with result "range_response_count:0 size:5" took too long (106.255337ms) to execute
+2022-12-06 08:18:23.891482 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (171.589335ms) to execute
+2022-12-06 08:18:23.891629 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (317.910126ms) to execute
+2022-12-06 08:18:23.891730 W | etcdserver: read-only range request "key:\"/registry/clusterroles/\" range_end:\"/registry/clusterroles0\" count_only:true " with result "range_response_count:0 size:7" took too long (107.349044ms) to execute
+2022-12-06 08:18:25.065689 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:35.066915 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:45.066418 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:55.067046 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:18:55.448197 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (143.407148ms) to execute
+2022-12-06 08:18:57.873011 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (146.398142ms) to execute
+2022-12-06 08:18:58.840019 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (275.156751ms) to execute
+2022-12-06 08:18:58.910666 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (184.100811ms) to execute
+2022-12-06 08:19:00.015904 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (290.593553ms) to execute
+2022-12-06 08:19:00.015982 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (161.12737ms) to execute
+2022-12-06 08:19:01.197958 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (148.433987ms) to execute
+2022-12-06 08:19:05.066159 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:13.551898 W | etcdserver: request "header:<ID:5444998075047568162 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:801 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047568160 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (125.610632ms) to execute
+2022-12-06 08:19:13.847429 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (210.740714ms) to execute
+2022-12-06 08:19:13.847608 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (121.998957ms) to execute
+2022-12-06 08:19:13.848101 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (293.42643ms) to execute
+2022-12-06 08:19:14.863932 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (136.814824ms) to execute
+2022-12-06 08:19:15.268186 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:15.624231 W | etcdserver: request "header:<ID:5444998075047568176 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:805 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (253.352795ms) to execute
+2022-12-06 08:19:16.052021 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (184.899578ms) to execute
+2022-12-06 08:19:16.052694 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (324.185499ms) to execute
+2022-12-06 08:19:16.503911 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (120.695984ms) to execute
+2022-12-06 08:19:17.044592 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (318.397953ms) to execute
+2022-12-06 08:19:18.859153 W | etcdserver: request "header:<ID:5444998075047568191 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:811 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:567 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (402.596442ms) to execute
+2022-12-06 08:19:18.859887 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (337.122366ms) to execute
+2022-12-06 08:19:19.472458 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (744.940624ms) to execute
+2022-12-06 08:19:19.472678 W | etcdserver: request "header:<ID:5444998075047568194 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:825 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:443 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (437.238885ms) to execute
+2022-12-06 08:19:19.473234 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (399.767794ms) to execute
+2022-12-06 08:19:20.129763 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (272.532539ms) to execute
+2022-12-06 08:19:20.130279 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (405.430242ms) to execute
+2022-12-06 08:19:22.093738 W | etcdserver: request "header:<ID:5444998075047568209 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-scheduler\" mod_revision:830 > success:<request_put:<key:\"/registry/leases/kube-system/kube-scheduler\" value_size:425 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-scheduler\" > >>" with result "size:16" took too long (317.237808ms) to execute
+2022-12-06 08:19:22.094667 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (367.322922ms) to execute
+2022-12-06 08:19:22.095468 W | etcdserver: read-only range request "key:\"/registry/storageclasses/\" range_end:\"/registry/storageclasses0\" count_only:true " with result "range_response_count:0 size:7" took too long (470.925485ms) to execute
+2022-12-06 08:19:22.819749 W | etcdserver: read-only range request "key:\"/registry/leases/\" range_end:\"/registry/leases0\" count_only:true " with result "range_response_count:0 size:7" took too long (107.292582ms) to execute
+2022-12-06 08:19:23.954903 W | etcdserver: request "header:<ID:5444998075047568223 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:819 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047568221 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (315.362589ms) to execute
+2022-12-06 08:19:23.955289 W | etcdserver: read-only range request "key:\"/registry/mutatingwebhookconfigurations/\" range_end:\"/registry/mutatingwebhookconfigurations0\" count_only:true " with result "range_response_count:0 size:5" took too long (656.37788ms) to execute
+2022-12-06 08:19:23.956141 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (234.474104ms) to execute
+2022-12-06 08:19:23.956391 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (450.436022ms) to execute
+2022-12-06 08:19:23.960858 W | etcdserver: read-only range request "key:\"/registry/horizontalpodautoscalers/\" range_end:\"/registry/horizontalpodautoscalers0\" count_only:true " with result "range_response_count:0 size:5" took too long (506.145329ms) to execute
+2022-12-06 08:19:24.841402 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (113.977909ms) to execute
+2022-12-06 08:19:24.844443 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (737.646658ms) to execute
+2022-12-06 08:19:24.848387 W | etcdserver: read-only range request "key:\"/registry/events/\" range_end:\"/registry/events0\" count_only:true " with result "range_response_count:0 size:7" took too long (610.745373ms) to execute
+2022-12-06 08:19:24.849444 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (658.037859ms) to execute
+2022-12-06 08:19:25.238772 W | etcdserver: request "header:<ID:5444998075047568234 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" mod_revision:834 > success:<request_put:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" value_size:550 >> failure:<request_range:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" > >>" with result "size:16" took too long (107.870833ms) to execute
+2022-12-06 08:19:25.239202 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:25.778273 W | etcdserver: request "header:<ID:5444998075047568236 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:823 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (137.16603ms) to execute
+2022-12-06 08:19:26.390379 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (401.844037ms) to execute
+2022-12-06 08:19:26.390432 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (662.47252ms) to execute
+2022-12-06 08:19:26.390611 W | etcdserver: read-only range request "key:\"/registry/csidrivers/\" range_end:\"/registry/csidrivers0\" count_only:true " with result "range_response_count:0 size:5" took too long (687.917924ms) to execute
+2022-12-06 08:19:26.391218 W | etcdserver: read-only range request "key:\"/registry/prioritylevelconfigurations/\" range_end:\"/registry/prioritylevelconfigurations0\" count_only:true " with result "range_response_count:0 size:7" took too long (557.774168ms) to execute
+2022-12-06 08:19:26.863656 W | etcdserver: read-only range request "key:\"/registry/poddisruptionbudgets/\" range_end:\"/registry/poddisruptionbudgets0\" count_only:true " with result "range_response_count:0 size:5" took too long (345.371708ms) to execute
+2022-12-06 08:19:26.863818 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (323.364135ms) to execute
+2022-12-06 08:19:26.864162 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (137.237452ms) to execute
+2022-12-06 08:19:27.601558 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (342.053148ms) to execute
+2022-12-06 08:19:27.954935 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (228.73774ms) to execute
+2022-12-06 08:19:28.990961 W | etcdserver: request "header:<ID:5444998075047568250 > lease_revoke:<id:4b9084e681e56320>" with result "size:28" took too long (353.029208ms) to execute
+2022-12-06 08:19:28.992740 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (266.354442ms) to execute
+2022-12-06 08:19:29.416014 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (525.478919ms) to execute
+2022-12-06 08:19:29.416168 W | etcdserver: read-only range request "key:\"/registry/ranges/serviceips\" " with result "range_response_count:1 size:118" took too long (437.79139ms) to execute
+2022-12-06 08:19:29.416335 W | etcdserver: read-only range request "key:\"/registry/ranges/servicenodeports\" " with result "range_response_count:1 size:120" took too long (418.663347ms) to execute
+2022-12-06 08:19:29.907972 W | etcdserver: read-only range request "key:\"/registry/csistoragecapacities/\" range_end:\"/registry/csistoragecapacities0\" count_only:true " with result "range_response_count:0 size:5" took too long (432.644197ms) to execute
+2022-12-06 08:19:29.908387 W | etcdserver: read-only range request "key:\"/registry/flowschemas/exempt\" " with result "range_response_count:1 size:879" took too long (431.243117ms) to execute
+2022-12-06 08:19:29.908664 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (183.189151ms) to execute
+2022-12-06 08:19:29.908947 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (284.08698ms) to execute
+2022-12-06 08:19:29.909175 W | etcdserver: read-only range request "key:\"/registry/namespaces/kube-system\" " with result "range_response_count:1 size:351" took too long (317.554643ms) to execute
+2022-12-06 08:19:29.909742 W | etcdserver: read-only range request "key:\"/registry/csinodes/\" range_end:\"/registry/csinodes0\" count_only:true " with result "range_response_count:0 size:7" took too long (253.708994ms) to execute
+2022-12-06 08:19:30.645851 W | etcdserver: read-only range request "key:\"/registry/prioritylevelconfigurations/exempt\" " with result "range_response_count:1 size:371" took too long (723.243985ms) to execute
+2022-12-06 08:19:30.645972 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (205.427465ms) to execute
+2022-12-06 08:19:31.084235 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (357.837115ms) to execute
+2022-12-06 08:19:33.448530 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (169.390035ms) to execute
+2022-12-06 08:19:33.449011 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (722.850803ms) to execute
+2022-12-06 08:19:33.888110 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (432.573881ms) to execute
+2022-12-06 08:19:33.889062 W | etcdserver: request "header:<ID:5444998075047568286 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:835 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047568284 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (109.932773ms) to execute
+2022-12-06 08:19:33.890140 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (163.538494ms) to execute
+2022-12-06 08:19:33.890749 W | etcdserver: read-only range request "key:\"/registry/controllers/\" range_end:\"/registry/controllers0\" count_only:true " with result "range_response_count:0 size:5" took too long (112.727185ms) to execute
+2022-12-06 08:19:34.257119 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (208.523395ms) to execute
+2022-12-06 08:19:34.257535 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (308.918941ms) to execute
+2022-12-06 08:19:34.795324 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (106.035466ms) to execute
+2022-12-06 08:19:35.082123 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:36.456430 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (170.16651ms) to execute
+2022-12-06 08:19:36.458257 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (541.229649ms) to execute
+2022-12-06 08:19:37.026316 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (300.31961ms) to execute
+2022-12-06 08:19:37.404544 W | etcdserver: read-only range request "key:\"/registry/controllerrevisions/\" range_end:\"/registry/controllerrevisions0\" count_only:true " with result "range_response_count:0 size:7" took too long (483.778567ms) to execute
+2022-12-06 08:19:37.405088 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (509.589603ms) to execute
+2022-12-06 08:19:37.406037 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (582.786566ms) to execute
+2022-12-06 08:19:38.837567 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (255.681938ms) to execute
+2022-12-06 08:19:38.838723 W | etcdserver: request "header:<ID:5444998075047568317 > lease_revoke:<id:4b9084e681e5635d>" with result "size:28" took too long (175.941114ms) to execute
+2022-12-06 08:19:38.839060 W | etcdserver: read-only range request "key:\"/registry/volumeattachments/\" range_end:\"/registry/volumeattachments0\" count_only:true " with result "range_response_count:0 size:5" took too long (247.893245ms) to execute
+2022-12-06 08:19:38.839709 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (113.82199ms) to execute
+2022-12-06 08:19:39.251929 W | etcdserver: request "header:<ID:5444998075047568321 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:844 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:567 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (241.748073ms) to execute
+2022-12-06 08:19:39.252212 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (203.269758ms) to execute
+2022-12-06 08:19:40.013058 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (156.122262ms) to execute
+2022-12-06 08:19:40.013356 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (286.81006ms) to execute
+2022-12-06 08:19:40.014047 W | etcdserver: read-only range request "key:\"/registry/events/\" range_end:\"/registry/events0\" count_only:true " with result "range_response_count:0 size:7" took too long (135.101287ms) to execute
+2022-12-06 08:19:40.017009 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (581.23064ms) to execute
+2022-12-06 08:19:40.954865 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (445.98595ms) to execute
+2022-12-06 08:19:40.955366 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (229.35305ms) to execute
+2022-12-06 08:19:40.955809 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/\" range_end:\"/registry/services/endpoints0\" count_only:true " with result "range_response_count:0 size:7" took too long (622.732571ms) to execute
+2022-12-06 08:19:41.770661 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (497.491128ms) to execute
+2022-12-06 08:19:41.771143 W | etcdserver: read-only range request "key:\"/registry/ingress/\" range_end:\"/registry/ingress0\" count_only:true " with result "range_response_count:0 size:5" took too long (568.98075ms) to execute
+2022-12-06 08:19:41.772249 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (531.72554ms) to execute
+2022-12-06 08:19:42.757816 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (708.554623ms) to execute
+2022-12-06 08:19:43.448439 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (473.199013ms) to execute
+2022-12-06 08:19:43.448711 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (380.364623ms) to execute
+2022-12-06 08:19:43.448947 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (168.66265ms) to execute
+2022-12-06 08:19:43.449017 W | etcdserver: read-only range request "key:\"/registry/validatingwebhookconfigurations/\" range_end:\"/registry/validatingwebhookconfigurations0\" count_only:true " with result "range_response_count:0 size:5" took too long (329.556489ms) to execute
+2022-12-06 08:19:43.450640 W | etcdserver: read-only range request "key:\"/registry/priorityclasses/\" range_end:\"/registry/priorityclasses0\" count_only:true " with result "range_response_count:0 size:7" took too long (384.483023ms) to execute
+2022-12-06 08:19:44.535147 W | etcdserver: request "header:<ID:5444998075047568349 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:851 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047568347 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (305.947085ms) to execute
+2022-12-06 08:19:44.535921 W | etcdserver: read-only range request "key:\"/registry/leases/\" range_end:\"/registry/leases0\" count_only:true " with result "range_response_count:0 size:7" took too long (940.182585ms) to execute
+2022-12-06 08:19:44.590838 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (787.17712ms) to execute
+2022-12-06 08:19:44.591372 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (863.452621ms) to execute
+2022-12-06 08:19:45.395926 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:45.516121 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (789.300949ms) to execute
+2022-12-06 08:19:45.516435 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:517" took too long (732.240941ms) to execute
+2022-12-06 08:19:45.941434 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (215.052053ms) to execute
+2022-12-06 08:19:45.942700 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (385.972782ms) to execute
+2022-12-06 08:19:45.942901 W | etcdserver: request "header:<ID:5444998075047568363 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:855 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (125.967258ms) to execute
+2022-12-06 08:19:47.698179 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (152.546333ms) to execute
+2022-12-06 08:19:47.698900 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (971.910181ms) to execute
+2022-12-06 08:19:47.699706 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (1.07655515s) to execute
+2022-12-06 08:19:47.700227 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (249.646499ms) to execute
+2022-12-06 08:19:48.057367 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (333.170952ms) to execute
+2022-12-06 08:19:48.370141 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/\" range_end:\"/registry/apiregistration.k8s.io/apiservices0\" count_only:true " with result "range_response_count:0 size:7" took too long (619.461327ms) to execute
+2022-12-06 08:19:48.370751 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (309.198883ms) to execute
+2022-12-06 08:19:49.643390 W | etcdserver: request "header:<ID:5444998075047568378 > lease_revoke:<id:4b9084e681e5639c>" with result "size:28" took too long (310.239254ms) to execute
+2022-12-06 08:19:49.645154 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (919.213175ms) to execute
+2022-12-06 08:19:50.969885 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (250.062586ms) to execute
+2022-12-06 08:19:50.969957 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (900.28872ms) to execute
+2022-12-06 08:19:50.970096 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (382.973998ms) to execute
+2022-12-06 08:19:50.970144 W | etcdserver: read-only range request "key:\"/registry/csinodes/\" range_end:\"/registry/csinodes0\" count_only:true " with result "range_response_count:0 size:7" took too long (1.050171048s) to execute
+2022-12-06 08:19:50.970286 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (466.318817ms) to execute
+2022-12-06 08:19:50.970781 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (1.115787097s) to execute
+2022-12-06 08:19:50.970862 W | etcdserver: read-only range request "key:\"/registry/clusterroles/\" range_end:\"/registry/clusterroles0\" count_only:true " with result "range_response_count:0 size:7" took too long (322.875663ms) to execute
+2022-12-06 08:19:51.764966 W | etcdserver: request "header:<ID:5444998075047568391 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" mod_revision:873 > success:<request_put:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" value_size:550 >> failure:<request_range:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" > >>" with result "size:16" took too long (223.699396ms) to execute
+2022-12-06 08:19:52.645524 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (847.646146ms) to execute
+2022-12-06 08:19:54.228756 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (427.609521ms) to execute
+2022-12-06 08:19:54.228802 W | etcdserver: read-only range request "key:\"/registry/ingress/\" range_end:\"/registry/ingress0\" count_only:true " with result "range_response_count:0 size:5" took too long (609.843301ms) to execute
+2022-12-06 08:19:54.229249 W | etcdserver: read-only range request "key:\"/registry/roles/\" range_end:\"/registry/roles0\" count_only:true " with result "range_response_count:0 size:7" took too long (532.336638ms) to execute
+2022-12-06 08:19:54.229712 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (948.933896ms) to execute
+2022-12-06 08:19:54.229944 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (1.146542916s) to execute
+2022-12-06 08:19:54.231764 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (501.603416ms) to execute
+2022-12-06 08:19:54.235094 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (435.101786ms) to execute
+2022-12-06 08:19:54.917676 W | etcdserver: request "header:<ID:5444998075047568406 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" mod_revision:878 > success:<request_put:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" value_size:550 >> failure:<request_range:<key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" > >>" with result "size:16" took too long (457.497661ms) to execute
+2022-12-06 08:19:54.918560 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (191.31987ms) to execute
+2022-12-06 08:19:54.918963 W | etcdserver: read-only range request "key:\"/registry/rolebindings/\" range_end:\"/registry/rolebindings0\" count_only:true " with result "range_response_count:0 size:7" took too long (367.77436ms) to execute
+2022-12-06 08:19:55.452351 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:19:55.757271 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (726.40834ms) to execute
+2022-12-06 08:19:55.757478 W | etcdserver: read-only range request "key:\"/registry/endpointslices/\" range_end:\"/registry/endpointslices0\" count_only:true " with result "range_response_count:0 size:7" took too long (423.1965ms) to execute
+2022-12-06 08:19:55.758008 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (828.030042ms) to execute
+2022-12-06 08:19:56.480181 W | etcdserver: request "header:<ID:5444998075047568419 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:870 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (215.553694ms) to execute
+2022-12-06 08:19:57.430324 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (1.165747981s) to execute
+2022-12-06 08:19:57.430444 W | etcdserver: read-only range request "key:\"/registry/configmaps/\" range_end:\"/registry/configmaps0\" count_only:true " with result "range_response_count:0 size:7" took too long (967.892774ms) to execute
+2022-12-06 08:19:57.430586 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (481.625917ms) to execute
+2022-12-06 08:19:57.430848 W | etcdserver: read-only range request "key:\"/registry/csidrivers/\" range_end:\"/registry/csidrivers0\" count_only:true " with result "range_response_count:0 size:5" took too long (266.569688ms) to execute
+2022-12-06 08:19:57.431207 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (1.073079607s) to execute
+2022-12-06 08:19:57.432881 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (706.265507ms) to execute
+2022-12-06 08:19:58.573942 W | etcdserver: request "header:<ID:5444998075047568428 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:881 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:442 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (714.484495ms) to execute
+2022-12-06 08:19:58.574577 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (836.19065ms) to execute
+2022-12-06 08:19:58.574774 W | etcdserver: read-only range request "key:\"/registry/daemonsets/\" range_end:\"/registry/daemonsets0\" count_only:true " with result "range_response_count:0 size:7" took too long (406.176635ms) to execute
+2022-12-06 08:19:58.575208 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (835.724381ms) to execute
+2022-12-06 08:19:58.577243 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:490" took too long (798.294123ms) to execute
+2022-12-06 08:19:58.579861 W | etcdserver: read-only range request "key:\"/registry/volumeattachments/\" range_end:\"/registry/volumeattachments0\" count_only:true " with result "range_response_count:0 size:5" took too long (606.426431ms) to execute
+2022-12-06 08:19:59.481268 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (760.476664ms) to execute
+2022-12-06 08:20:00.326261 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (795.345187ms) to execute
+2022-12-06 08:20:00.326898 W | etcdserver: request "header:<ID:5444998075047568436 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:875 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:567 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (377.756807ms) to execute
+2022-12-06 08:20:00.327109 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (600.67654ms) to execute
+2022-12-06 08:20:00.327473 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (469.603873ms) to execute
+2022-12-06 08:20:01.423824 W | etcdserver: read-only range request "key:\"/registry/ingressclasses/\" range_end:\"/registry/ingressclasses0\" count_only:true " with result "range_response_count:0 size:5" took too long (118.10713ms) to execute
+2022-12-06 08:20:01.424347 W | etcdserver: read-only range request "key:\"/registry/cronjobs/\" range_end:\"/registry/cronjobs0\" count_only:true " with result "range_response_count:0 size:5" took too long (575.080985ms) to execute
+2022-12-06 08:20:01.424634 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (828.648137ms) to execute
+2022-12-06 08:20:01.424927 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (698.095472ms) to execute
+2022-12-06 08:20:01.425571 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:517" took too long (832.230198ms) to execute
+2022-12-06 08:20:02.182111 W | etcdserver: request "header:<ID:5444998075047568445 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:887 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:443 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (369.757897ms) to execute
+2022-12-06 08:20:02.184500 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:642" took too long (675.701263ms) to execute
+2022-12-06 08:20:02.185587 W | etcdserver: read-only range request "key:\"/registry/runtimeclasses/\" range_end:\"/registry/runtimeclasses0\" count_only:true " with result "range_response_count:0 size:5" took too long (510.956829ms) to execute
+2022-12-06 08:20:02.186351 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (459.294658ms) to execute
+2022-12-06 08:20:02.567864 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (125.146246ms) to execute
+2022-12-06 08:20:03.513504 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (171.331395ms) to execute
+2022-12-06 08:20:05.066778 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:20:15.066924 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:20:25.067253 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:20:35.067037 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:20:45.066636 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:20:55.066735 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:05.072067 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:15.067254 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:25.066144 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:35.066913 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:45.066955 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:21:55.067166 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:05.066885 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:15.066345 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:25.066332 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:35.067063 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:45.067122 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:22:55.067310 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:05.066962 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:15.066458 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:25.067159 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:35.066836 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:45.066157 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:23:55.073815 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:05.109542 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:15.066291 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:25.067123 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:35.066762 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:45.066764 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:24:55.066978 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:05.066514 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:15.067298 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:25.066761 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:33.838454 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (117.913524ms) to execute
+2022-12-06 08:25:35.066250 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:45.066250 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:55.067195 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:25:57.379986 W | etcdserver: read-only range request "key:\"/registry/clusterroles/linkerd-heartbeat\" " with result "range_response_count:0 size:5" took too long (156.083213ms) to execute
+2022-12-06 08:25:57.380648 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:11 size:55202" took too long (104.219671ms) to execute
+2022-12-06 08:25:58.196035 W | etcdserver: read-only range request "key:\"/registry/services/specs/linkerd/linkerd-dst\" " with result "range_response_count:0 size:5" took too long (100.119776ms) to execute
+2022-12-06 08:25:58.371077 W | etcdserver: read-only range request "key:\"/registry/deployments/linkerd/linkerd-identity\" " with result "range_response_count:1 size:21404" took too long (102.779174ms) to execute
+2022-12-06 08:25:58.696020 W | etcdserver: read-only range request "key:\"/registry/replicasets/linkerd/linkerd-identity-66f769767c\" " with result "range_response_count:1 size:14065" took too long (105.246214ms) to execute
+2022-12-06 08:25:58.896096 W | etcdserver: read-only range request "key:\"/registry/services/specs/linkerd/linkerd-policy\" " with result "range_response_count:0 size:5" took too long (147.089917ms) to execute
+2022-12-06 08:25:58.916614 W | etcdserver: read-only range request "key:\"/registry/replicasets/linkerd/linkerd-identity-66f769767c\" " with result "range_response_count:1 size:14065" took too long (143.541593ms) to execute
+2022-12-06 08:25:59.120129 W | etcdserver: read-only range request "key:\"/registry/services/specs/linkerd/linkerd-policy-validator\" " with result "range_response_count:0 size:5" took too long (156.255522ms) to execute
+2022-12-06 08:25:59.545829 W | etcdserver: read-only range request "key:\"/registry/namespaces/linkerd\" " with result "range_response_count:1 size:1043" took too long (149.609682ms) to execute
+2022-12-06 08:25:59.815573 W | etcdserver: request "header:<ID:5444998075047571157 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/linkerd/linkerd-destination-6d9f54b659-lq9dw\" mod_revision:1641 > success:<request_put:<key:\"/registry/pods/linkerd/linkerd-destination-6d9f54b659-lq9dw\" value_size:16452 >> failure:<request_range:<key:\"/registry/pods/linkerd/linkerd-destination-6d9f54b659-lq9dw\" > >>" with result "size:16" took too long (142.23028ms) to execute
+2022-12-06 08:25:59.817906 W | etcdserver: read-only range request "key:\"/registry/endpointslices/linkerd/linkerd-dst-headless-9xkgx\" " with result "range_response_count:1 size:1138" took too long (173.958275ms) to execute
+2022-12-06 08:25:59.837674 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (118.602578ms) to execute
+2022-12-06 08:25:59.837903 W | etcdserver: read-only range request "key:\"/registry/deployments/linkerd/linkerd-destination\" " with result "range_response_count:1 size:25686" took too long (177.858403ms) to execute
+2022-12-06 08:25:59.838065 W | etcdserver: read-only range request "key:\"/registry/endpointslices/linkerd/linkerd-dst-lrw69\" " with result "range_response_count:1 size:1019" took too long (191.552299ms) to execute
+2022-12-06 08:26:00.037459 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (145.343224ms) to execute
+2022-12-06 08:26:00.037871 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (185.226034ms) to execute
+2022-12-06 08:26:00.038599 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/cronjob-controller\" " with result "range_response_count:1 size:251" took too long (140.408542ms) to execute
+2022-12-06 08:26:00.039204 W | etcdserver: read-only range request "key:\"/registry/namespaces/linkerd\" " with result "range_response_count:1 size:1043" took too long (140.751839ms) to execute
+2022-12-06 08:26:00.212687 W | etcdserver: read-only range request "key:\"/registry/services/specs/linkerd/linkerd-proxy-injector\" " with result "range_response_count:0 size:5" took too long (133.463357ms) to execute
+2022-12-06 08:26:00.492899 W | etcdserver: read-only range request "key:\"/registry/pods/linkerd/linkerd-proxy-injector-5f8cc9d559-dgmq9\" " with result "range_response_count:1 size:13706" took too long (251.279551ms) to execute
+2022-12-06 08:26:00.493236 W | etcdserver: read-only range request "key:\"/registry/deployments/linkerd/linkerd-proxy-injector\" " with result "range_response_count:1 size:21377" took too long (246.106256ms) to execute
+2022-12-06 08:26:00.729456 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/linkerd/linkerd-proxy-injector\" " with result "range_response_count:1 size:1064" took too long (286.886981ms) to execute
+2022-12-06 08:26:00.730206 W | etcdserver: request "header:<ID:5444998075047571204 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/endpointslices/linkerd/linkerd-proxy-injector-84flb\" mod_revision:0 > success:<request_put:<key:\"/registry/endpointslices/linkerd/linkerd-proxy-injector-84flb\" value_size:1148 >> failure:<>>" with result "size:16" took too long (103.112567ms) to execute
+2022-12-06 08:26:00.731319 W | etcdserver: read-only range request "key:\"/registry/secrets/linkerd/linkerd-config-overrides\" " with result "range_response_count:0 size:5" took too long (209.09454ms) to execute
+2022-12-06 08:26:00.731705 W | etcdserver: read-only range request "key:\"/registry/pods/linkerd/linkerd-proxy-injector-5f8cc9d559-dgmq9\" " with result "range_response_count:1 size:14937" took too long (212.9559ms) to execute
+2022-12-06 08:26:05.067442 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:26:15.066829 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:26:17.330362 W | etcdserver: read-only range request "key:\"/registry/cronjobs/\" range_end:\"/registry/cronjobs0\" count_only:true " with result "range_response_count:0 size:7" took too long (100.021833ms) to execute
+2022-12-06 08:26:23.578540 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:519" took too long (191.88038ms) to execute
+2022-12-06 08:26:23.578608 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (261.534158ms) to execute
+2022-12-06 08:26:23.963872 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (180.093995ms) to execute
+2022-12-06 08:26:24.036671 I | mvcc: store.index: compact 1039
+2022-12-06 08:26:24.177084 I | mvcc: finished scheduled compaction at 1039 (took 139.548394ms)
+2022-12-06 08:26:25.066545 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:26:34.453336 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (593.698147ms) to execute
+2022-12-06 08:26:34.453903 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6360" took too long (111.786422ms) to execute
+2022-12-06 08:26:34.454078 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (731.008153ms) to execute
+2022-12-06 08:26:34.454398 W | etcdserver: read-only range request "key:\"/registry/resourcequotas/\" range_end:\"/registry/resourcequotas0\" count_only:true " with result "range_response_count:0 size:5" took too long (452.750092ms) to execute
+2022-12-06 08:26:34.456119 W | etcdserver: request "header:<ID:5444998075047571534 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" mod_revision:1754 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" value_size:566 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-control-plane\" > >>" with result "size:16" took too long (114.000063ms) to execute
+2022-12-06 08:26:35.066378 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:26:35.832184 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (112.556809ms) to execute
+2022-12-06 08:26:35.832984 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:519" took too long (120.348174ms) to execute
+2022-12-06 08:26:37.669392 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (103.274411ms) to execute
+2022-12-06 08:26:45.066367 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:26:55.067346 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:05.066717 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:06.854602 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (126.854827ms) to execute
+2022-12-06 08:27:07.985921 W | etcdserver: read-only range request "key:\"/registry/endpointslices/\" range_end:\"/registry/endpointslices0\" " with result "range_response_count:10 size:13300" took too long (117.361813ms) to execute
+2022-12-06 08:27:15.067057 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:20.376259 W | etcdserver: read-only range request "key:\"/registry/events/linkerd/linkerd-proxy-injector-5f8cc9d559-dgmq9.172e26d9c5e2ef43\" " with result "range_response_count:1 size:867" took too long (133.374895ms) to execute
+2022-12-06 08:27:20.376547 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6819" took too long (121.014744ms) to execute
+2022-12-06 08:27:25.067039 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:35.101463 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:45.067678 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:27:55.067201 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:05.068107 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:06.656817 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/voting\" " with result "range_response_count:1 size:3339" took too long (100.951993ms) to execute
+2022-12-06 08:28:06.656905 W | etcdserver: read-only range request "key:\"/registry/namespaces/emojivoto\" " with result "range_response_count:1 size:585" took too long (102.275971ms) to execute
+2022-12-06 08:28:06.657117 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-69754c864f-mf6gh\" " with result "range_response_count:1 size:1905" took too long (104.682848ms) to execute
+2022-12-06 08:28:06.831990 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (111.892973ms) to execute
+2022-12-06 08:28:06.832537 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/voting\" " with result "range_response_count:1 size:3689" took too long (128.52502ms) to execute
+2022-12-06 08:28:06.833466 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" " with result "range_response_count:1 size:2260" took too long (131.162951ms) to execute
+2022-12-06 08:28:06.908606 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/emojivoto/voting\" " with result "range_response_count:1 size:691" took too long (133.647181ms) to execute
+2022-12-06 08:28:07.015110 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/web\" " with result "range_response_count:1 size:3496" took too long (168.148575ms) to execute
+2022-12-06 08:28:07.054245 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/web-79469b946f-kkwvp\" " with result "range_response_count:1 size:2346" took too long (134.40933ms) to execute
+2022-12-06 08:28:07.054729 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" " with result "range_response_count:1 size:3150" took too long (144.384463ms) to execute
+2022-12-06 08:28:07.183967 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/emojivoto/web\" " with result "range_response_count:1 size:676" took too long (106.830578ms) to execute
+2022-12-06 08:28:07.240182 W | etcdserver: read-only range request "key:\"/registry/replicasets/emojivoto/web-79469b946f\" " with result "range_response_count:1 size:2538" took too long (124.537433ms) to execute
+2022-12-06 08:28:08.639963 W | etcdserver: request "header:<ID:5444998075047572454 > lease_revoke:<id:4b9084e681e572fc>" with result "size:28" took too long (199.521885ms) to execute
+2022-12-06 08:28:15.066973 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:15.590005 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" " with result "range_response_count:1 size:6415" took too long (101.898302ms) to execute
+2022-12-06 08:28:15.631871 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/emoji-696d9d8f95-2mbfg\" " with result "range_response_count:1 size:7992" took too long (112.395323ms) to execute
+2022-12-06 08:28:15.633970 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/emoji-696d9d8f95-2mbfg\" " with result "range_response_count:1 size:7992" took too long (113.206781ms) to execute
+2022-12-06 08:28:15.781548 W | etcdserver: read-only range request "key:\"/registry/replicasets/emojivoto/voting-ff4c54b8d\" " with result "range_response_count:1 size:2491" took too long (127.549784ms) to execute
+2022-12-06 08:28:15.781910 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/emojivoto/default\" " with result "range_response_count:1 size:213" took too long (128.74179ms) to execute
+2022-12-06 08:28:15.782096 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/emojivoto/default\" " with result "range_response_count:1 size:213" took too long (130.287713ms) to execute
+2022-12-06 08:28:15.809059 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/voting\" " with result "range_response_count:1 size:4754" took too long (125.296137ms) to execute
+2022-12-06 08:28:15.812141 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" " with result "range_response_count:1 size:6777" took too long (136.431883ms) to execute
+2022-12-06 08:28:15.812629 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/web\" " with result "range_response_count:1 size:4912" took too long (126.815508ms) to execute
+2022-12-06 08:28:15.841136 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (119.91168ms) to execute
+2022-12-06 08:28:18.880765 W | etcdserver: read-only range request "key:\"/registry/apiextensions.k8s.io/customresourcedefinitions/\" range_end:\"/registry/apiextensions.k8s.io/customresourcedefinitions0\" count_only:true " with result "range_response_count:0 size:7" took too long (313.788883ms) to execute
+2022-12-06 08:28:18.880994 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (161.052426ms) to execute
+2022-12-06 08:28:18.881779 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:22 size:148369" took too long (140.917172ms) to execute
+2022-12-06 08:28:19.807153 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (124.185731ms) to execute
+2022-12-06 08:28:20.007752 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (154.868047ms) to execute
+2022-12-06 08:28:21.692345 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (293.750091ms) to execute
+2022-12-06 08:28:22.131778 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (412.047824ms) to execute
+2022-12-06 08:28:22.132155 W | etcdserver: request "header:<ID:5444998075047572649 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/emojivoto/vote-bot-6d7677bb68-mgmv6.172e26eacdf4ac99\" mod_revision:0 > success:<request_put:<key:\"/registry/events/emojivoto/vote-bot-6d7677bb68-mgmv6.172e26eacdf4ac99\" value_size:695 lease:5444998075047572364 >> failure:<>>" with result "size:16" took too long (162.285535ms) to execute
+2022-12-06 08:28:22.133049 W | etcdserver: read-only range request "key:\"/registry/ingress/\" range_end:\"/registry/ingress0\" count_only:true " with result "range_response_count:0 size:5" took too long (410.232542ms) to execute
+2022-12-06 08:28:22.133414 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (318.598658ms) to execute
+2022-12-06 08:28:22.133739 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" " with result "range_response_count:1 size:8002" took too long (321.650292ms) to execute
+2022-12-06 08:28:22.524374 W | etcdserver: request "header:<ID:5444998075047572653 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" mod_revision:2163 > success:<request_put:<key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" value_size:8208 >> failure:<request_range:<key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" > >>" with result "size:16" took too long (217.429508ms) to execute
+2022-12-06 08:28:22.861126 W | etcdserver: request "header:<ID:5444998075047572654 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" mod_revision:2145 > success:<request_put:<key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" value_size:1159 >> failure:<request_range:<key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" > >>" with result "size:16" took too long (152.364069ms) to execute
+2022-12-06 08:28:22.861771 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" " with result "range_response_count:1 size:7627" took too long (325.568694ms) to execute
+2022-12-06 08:28:23.181600 W | etcdserver: request "header:<ID:5444998075047572656 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/emojivoto/voting-ff4c54b8d-8pfhc.172e26eb0fb462ee\" mod_revision:0 > success:<request_put:<key:\"/registry/events/emojivoto/voting-ff4c54b8d-8pfhc.172e26eb0fb462ee\" value_size:737 lease:5444998075047572364 >> failure:<>>" with result "size:16" took too long (206.526178ms) to execute
+2022-12-06 08:28:23.184261 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (459.737427ms) to execute
+2022-12-06 08:28:23.760303 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (437.418883ms) to execute
+2022-12-06 08:28:23.760938 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" " with result "range_response_count:1 size:8278" took too long (565.602773ms) to execute
+2022-12-06 08:28:23.761777 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:22 size:149197" took too long (659.292403ms) to execute
+2022-12-06 08:28:24.046230 W | etcdserver: request "header:<ID:5444998075047572670 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-controller-manager\" mod_revision:2191 > success:<request_put:<key:\"/registry/leases/kube-system/kube-controller-manager\" value_size:443 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-controller-manager\" > >>" with result "size:16" took too long (134.117358ms) to execute
+2022-12-06 08:28:24.426678 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (276.912537ms) to execute
+2022-12-06 08:28:24.426729 W | etcdserver: read-only range request "key:\"/registry/masterleases/\" range_end:\"/registry/masterleases0\" " with result "range_response_count:1 size:129" took too long (278.010578ms) to execute
+2022-12-06 08:28:25.284375 W | etcdserver: request "header:<ID:5444998075047572682 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" mod_revision:2199 > success:<request_put:<key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" value_size:7833 >> failure:<request_range:<key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" > >>" with result "size:16" took too long (283.59486ms) to execute
+2022-12-06 08:28:25.408945 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:25.815765 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:6987" took too long (332.427467ms) to execute
+2022-12-06 08:28:25.817915 W | etcdserver: read-only range request "key:\"/registry/rolebindings/\" range_end:\"/registry/rolebindings0\" count_only:true " with result "range_response_count:0 size:7" took too long (592.415865ms) to execute
+2022-12-06 08:28:26.408435 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:519" took too long (345.908083ms) to execute
+2022-12-06 08:28:26.408760 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (354.179542ms) to execute
+2022-12-06 08:28:26.627974 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (185.454085ms) to execute
+2022-12-06 08:28:27.006488 W | etcdserver: request "header:<ID:5444998075047572695 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-system/kube-scheduler\" mod_revision:2204 > success:<request_put:<key:\"/registry/leases/kube-system/kube-scheduler\" value_size:425 >> failure:<request_range:<key:\"/registry/leases/kube-system/kube-scheduler\" > >>" with result "size:16" took too long (103.661258ms) to execute
+2022-12-06 08:28:27.007162 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (287.850315ms) to execute
+2022-12-06 08:28:27.933595 W | etcdserver: read-only range request "key:\"/registry/policy.linkerd.io/meshtlsauthentications/\" range_end:\"/registry/policy.linkerd.io/meshtlsauthentications0\" count_only:true " with result "range_response_count:0 size:5" took too long (111.835583ms) to execute
+2022-12-06 08:28:28.485727 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/web-5f86686c4d-xnnhl\" " with result "range_response_count:1 size:8064" took too long (459.258836ms) to execute
+2022-12-06 08:28:28.536556 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (101.9203ms) to execute
+2022-12-06 08:28:28.536832 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (100.762788ms) to execute
+2022-12-06 08:28:28.881362 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (161.132429ms) to execute
+2022-12-06 08:28:35.066653 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:35.533787 W | etcdserver: read-only range request "key:\"/registry/volumeattachments/\" range_end:\"/registry/volumeattachments0\" count_only:true " with result "range_response_count:0 size:5" took too long (135.792246ms) to execute
+2022-12-06 08:28:35.534171 W | etcdserver: read-only range request "key:\"/registry/secrets/linkerd/linkerd-proxy-injector-k8s-tls\" " with result "range_response_count:1 size:7888" took too long (129.991479ms) to execute
+2022-12-06 08:28:43.355605 W | etcdserver: request "header:<ID:5444998075047572923 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/web-79469b946f-kkwvp\" mod_revision:2290 > success:<request_delete_range:<key:\"/registry/pods/emojivoto/web-79469b946f-kkwvp\" > > failure:<request_range:<key:\"/registry/pods/emojivoto/web-79469b946f-kkwvp\" > >>" with result "size:18" took too long (139.658625ms) to execute
+2022-12-06 08:28:43.356158 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/\" range_end:\"/registry/pods/emojivoto0\" " with result "range_response_count:7 size:42208" took too long (138.896871ms) to execute
+2022-12-06 08:28:45.066913 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:47.997505 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (276.504351ms) to execute
+2022-12-06 08:28:47.998149 W | etcdserver: request "header:<ID:5444998075047572963 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:2273 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (214.656823ms) to execute
+2022-12-06 08:28:49.272837 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" " with result "range_response_count:1 size:3150" took too long (133.599164ms) to execute
+2022-12-06 08:28:52.388237 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/emoji-696d9d8f95-2mbfg\" " with result "range_response_count:1 size:8609" took too long (166.350499ms) to execute
+2022-12-06 08:28:52.998852 W | etcdserver: request "header:<ID:5444998075047573014 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/emoji-66ccdb4d86-xhx2s\" mod_revision:2283 > success:<request_put:<key:\"/registry/pods/emojivoto/emoji-66ccdb4d86-xhx2s\" value_size:3200 >> failure:<request_range:<key:\"/registry/pods/emojivoto/emoji-66ccdb4d86-xhx2s\" > >>" with result "size:16" took too long (115.404537ms) to execute
+2022-12-06 08:28:52.999128 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/emoji\" " with result "range_response_count:1 size:4765" took too long (196.31225ms) to execute
+2022-12-06 08:28:53.217294 W | etcdserver: read-only range request "key:\"/registry/deployments/\" range_end:\"/registry/deployments0\" count_only:true " with result "range_response_count:0 size:7" took too long (143.444302ms) to execute
+2022-12-06 08:28:54.304946 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" " with result "range_response_count:1 size:8621" took too long (103.861858ms) to execute
+2022-12-06 08:28:54.544853 W | etcdserver: request "header:<ID:5444998075047573051 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" mod_revision:2310 > success:<request_put:<key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" value_size:1324 >> failure:<request_range:<key:\"/registry/endpointslices/emojivoto/voting-svc-4tl8z\" > >>" with result "size:16" took too long (125.553266ms) to execute
+2022-12-06 08:28:55.055138 W | etcdserver: request "header:<ID:5444998075047573058 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" mod_revision:2308 > success:<request_put:<key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" value_size:3208 >> failure:<request_range:<key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" > >>" with result "size:16" took too long (157.57085ms) to execute
+2022-12-06 08:28:55.055491 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (335.144223ms) to execute
+2022-12-06 08:28:55.055797 W | etcdserver: read-only range request "key:\"/registry/deployments/emojivoto/voting\" " with result "range_response_count:1 size:4783" took too long (419.128835ms) to execute
+2022-12-06 08:28:55.066556 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:28:55.570891 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:21 size:147089" took too long (106.445645ms) to execute
+2022-12-06 08:28:57.716334 W | etcdserver: request "header:<ID:5444998075047573097 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/emojivoto/vote-bot-69754c864f.172e26f31d790e16\" mod_revision:0 > success:<request_put:<key:\"/registry/events/emojivoto/vote-bot-69754c864f.172e26f31d790e16\" value_size:667 lease:5444998075047572364 >> failure:<>>" with result "size:16" took too long (267.043997ms) to execute
+2022-12-06 08:28:57.716868 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-69754c864f-mf6gh\" " with result "range_response_count:1 size:2907" took too long (292.182237ms) to execute
+2022-12-06 08:28:57.717279 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (269.655959ms) to execute
+2022-12-06 08:28:57.717669 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (127.222626ms) to execute
+2022-12-06 08:29:03.487927 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (115.824184ms) to execute
+2022-12-06 08:29:05.066299 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:29:15.066936 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:29:23.531395 W | etcdserver: request "header:<ID:5444998075047573301 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/masterleases/172.19.0.2\" mod_revision:2411 > success:<request_put:<key:\"/registry/masterleases/172.19.0.2\" value_size:65 lease:5444998075047573299 >> failure:<request_range:<key:\"/registry/masterleases/172.19.0.2\" > >>" with result "size:16" took too long (102.986908ms) to execute
+2022-12-06 08:29:25.066244 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:29:25.563099 W | etcdserver: read-only range request "key:\"/registry/ingressclasses/\" range_end:\"/registry/ingressclasses0\" count_only:true " with result "range_response_count:0 size:5" took too long (117.480434ms) to execute
+2022-12-06 08:29:25.844973 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (124.587312ms) to execute
+2022-12-06 08:29:27.495489 W | etcdserver: request "header:<ID:5444998075047573343 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" mod_revision:2441 > success:<request_delete_range:<key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" > > failure:<request_range:<key:\"/registry/pods/emojivoto/voting-f999bd4d7-qpzb4\" > >>" with result "size:18" took too long (146.53583ms) to execute
+2022-12-06 08:29:27.496171 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:18 size:137814" took too long (174.93159ms) to execute
+2022-12-06 08:29:35.066955 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:29:45.067237 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:29:55.067113 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:05.066368 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:13.492967 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/default/kubernetes\" " with result "range_response_count:1 size:418" took too long (131.548684ms) to execute
+2022-12-06 08:30:15.066933 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:25.066445 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:35.066788 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:45.066795 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:30:55.066507 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:05.066834 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:15.067149 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:24.089715 I | mvcc: store.index: compact 1753
+2022-12-06 08:31:24.167061 I | mvcc: finished scheduled compaction at 1753 (took 76.652503ms)
+2022-12-06 08:31:25.067049 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:35.066361 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:45.066949 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:31:55.066786 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:05.066764 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:15.066512 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:25.066258 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:35.066715 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:45.066217 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:32:55.066905 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:05.067082 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:08.894397 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (162.12464ms) to execute
+2022-12-06 08:33:15.066333 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:25.067106 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:29.126936 W | etcdserver: request "header:<ID:5444998075047575062 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:2856 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:546 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (116.669862ms) to execute
+2022-12-06 08:33:35.066963 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:45.067006 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:33:55.066796 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:05.066533 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:15.066565 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:25.066353 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:35.066766 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:45.067033 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:34:55.066512 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:00.639139 W | etcdserver: read-only range request "key:\"/registry/pods/linkerd/linkerd-heartbeat-27838595-5l2hb\" " with result "range_response_count:1 size:2550" took too long (101.431351ms) to execute
+2022-12-06 08:35:03.680540 W | etcdserver: read-only range request "key:\"/registry/jobs/linkerd/linkerd-heartbeat-27838595\" " with result "range_response_count:1 size:2518" took too long (166.278155ms) to execute
+2022-12-06 08:35:03.830466 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (110.352481ms) to execute
+2022-12-06 08:35:05.066351 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:15.088352 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:19.187625 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (119.6775ms) to execute
+2022-12-06 08:35:25.067092 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:35.066886 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:45.066441 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:35:55.066200 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:05.066681 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:15.067347 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:24.133305 I | mvcc: store.index: compact 2652
+2022-12-06 08:36:24.211118 I | mvcc: finished scheduled compaction at 2652 (took 76.831565ms)
+2022-12-06 08:36:25.067222 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:35.066887 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:45.066806 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:36:55.067165 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:05.067018 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:15.067136 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:25.066702 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:32.283129 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7499" took too long (167.161563ms) to execute
+2022-12-06 08:37:32.284739 W | etcdserver: read-only range request "key:\"/registry/persistentvolumeclaims/\" range_end:\"/registry/persistentvolumeclaims0\" count_only:true " with result "range_response_count:0 size:5" took too long (117.840625ms) to execute
+2022-12-06 08:37:35.067050 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:45.066303 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:37:55.067529 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:05.066922 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:15.067072 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:25.067343 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:35.066668 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:45.066090 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:38:53.310969 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7499" took too long (140.268066ms) to execute
+2022-12-06 08:38:53.311088 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7499" took too long (139.225008ms) to execute
+2022-12-06 08:38:53.312030 W | etcdserver: read-only range request "key:\"/registry/certificatesigningrequests/\" range_end:\"/registry/certificatesigningrequests0\" count_only:true " with result "range_response_count:0 size:7" took too long (111.165842ms) to execute
+2022-12-06 08:38:55.066150 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:05.066795 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:15.066674 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:25.091293 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:25.125929 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (101.955755ms) to execute
+2022-12-06 08:39:35.066301 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:45.066359 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:39:55.067146 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:05.066275 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:15.066946 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:25.066382 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:35.067196 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:44.601697 W | etcdserver: read-only range request "key:\"/registry/events/\" range_end:\"/registry/events0\" count_only:true " with result "range_response_count:0 size:8" took too long (151.569322ms) to execute
+2022-12-06 08:40:45.096815 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:40:45.334901 W | etcdserver: read-only range request "key:\"/registry/services/specs/emojivoto/\" range_end:\"/registry/services/specs/emojivoto0\" " with result "range_response_count:0 size:5" took too long (142.798053ms) to execute
+2022-12-06 08:40:46.584867 W | etcdserver: read-only range request "key:\"/registry/events/emojivoto/voting-ff4c54b8d-8pfhc.172e26ec6b7ed05e\" " with result "range_response_count:1 size:786" took too long (110.736106ms) to execute
+2022-12-06 08:40:47.664961 W | etcdserver: request "header:<ID:5444998075047578621 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/deployments/emojivoto/emoji\" mod_revision:2339 > success:<request_put:<key:\"/registry/deployments/emojivoto/emoji\" value_size:4678 >> failure:<request_range:<key:\"/registry/deployments/emojivoto/emoji\" > >>" with result "size:16" took too long (108.661895ms) to execute
+2022-12-06 08:40:47.909613 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" " with result "range_response_count:1 size:8431" took too long (237.813224ms) to execute
+2022-12-06 08:40:47.909894 W | etcdserver: request "header:<ID:5444998075047578623 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/replicasets/emojivoto/vote-bot-6d7677bb68\" mod_revision:2370 > success:<request_put:<key:\"/registry/replicasets/emojivoto/vote-bot-6d7677bb68\" value_size:2058 >> failure:<request_range:<key:\"/registry/replicasets/emojivoto/vote-bot-6d7677bb68\" > >>" with result "size:16" took too long (107.041521ms) to execute
+2022-12-06 08:40:48.140838 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (419.998973ms) to execute
+2022-12-06 08:40:48.141003 W | etcdserver: request "header:<ID:5444998075047578625 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" mod_revision:2346 > success:<request_put:<key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" value_size:8373 >> failure:<request_range:<key:\"/registry/pods/emojivoto/voting-ff4c54b8d-8pfhc\" > >>" with result "size:16" took too long (100.470537ms) to execute
+2022-12-06 08:40:48.141139 W | etcdserver: read-only range request "key:\"/registry/events/\" range_end:\"/registry/events0\" count_only:true " with result "range_response_count:0 size:8" took too long (435.463199ms) to execute
+2022-12-06 08:40:48.141436 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" " with result "range_response_count:1 size:8065" took too long (462.264029ms) to execute
+2022-12-06 08:40:48.152409 W | etcdserver: read-only range request "key:\"/registry/cronjobs/\" range_end:\"/registry/cronjobs0\" count_only:true " with result "range_response_count:0 size:7" took too long (317.382029ms) to execute
+2022-12-06 08:40:48.502673 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/\" range_end:\"/registry/pods/emojivoto0\" " with result "range_response_count:4 size:33422" took too long (296.517115ms) to execute
+2022-12-06 08:40:48.502732 W | etcdserver: request "header:<ID:5444998075047578633 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/replicasets/emojivoto/web-5f86686c4d\" mod_revision:2255 > success:<request_put:<key:\"/registry/replicasets/emojivoto/web-5f86686c4d\" value_size:2521 >> failure:<request_range:<key:\"/registry/replicasets/emojivoto/web-5f86686c4d\" > >>" with result "size:16" took too long (253.407261ms) to execute
+2022-12-06 08:40:48.503254 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/web-5f86686c4d-xnnhl\" " with result "range_response_count:1 size:8504" took too long (255.069351ms) to execute
+2022-12-06 08:40:48.550180 W | etcdserver: read-only range request "key:\"/registry/networkpolicies/\" range_end:\"/registry/networkpolicies0\" count_only:true " with result "range_response_count:0 size:5" took too long (211.885243ms) to execute
+2022-12-06 08:40:48.726044 W | etcdserver: read-only range request "key:\"/registry/jobs/emojivoto/\" range_end:\"/registry/jobs/emojivoto0\" " with result "range_response_count:0 size:5" took too long (214.8103ms) to execute
+2022-12-06 08:40:48.726556 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/\" range_end:\"/registry/services/endpoints0\" count_only:true " with result "range_response_count:0 size:7" took too long (206.769619ms) to execute
+2022-12-06 08:40:48.918145 W | etcdserver: read-only range request "key:\"/registry/pods/emojivoto/vote-bot-6d7677bb68-mgmv6\" " with result "range_response_count:1 size:8065" took too long (141.868132ms) to execute
+2022-12-06 08:40:48.918254 W | etcdserver: read-only range request "key:\"/registry/policy.linkerd.io/serverauthorizations/emojivoto/\" range_end:\"/registry/policy.linkerd.io/serverauthorizations/emojivoto0\" " with result "range_response_count:0 size:5" took too long (119.419046ms) to execute
+2022-12-06 08:40:55.066429 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:05.066696 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:15.066586 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:19.408685 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (294.598913ms) to execute
+2022-12-06 08:41:19.408785 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (240.581194ms) to execute
+2022-12-06 08:41:19.408831 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/local-path-storage/rancher.io-local-path\" " with result "range_response_count:1 size:643" took too long (161.415908ms) to execute
+2022-12-06 08:41:24.190705 I | mvcc: store.index: compact 3210
+2022-12-06 08:41:24.243801 I | mvcc: finished scheduled compaction at 3210 (took 52.472119ms)
+2022-12-06 08:41:25.066423 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:35.065682 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:45.066547 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:41:55.067120 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:05.066060 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:15.066408 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:25.066473 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:35.066595 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:45.066949 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:42:55.066506 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:05.110556 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:15.067023 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:25.066309 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:35.066927 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:45.067278 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:55.066753 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:43:57.108013 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7499" took too long (205.209949ms) to execute
+2022-12-06 08:44:05.067287 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:44:15.066926 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:44:17.499816 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (334.092686ms) to execute
+2022-12-06 08:44:17.502086 W | etcdserver: request "header:<ID:5444998075047581391 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/leases/kube-node-lease/kind-1-worker\" mod_revision:4255 > success:<request_put:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" value_size:545 >> failure:<request_range:<key:\"/registry/leases/kube-node-lease/kind-1-worker\" > >>" with result "size:16" took too long (333.832347ms) to execute
+2022-12-06 08:44:17.855591 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (128.873284ms) to execute
+2022-12-06 08:44:17.859865 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:18 size:124870" took too long (109.122315ms) to execute
+2022-12-06 08:44:17.861135 W | etcdserver: read-only range request "key:\"/registry/csistoragecapacities/\" range_end:\"/registry/csistoragecapacities0\" count_only:true " with result "range_response_count:0 size:5" took too long (107.155012ms) to execute
+2022-12-06 08:44:20.331898 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:491" took too long (114.403218ms) to execute
+2022-12-06 08:44:23.207958 W | etcdserver: request "header:<ID:5444998075047581478 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/deployments/default/greeting\" mod_revision:4346 > success:<request_put:<key:\"/registry/deployments/default/greeting\" value_size:3958 >> failure:<request_range:<key:\"/registry/deployments/default/greeting\" > >>" with result "size:16" took too long (115.102906ms) to execute
+2022-12-06 08:44:23.423970 W | etcdserver: read-only range request "key:\"/registry/pods/default/alpine-bc578d674-jm7p2\" " with result "range_response_count:1 size:2615" took too long (208.369974ms) to execute
+2022-12-06 08:44:23.424266 W | etcdserver: request "header:<ID:5444998075047581480 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/default/alpine.172e27caab4c2c6a\" mod_revision:0 > success:<request_put:<key:\"/registry/events/default/alpine.172e27caab4c2c6a\" value_size:645 lease:5444998075047581080 >> failure:<>>" with result "size:16" took too long (112.310991ms) to execute
+2022-12-06 08:44:23.666458 W | etcdserver: read-only range request "key:\"/registry/namespaces/default\" " with result "range_response_count:1 size:341" took too long (284.399174ms) to execute
+2022-12-06 08:44:23.667356 W | etcdserver: request "header:<ID:5444998075047581483 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/alpine-bc578d674-jm7p2\" mod_revision:4243 > success:<request_put:<key:\"/registry/pods/default/alpine-bc578d674-jm7p2\" value_size:2559 >> failure:<request_range:<key:\"/registry/pods/default/alpine-bc578d674-jm7p2\" > >>" with result "size:16" took too long (134.807312ms) to execute
+2022-12-06 08:44:23.873640 W | etcdserver: read-only range request "key:\"/registry/services/specs/default/kubernetes\" " with result "range_response_count:1 size:665" took too long (189.562367ms) to execute
+2022-12-06 08:44:23.873959 W | etcdserver: request "header:<ID:5444998075047581485 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/default/alpine-bc578d674.172e27cac6dd4828\" mod_revision:0 > success:<request_put:<key:\"/registry/events/default/alpine-bc578d674.172e27cac6dd4828\" value_size:654 lease:5444998075047581080 >> failure:<>>" with result "size:16" took too long (107.05063ms) to execute
+2022-12-06 08:44:23.878703 W | etcdserver: read-only range request "key:\"/registry/pods/default/alpine-bc578d674-jm7p2\" " with result "range_response_count:1 size:2627" took too long (190.708948ms) to execute
+2022-12-06 08:44:23.882688 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (162.085196ms) to execute
+2022-12-06 08:44:25.066628 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:44:35.066144 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:44:45.066749 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:44:55.066696 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:05.066879 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:15.080442 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:25.067003 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:35.130804 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:45.066406 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:45:55.066902 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:05.066385 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:15.066683 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:24.250072 I | mvcc: store.index: compact 3910
+2022-12-06 08:46:24.302952 I | mvcc: finished scheduled compaction at 3910 (took 51.798468ms)
+2022-12-06 08:46:25.066437 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:35.066920 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:45.066982 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:55.066895 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:46:59.156752 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (112.245133ms) to execute
+2022-12-06 08:47:05.067088 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:47:15.066151 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:47:19.422206 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (123.39215ms) to execute
+2022-12-06 08:47:19.422304 W | etcdserver: read-only range request "key:\"/registry/pods/\" range_end:\"/registry/pods0\" limit:500 " with result "range_response_count:16 size:120245" took too long (123.225592ms) to execute
+2022-12-06 08:47:25.066812 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:47:35.066892 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:47:45.074035 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:47:49.837233 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (116.818675ms) to execute
+2022-12-06 08:47:49.837360 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (125.825396ms) to execute
+2022-12-06 08:47:55.066431 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:05.066787 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:15.067438 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:25.066372 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:29.831603 W | etcdserver: read-only range request "key:\"/registry/health\" " with result "range_response_count:0 size:5" took too long (105.954167ms) to execute
+2022-12-06 08:48:29.832222 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-scheduler\" " with result "range_response_count:1 size:492" took too long (115.357984ms) to execute
+2022-12-06 08:48:35.067286 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:45.066737 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:48:55.067216 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:05.066487 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:15.066228 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:25.066400 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:35.068612 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:41.231780 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (103.320573ms) to execute
+2022-12-06 08:49:45.066513 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:49:55.066699 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:05.066986 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:15.066660 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:25.067144 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:35.067133 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:45.066753 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:50:55.066855 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:05.067451 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:12.403815 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (133.719482ms) to execute
+2022-12-06 08:51:15.066937 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:24.310333 I | mvcc: store.index: compact 4588
+2022-12-06 08:51:24.362989 I | mvcc: finished scheduled compaction at 4588 (took 51.894986ms)
+2022-12-06 08:51:25.066832 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:35.066472 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:45.066326 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:51:55.067322 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:05.067120 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:15.066579 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:25.067261 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:27.699089 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:519" took too long (104.525839ms) to execute
+2022-12-06 08:52:33.465109 W | etcdserver: read-only range request "key:\"/registry/minions/\" range_end:\"/registry/minions0\" " with result "range_response_count:2 size:7787" took too long (120.992967ms) to execute
+2022-12-06 08:52:33.465243 W | etcdserver: read-only range request "key:\"/registry/controllerrevisions/\" range_end:\"/registry/controllerrevisions0\" count_only:true " with result "range_response_count:0 size:7" took too long (111.107862ms) to execute
+2022-12-06 08:52:35.066688 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:45.067099 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:52:55.066869 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+2022-12-06 08:53:04.372168 W | etcdserver: read-only range request "key:\"/registry/leases/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:518" took too long (106.061282ms) to execute
+2022-12-06 08:53:05.067315 I | etcdserver/api/etcdhttp: /health OK (status code 200)
+==== END logs for container etcd of pod kube-system/etcd-kind-1-control-plane ====

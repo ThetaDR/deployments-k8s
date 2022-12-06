@@ -1,0 +1,925 @@
+==== START logs for container kube-apiserver of pod kube-system/kube-apiserver-kind-1-control-plane ====
+Flag --insecure-port has been deprecated, This flag has no effect now and will be removed in v1.24.
+I1206 08:16:22.065127       1 server.go:629] external host was not specified, using 172.19.0.2
+I1206 08:16:22.065643       1 server.go:181] Version: v1.21.1
+I1206 08:16:22.447022       1 shared_informer.go:240] Waiting for caches to sync for node_authorizer
+I1206 08:16:22.448511       1 plugins.go:158] Loaded 12 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionWebhook.
+I1206 08:16:22.448538       1 plugins.go:161] Loaded 10 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,CertificateSubjectRestriction,ValidatingAdmissionWebhook,ResourceQuota.
+I1206 08:16:22.450680       1 plugins.go:158] Loaded 12 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionWebhook.
+I1206 08:16:22.450711       1 plugins.go:161] Loaded 10 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,CertificateSubjectRestriction,ValidatingAdmissionWebhook,ResourceQuota.
+I1206 08:16:22.453974       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:22.454045       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+W1206 08:16:22.454864       1 clientconn.go:1223] grpc: addrConn.createTransport failed to connect to {https://127.0.0.1:2379  <nil> 0 <nil>}. Err :connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:2379: connect: connection refused". Reconnecting...
+I1206 08:16:23.447323       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:23.447392       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:23.935908       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:23.935977       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:23.950717       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:16:23.950768       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:16:23.950778       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:16:23.951949       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:23.952068       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.007868       1 instance.go:283] Using reconciler: lease
+I1206 08:16:24.008403       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.008431       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.019691       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.019725       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.029587       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.029731       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.039003       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.039044       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.048704       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.048751       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.058984       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.059030       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.072342       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.072397       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.084977       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.085022       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.095109       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.095370       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.105684       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.105742       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.116667       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.116707       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.126995       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.127237       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.137542       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.137680       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.147333       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.147581       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.158442       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.158684       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.168234       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.168265       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.177689       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.177722       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.187596       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.187638       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.196782       1 rest.go:130] the default service ipfamily for this cluster is: IPv4
+I1206 08:16:24.303067       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.303111       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.321429       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.321546       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.341266       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.341333       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.351763       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.351814       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.365710       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.365774       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.384682       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.384748       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.397673       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.397717       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.410894       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.411181       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.427840       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.428103       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.440124       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.440180       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.450025       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.450069       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.461353       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.461404       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.470979       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.471047       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.480562       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.480613       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.492571       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.492613       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.502385       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.502433       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.512206       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.512251       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.522239       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.522479       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.533023       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.533080       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.543385       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.543666       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.553722       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.553869       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.563644       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.563685       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.573547       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.573588       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.583454       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.583488       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.596857       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.596894       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.607058       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.607329       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.645397       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.645460       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.655877       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.655921       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.667233       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.667312       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.677844       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.677894       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.688169       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.688235       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.711116       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.711324       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.722412       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.722826       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.733697       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.733763       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.757420       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.757473       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.772733       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.772810       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.783778       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.783841       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.795628       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.795688       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.806978       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.807023       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.818806       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.818860       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.830011       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.830058       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.841366       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.841422       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.851869       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.851918       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.862415       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.862463       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.873165       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.873261       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.883891       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.883936       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.894222       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.894430       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.904941       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.905174       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.917533       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.917659       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.928050       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.928100       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.938196       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.938244       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.947933       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.947974       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.957872       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.958007       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.968292       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.968330       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:24.978215       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:24.978258       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+W1206 08:16:25.230200       1 genericapiserver.go:425] Skipping API node.k8s.io/v1alpha1 because it has no resources.
+W1206 08:16:25.246099       1 genericapiserver.go:425] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+W1206 08:16:25.251961       1 genericapiserver.go:425] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+W1206 08:16:25.261434       1 genericapiserver.go:425] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+W1206 08:16:25.265486       1 genericapiserver.go:425] Skipping API flowcontrol.apiserver.k8s.io/v1alpha1 because it has no resources.
+W1206 08:16:25.273004       1 genericapiserver.go:425] Skipping API apps/v1beta2 because it has no resources.
+W1206 08:16:25.273030       1 genericapiserver.go:425] Skipping API apps/v1beta1 because it has no resources.
+I1206 08:16:25.288007       1 plugins.go:158] Loaded 12 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,StorageObjectInUseProtection,RuntimeClass,DefaultIngressClass,MutatingAdmissionWebhook.
+I1206 08:16:25.288035       1 plugins.go:161] Loaded 10 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,RuntimeClass,CertificateApproval,CertificateSigning,CertificateSubjectRestriction,ValidatingAdmissionWebhook,ResourceQuota.
+I1206 08:16:25.290069       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:25.290141       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:25.307209       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:16:25.307301       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:16:28.470276       1 dynamic_cafile_content.go:167] Starting client-ca-bundle::/etc/kubernetes/pki/ca.crt
+I1206 08:16:28.470276       1 dynamic_cafile_content.go:167] Starting request-header::/etc/kubernetes/pki/front-proxy-ca.crt
+I1206 08:16:28.470399       1 dynamic_serving_content.go:130] Starting serving-cert::/etc/kubernetes/pki/apiserver.crt::/etc/kubernetes/pki/apiserver.key
+I1206 08:16:28.471004       1 secure_serving.go:197] Serving securely on [::]:6443
+I1206 08:16:28.471070       1 available_controller.go:475] Starting AvailableConditionController
+I1206 08:16:28.471085       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+I1206 08:16:28.471108       1 tlsconfig.go:240] Starting DynamicServingCertificateController
+I1206 08:16:28.471575       1 controller.go:83] Starting OpenAPI AggregationController
+I1206 08:16:28.471629       1 apf_controller.go:294] Starting API Priority and Fairness config controller
+I1206 08:16:28.471729       1 dynamic_serving_content.go:130] Starting aggregator-proxy-cert::/etc/kubernetes/pki/front-proxy-client.crt::/etc/kubernetes/pki/front-proxy-client.key
+I1206 08:16:28.472316       1 cluster_authentication_trust_controller.go:440] Starting cluster_authentication_trust_controller controller
+I1206 08:16:28.472338       1 shared_informer.go:240] Waiting for caches to sync for cluster_authentication_trust_controller
+I1206 08:16:28.472734       1 apiservice_controller.go:97] Starting APIServiceRegistrationController
+I1206 08:16:28.472753       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+I1206 08:16:28.472807       1 autoregister_controller.go:141] Starting autoregister controller
+I1206 08:16:28.472880       1 cache.go:32] Waiting for caches to sync for autoregister controller
+I1206 08:16:28.473000       1 dynamic_cafile_content.go:167] Starting client-ca-bundle::/etc/kubernetes/pki/ca.crt
+I1206 08:16:28.473032       1 dynamic_cafile_content.go:167] Starting request-header::/etc/kubernetes/pki/front-proxy-ca.crt
+I1206 08:16:28.494539       1 controller.go:86] Starting OpenAPI controller
+I1206 08:16:28.519051       1 naming_controller.go:291] Starting NamingConditionController
+I1206 08:16:28.519102       1 establishing_controller.go:76] Starting EstablishingController
+I1206 08:16:28.519133       1 nonstructuralschema_controller.go:192] Starting NonStructuralSchemaConditionController
+I1206 08:16:28.519150       1 apiapproval_controller.go:186] Starting KubernetesAPIApprovalPolicyConformantConditionController
+I1206 08:16:28.519172       1 crd_finalizer.go:266] Starting CRDFinalizer
+I1206 08:16:28.521279       1 crdregistration_controller.go:111] Starting crd-autoregister controller
+I1206 08:16:28.521468       1 shared_informer.go:240] Waiting for caches to sync for crd-autoregister
+I1206 08:16:28.472905       1 customresource_discovery_controller.go:209] Starting DiscoveryController
+E1206 08:16:28.527008       1 controller.go:152] Unable to remove old endpoints from kubernetes service: StorageError: key not found, Code: 1, Key: /registry/masterleases/172.19.0.2, ResourceVersion: 0, AdditionalErrorMsg: 
+I1206 08:16:28.572202       1 cache.go:39] Caches are synced for AvailableConditionController controller
+I1206 08:16:28.572253       1 apf_controller.go:299] Running API Priority and Fairness config worker
+I1206 08:16:28.575579       1 shared_informer.go:247] Caches are synced for cluster_authentication_trust_controller 
+I1206 08:16:28.575723       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+I1206 08:16:28.575784       1 cache.go:39] Caches are synced for autoregister controller
+I1206 08:16:28.621817       1 shared_informer.go:247] Caches are synced for crd-autoregister 
+I1206 08:16:28.647945       1 shared_informer.go:247] Caches are synced for node_authorizer 
+I1206 08:16:28.738325       1 controller.go:611] quota admission added evaluator for: namespaces
+I1206 08:16:29.470395       1 controller.go:132] OpenAPI AggregationController: action for item : Nothing (removed from the queue).
+I1206 08:16:29.470465       1 controller.go:132] OpenAPI AggregationController: action for item k8s_internal_local_delegation_chain_0000000000: Nothing (removed from the queue).
+I1206 08:16:29.538358       1 storage_scheduling.go:132] created PriorityClass system-node-critical with value 2000001000
+I1206 08:16:29.551636       1 storage_scheduling.go:132] created PriorityClass system-cluster-critical with value 2000000000
+I1206 08:16:29.551689       1 storage_scheduling.go:148] all system priority classes are created successfully or already exist.
+I1206 08:16:32.542451       1 controller.go:611] quota admission added evaluator for: roles.rbac.authorization.k8s.io
+I1206 08:16:32.813047       1 controller.go:611] quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io
+W1206 08:16:33.339315       1 lease.go:233] Resetting endpoints for master service "kubernetes" to [172.19.0.2]
+I1206 08:16:33.341996       1 controller.go:611] quota admission added evaluator for: endpoints
+I1206 08:16:33.356256       1 controller.go:611] quota admission added evaluator for: endpointslices.discovery.k8s.io
+I1206 08:16:33.988187       1 controller.go:611] quota admission added evaluator for: leases.coordination.k8s.io
+I1206 08:16:34.648400       1 controller.go:611] quota admission added evaluator for: serviceaccounts
+I1206 08:16:35.878787       1 controller.go:611] quota admission added evaluator for: deployments.apps
+I1206 08:16:36.119561       1 controller.go:611] quota admission added evaluator for: daemonsets.apps
+I1206 08:16:49.201023       1 controller.go:611] quota admission added evaluator for: controllerrevisions.apps
+I1206 08:16:49.311918       1 controller.go:611] quota admission added evaluator for: replicasets.apps
+I1206 08:16:57.964858       1 trace.go:205] Trace[1772268453]: "Get" url:/api/v1/nodes/kind-1-worker,user-agent:kubeadm/v1.21.1 (linux/amd64) kubernetes/5e58841,client:172.19.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:16:57.398) (total time: 566ms):
+Trace[1772268453]: [566.612046ms] [566.612046ms] END
+I1206 08:16:57.965416       1 trace.go:205] Trace[1432432026]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:16:57.270) (total time: 695ms):
+Trace[1432432026]: ---"About to write a response" 694ms (08:16:00.965)
+Trace[1432432026]: [695.051269ms] [695.051269ms] END
+I1206 08:17:00.046985       1 trace.go:205] Trace[1195743583]: "Get" url:/api/v1/nodes/kind-1-worker,user-agent:kubeadm/v1.21.1 (linux/amd64) kubernetes/5e58841,client:172.19.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:16:59.400) (total time: 646ms):
+Trace[1195743583]: [646.640931ms] [646.640931ms] END
+I1206 08:17:08.030434       1 trace.go:205] Trace[1215258842]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:07.426) (total time: 603ms):
+Trace[1215258842]: ---"Transaction committed" 602ms (08:17:00.030)
+Trace[1215258842]: [603.320918ms] [603.320918ms] END
+I1206 08:17:08.031028       1 trace.go:205] Trace[1656277985]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:07.426) (total time: 604ms):
+Trace[1656277985]: ---"Object stored in database" 603ms (08:17:00.030)
+Trace[1656277985]: [604.12355ms] [604.12355ms] END
+I1206 08:17:08.447074       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:17:08.447142       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:17:08.447163       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:17:08.728676       1 trace.go:205] Trace[1424423567]: "Get" url:/api/v1/namespaces/local-path-storage/pods/local-path-provisioner-547f784dff-fr4h6,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.134) (total time: 594ms):
+Trace[1424423567]: ---"About to write a response" 594ms (08:17:00.728)
+Trace[1424423567]: [594.333433ms] [594.333433ms] END
+I1206 08:17:08.728993       1 trace.go:205] Trace[280700263]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.115) (total time: 613ms):
+Trace[280700263]: ---"About to write a response" 613ms (08:17:00.728)
+Trace[280700263]: [613.726147ms] [613.726147ms] END
+I1206 08:17:08.728738       1 trace.go:205] Trace[944618256]: "Create" url:/api/v1/namespaces/kube-system/events,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/scheduler,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.130) (total time: 598ms):
+Trace[944618256]: ---"Object stored in database" 598ms (08:17:00.728)
+Trace[944618256]: [598.377674ms] [598.377674ms] END
+I1206 08:17:08.809029       1 trace.go:205] Trace[810609549]: "Create" url:/api/v1/namespaces/kube-system/serviceaccounts/coredns/token,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.277) (total time: 531ms):
+Trace[810609549]: ---"Object stored in database" 531ms (08:17:00.808)
+Trace[810609549]: [531.396973ms] [531.396973ms] END
+I1206 08:17:09.265895       1 trace.go:205] Trace[736784582]: "Create" url:/api/v1/namespaces/local-path-storage/serviceaccounts/local-path-provisioner-service-account/token,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.277) (total time: 988ms):
+Trace[736784582]: ---"Object stored in database" 988ms (08:17:00.265)
+Trace[736784582]: [988.420378ms] [988.420378ms] END
+I1206 08:17:09.268135       1 trace.go:205] Trace[172307560]: "Create" url:/api/v1/namespaces/kube-system/serviceaccounts/coredns/token,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:08.277) (total time: 990ms):
+Trace[172307560]: ---"Object stored in database" 990ms (08:17:00.267)
+Trace[172307560]: [990.479442ms] [990.479442ms] END
+I1206 08:17:09.834836       1 trace.go:205] Trace[2017717191]: "Get" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-pgfxq,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:09.283) (total time: 550ms):
+Trace[2017717191]: ---"About to write a response" 550ms (08:17:00.834)
+Trace[2017717191]: [550.787677ms] [550.787677ms] END
+I1206 08:17:10.615153       1 trace.go:205] Trace[167318431]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:10.043) (total time: 571ms):
+Trace[167318431]: ---"About to write a response" 570ms (08:17:00.614)
+Trace[167318431]: [571.089176ms] [571.089176ms] END
+I1206 08:17:29.518125       1 trace.go:205] Trace[477157586]: "GuaranteedUpdate etcd3" type:*core.Node (06-Dec-2022 08:17:29.002) (total time: 515ms):
+Trace[477157586]: ---"Transaction committed" 511ms (08:17:00.517)
+Trace[477157586]: [515.479174ms] [515.479174ms] END
+I1206 08:17:29.518761       1 trace.go:205] Trace[412885876]: "Patch" url:/api/v1/nodes/kind-1-worker,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:node-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:29.002) (total time: 516ms):
+Trace[412885876]: ---"Object stored in database" 512ms (08:17:00.518)
+Trace[412885876]: [516.390986ms] [516.390986ms] END
+I1206 08:17:29.519324       1 trace.go:205] Trace[860664713]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:28.995) (total time: 523ms):
+Trace[860664713]: ---"About to write a response" 523ms (08:17:00.519)
+Trace[860664713]: [523.669125ms] [523.669125ms] END
+I1206 08:17:30.541604       1 trace.go:205] Trace[608011210]: "Get" url:/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/exempt,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:29.531) (total time: 1009ms):
+Trace[608011210]: ---"About to write a response" 1009ms (08:17:00.541)
+Trace[608011210]: [1.009858794s] [1.009858794s] END
+I1206 08:17:34.148482       1 trace.go:205] Trace[1530231094]: "GuaranteedUpdate etcd3" type:*v1.Endpoints (06-Dec-2022 08:17:33.276) (total time: 871ms):
+Trace[1530231094]: ---"Transaction committed" 868ms (08:17:00.148)
+Trace[1530231094]: [871.665211ms] [871.665211ms] END
+I1206 08:17:34.149212       1 trace.go:205] Trace[2068786369]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:33.550) (total time: 598ms):
+Trace[2068786369]: ---"Transaction committed" 597ms (08:17:00.149)
+Trace[2068786369]: [598.843415ms] [598.843415ms] END
+I1206 08:17:34.149801       1 trace.go:205] Trace[357196226]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/kind-1-worker,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::3,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:33.549) (total time: 599ms):
+Trace[357196226]: ---"Object stored in database" 599ms (08:17:00.149)
+Trace[357196226]: [599.72657ms] [599.72657ms] END
+I1206 08:17:34.150298       1 trace.go:205] Trace[100073842]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:17:33.570) (total time: 580ms):
+Trace[100073842]: [580.119401ms] [580.119401ms] END
+I1206 08:17:34.151768       1 trace.go:205] Trace[935107284]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.2,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:33.570) (total time: 581ms):
+Trace[935107284]: ---"Listing from storage done" 580ms (08:17:00.150)
+Trace[935107284]: [581.595344ms] [581.595344ms] END
+I1206 08:17:34.395749       1 trace.go:205] Trace[774339482]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:33.615) (total time: 780ms):
+Trace[774339482]: ---"About to write a response" 780ms (08:17:00.395)
+Trace[774339482]: [780.374556ms] [780.374556ms] END
+I1206 08:17:41.276607       1 trace.go:205] Trace[1659398739]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:40.474) (total time: 801ms):
+Trace[1659398739]: ---"About to write a response" 801ms (08:17:00.276)
+Trace[1659398739]: [801.964197ms] [801.964197ms] END
+I1206 08:17:41.278597       1 trace.go:205] Trace[2090194079]: "GuaranteedUpdate etcd3" type:*core.Pod (06-Dec-2022 08:17:40.280) (total time: 997ms):
+Trace[2090194079]: ---"Transaction committed" 990ms (08:17:00.278)
+Trace[2090194079]: [997.724896ms] [997.724896ms] END
+I1206 08:17:41.279644       1 trace.go:205] Trace[1315295144]: "Get" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-pgfxq,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:40.291) (total time: 988ms):
+Trace[1315295144]: ---"About to write a response" 985ms (08:17:00.276)
+Trace[1315295144]: [988.093697ms] [988.093697ms] END
+I1206 08:17:41.280498       1 trace.go:205] Trace[1837596351]: "Patch" url:/api/v1/namespaces/kube-system/pods/kube-proxy-cbqh5/status,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::3,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:40.280) (total time: 999ms):
+Trace[1837596351]: ---"Object stored in database" 991ms (08:17:00.278)
+Trace[1837596351]: [999.79224ms] [999.79224ms] END
+I1206 08:17:42.417917       1 trace.go:205] Trace[521646435]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:41.299) (total time: 1118ms):
+Trace[521646435]: ---"Transaction committed" 1116ms (08:17:00.417)
+Trace[521646435]: [1.118417847s] [1.118417847s] END
+I1206 08:17:42.418865       1 trace.go:205] Trace[1512060570]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.299) (total time: 1119ms):
+Trace[1512060570]: ---"Object stored in database" 1119ms (08:17:00.418)
+Trace[1512060570]: [1.119571117s] [1.119571117s] END
+I1206 08:17:42.420988       1 trace.go:205] Trace[113747859]: "GuaranteedUpdate etcd3" type:*apps.DaemonSet (06-Dec-2022 08:17:41.297) (total time: 1123ms):
+Trace[113747859]: ---"Transaction committed" 1117ms (08:17:00.420)
+Trace[113747859]: [1.12330532s] [1.12330532s] END
+I1206 08:17:42.421383       1 trace.go:205] Trace[2096952535]: "Update" url:/apis/apps/v1/namespaces/kube-system/daemonsets/kube-proxy/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:daemon-set-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.297) (total time: 1124ms):
+Trace[2096952535]: ---"Object stored in database" 1123ms (08:17:00.421)
+Trace[2096952535]: [1.124263207s] [1.124263207s] END
+I1206 08:17:42.423687       1 trace.go:205] Trace[1818419846]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:41.297) (total time: 1125ms):
+Trace[1818419846]: ---"Transaction committed" 1125ms (08:17:00.423)
+Trace[1818419846]: [1.125982868s] [1.125982868s] END
+I1206 08:17:42.424199       1 trace.go:205] Trace[617745692]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.297) (total time: 1126ms):
+Trace[617745692]: ---"Object stored in database" 1126ms (08:17:00.423)
+Trace[617745692]: [1.126727445s] [1.126727445s] END
+I1206 08:17:42.425490       1 trace.go:205] Trace[935726030]: "GuaranteedUpdate etcd3" type:*discovery.EndpointSlice (06-Dec-2022 08:17:41.309) (total time: 1116ms):
+Trace[935726030]: ---"Transaction committed" 1114ms (08:17:00.425)
+Trace[935726030]: [1.116165276s] [1.116165276s] END
+I1206 08:17:42.427989       1 trace.go:205] Trace[1070479355]: "Update" url:/apis/discovery.k8s.io/v1/namespaces/kube-system/endpointslices/kube-dns-2qg82,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpointslice-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.308) (total time: 1118ms):
+Trace[1070479355]: ---"Object stored in database" 1116ms (08:17:00.425)
+Trace[1070479355]: [1.11887325s] [1.11887325s] END
+I1206 08:17:42.428913       1 trace.go:205] Trace[1558266254]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:17:41.309) (total time: 1118ms):
+Trace[1558266254]: ---"Transaction committed" 1117ms (08:17:00.428)
+Trace[1558266254]: [1.118913477s] [1.118913477s] END
+I1206 08:17:42.429306       1 trace.go:205] Trace[923836221]: "Update" url:/api/v1/namespaces/kube-system/endpoints/kube-dns,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpoint-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.309) (total time: 1119ms):
+Trace[923836221]: ---"Object stored in database" 1119ms (08:17:00.428)
+Trace[923836221]: [1.119534487s] [1.119534487s] END
+I1206 08:17:42.432608       1 trace.go:205] Trace[1888856142]: "Get" url:/api/v1/namespaces/local-path-storage/pods/local-path-provisioner-547f784dff-fr4h6,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:41.309) (total time: 1123ms):
+Trace[1888856142]: ---"About to write a response" 1122ms (08:17:00.432)
+Trace[1888856142]: [1.123083736s] [1.123083736s] END
+I1206 08:17:43.268471       1 trace.go:205] Trace[284597361]: "GuaranteedUpdate etcd3" type:*core.Pod (06-Dec-2022 08:17:42.444) (total time: 823ms):
+Trace[284597361]: ---"Transaction committed" 816ms (08:17:00.268)
+Trace[284597361]: [823.46657ms] [823.46657ms] END
+I1206 08:17:43.268889       1 trace.go:205] Trace[808355505]: "Patch" url:/api/v1/namespaces/local-path-storage/pods/local-path-provisioner-547f784dff-fr4h6/status,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:42.444) (total time: 824ms):
+Trace[808355505]: ---"Object stored in database" 817ms (08:17:00.268)
+Trace[808355505]: [824.133266ms] [824.133266ms] END
+I1206 08:17:43.926597       1 trace.go:205] Trace[1375126813]: "Get" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-pgfxq,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:43.292) (total time: 633ms):
+Trace[1375126813]: ---"About to write a response" 633ms (08:17:00.925)
+Trace[1375126813]: [633.982207ms] [633.982207ms] END
+I1206 08:17:43.926981       1 trace.go:205] Trace[1745687489]: "GuaranteedUpdate etcd3" type:*apps.Deployment (06-Dec-2022 08:17:43.297) (total time: 629ms):
+Trace[1745687489]: ---"Transaction committed" 624ms (08:17:00.926)
+Trace[1745687489]: [629.669547ms] [629.669547ms] END
+I1206 08:17:43.927699       1 trace.go:205] Trace[1116489236]: "Update" url:/apis/apps/v1/namespaces/local-path-storage/deployments/local-path-provisioner/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:deployment-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:43.296) (total time: 631ms):
+Trace[1116489236]: ---"Object stored in database" 629ms (08:17:00.927)
+Trace[1116489236]: [631.028431ms] [631.028431ms] END
+I1206 08:17:45.161930       1 trace.go:205] Trace[697199530]: "GuaranteedUpdate etcd3" type:*core.Node (06-Dec-2022 08:17:43.947) (total time: 1214ms):
+Trace[697199530]: ---"Transaction committed" 1210ms (08:17:00.161)
+Trace[697199530]: [1.214528621s] [1.214528621s] END
+I1206 08:17:45.162223       1 trace.go:205] Trace[1905147330]: "Patch" url:/api/v1/nodes/kind-1-worker,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:node-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:43.947) (total time: 1215ms):
+Trace[1905147330]: ---"Object stored in database" 1211ms (08:17:00.161)
+Trace[1905147330]: [1.215011938s] [1.215011938s] END
+I1206 08:17:45.162348       1 trace.go:205] Trace[1671238765]: "GuaranteedUpdate etcd3" type:*core.Pod (06-Dec-2022 08:17:43.933) (total time: 1229ms):
+Trace[1671238765]: ---"Transaction committed" 1217ms (08:17:00.162)
+Trace[1671238765]: [1.229058399s] [1.229058399s] END
+I1206 08:17:45.162674       1 trace.go:205] Trace[1266395586]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:44.166) (total time: 996ms):
+Trace[1266395586]: ---"Transaction committed" 994ms (08:17:00.162)
+Trace[1266395586]: [996.020514ms] [996.020514ms] END
+I1206 08:17:45.162970       1 trace.go:205] Trace[1391657345]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/kind-1-worker,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::3,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.166) (total time: 996ms):
+Trace[1391657345]: ---"Object stored in database" 996ms (08:17:00.162)
+Trace[1391657345]: [996.581085ms] [996.581085ms] END
+I1206 08:17:45.163743       1 trace.go:205] Trace[1662941250]: "Get" url:/api/v1/namespaces/default/services/kubernetes,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:43.291) (total time: 1871ms):
+Trace[1662941250]: ---"About to write a response" 1871ms (08:17:00.163)
+Trace[1662941250]: [1.871759623s] [1.871759623s] END
+I1206 08:17:45.167346       1 trace.go:205] Trace[807177037]: "Patch" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-pgfxq/status,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:43.932) (total time: 1234ms):
+Trace[807177037]: ---"Object stored in database" 1219ms (08:17:00.162)
+Trace[807177037]: [1.234316769s] [1.234316769s] END
+I1206 08:17:46.178436       1 trace.go:205] Trace[1470288136]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:17:44.168) (total time: 2009ms):
+Trace[1470288136]: [2.009737224s] [2.009737224s] END
+I1206 08:17:46.185507       1 trace.go:205] Trace[886358847]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.2,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.168) (total time: 2011ms):
+Trace[886358847]: ---"Listing from storage done" 2009ms (08:17:00.178)
+Trace[886358847]: [2.011640493s] [2.011640493s] END
+I1206 08:17:46.186144       1 trace.go:205] Trace[586101707]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.465) (total time: 1720ms):
+Trace[586101707]: ---"About to write a response" 1720ms (08:17:00.185)
+Trace[586101707]: [1.720842548s] [1.720842548s] END
+I1206 08:17:46.186985       1 trace.go:205] Trace[1765969914]: "GuaranteedUpdate etcd3" type:*discovery.EndpointSlice (06-Dec-2022 08:17:45.183) (total time: 1003ms):
+Trace[1765969914]: ---"Transaction committed" 1001ms (08:17:00.186)
+Trace[1765969914]: [1.003205992s] [1.003205992s] END
+I1206 08:17:46.197565       1 trace.go:205] Trace[1717552712]: "Update" url:/apis/discovery.k8s.io/v1/namespaces/kube-system/endpointslices/kube-dns-2qg82,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpointslice-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:45.183) (total time: 1014ms):
+Trace[1717552712]: ---"Object stored in database" 1013ms (08:17:00.197)
+Trace[1717552712]: [1.014393921s] [1.014393921s] END
+I1206 08:17:46.187640       1 trace.go:205] Trace[1054874858]: "GuaranteedUpdate etcd3" type:*apps.ReplicaSet (06-Dec-2022 08:17:45.183) (total time: 1004ms):
+Trace[1054874858]: ---"Transaction committed" 999ms (08:17:00.187)
+Trace[1054874858]: [1.004085138s] [1.004085138s] END
+I1206 08:17:46.187918       1 trace.go:205] Trace[1526804625]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.446) (total time: 1741ms):
+Trace[1526804625]: ---"About to write a response" 1741ms (08:17:00.187)
+Trace[1526804625]: [1.741433016s] [1.741433016s] END
+I1206 08:17:46.185506       1 trace.go:205] Trace[158428931]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.446) (total time: 1739ms):
+Trace[158428931]: ---"About to write a response" 1739ms (08:17:00.185)
+Trace[158428931]: [1.739356568s] [1.739356568s] END
+I1206 08:17:46.191256       1 trace.go:205] Trace[1297683310]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:17:45.181) (total time: 1010ms):
+Trace[1297683310]: ---"Transaction committed" 1008ms (08:17:00.191)
+Trace[1297683310]: [1.010115198s] [1.010115198s] END
+I1206 08:17:46.199805       1 trace.go:205] Trace[1460189810]: "Update" url:/api/v1/namespaces/kube-system/endpoints/kube-dns,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpoint-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:45.180) (total time: 1018ms):
+Trace[1460189810]: ---"Object stored in database" 1018ms (08:17:00.199)
+Trace[1460189810]: [1.018926785s] [1.018926785s] END
+I1206 08:17:46.197074       1 trace.go:205] Trace[497007638]: "Get" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-6wd9d,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:45.174) (total time: 1022ms):
+Trace[497007638]: ---"About to write a response" 1013ms (08:17:00.188)
+Trace[497007638]: [1.022491616s] [1.022491616s] END
+I1206 08:17:46.211765       1 trace.go:205] Trace[948379039]: "Update" url:/apis/apps/v1/namespaces/kube-system/replicasets/coredns-558bd4d5db/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:replicaset-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:45.182) (total time: 1015ms):
+Trace[948379039]: ---"Object stored in database" 1014ms (08:17:00.198)
+Trace[948379039]: [1.015415963s] [1.015415963s] END
+I1206 08:17:47.087448       1 trace.go:205] Trace[1147204605]: "GuaranteedUpdate etcd3" type:*apps.Deployment (06-Dec-2022 08:17:46.205) (total time: 882ms):
+Trace[1147204605]: ---"Transaction committed" 870ms (08:17:00.087)
+Trace[1147204605]: [882.119777ms] [882.119777ms] END
+I1206 08:17:47.088493       1 trace.go:205] Trace[1559814312]: "Update" url:/apis/apps/v1/namespaces/kube-system/deployments/coredns/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:deployment-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:46.204) (total time: 883ms):
+Trace[1559814312]: ---"Object stored in database" 883ms (08:17:00.088)
+Trace[1559814312]: [883.771907ms] [883.771907ms] END
+I1206 08:17:47.090071       1 trace.go:205] Trace[671932339]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:17:46.216) (total time: 873ms):
+Trace[671932339]: ---"Transaction committed" 873ms (08:17:00.089)
+Trace[671932339]: [873.999471ms] [873.999471ms] END
+I1206 08:17:47.090321       1 trace.go:205] Trace[887624083]: "Update" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:46.215) (total time: 874ms):
+Trace[887624083]: ---"Object stored in database" 874ms (08:17:00.090)
+Trace[887624083]: [874.573545ms] [874.573545ms] END
+I1206 08:17:47.092966       1 trace.go:205] Trace[2124163892]: "GuaranteedUpdate etcd3" type:*core.Pod (06-Dec-2022 08:17:46.217) (total time: 875ms):
+Trace[2124163892]: ---"Transaction committed" 869ms (08:17:00.092)
+Trace[2124163892]: [875.522241ms] [875.522241ms] END
+I1206 08:17:47.087663       1 trace.go:205] Trace[18006094]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:46.209) (total time: 878ms):
+Trace[18006094]: ---"Transaction committed" 877ms (08:17:00.087)
+Trace[18006094]: [878.143204ms] [878.143204ms] END
+I1206 08:17:47.093433       1 trace.go:205] Trace[304620052]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:46.209) (total time: 884ms):
+Trace[304620052]: ---"Object stored in database" 883ms (08:17:00.093)
+Trace[304620052]: [884.054255ms] [884.054255ms] END
+I1206 08:17:47.095271       1 trace.go:205] Trace[846542069]: "GuaranteedUpdate etcd3" type:*core.Node (06-Dec-2022 08:17:44.537) (total time: 2557ms):
+Trace[846542069]: ---"Transaction committed" 1648ms (08:17:00.190)
+Trace[846542069]: ---"Transaction committed" 898ms (08:17:00.095)
+Trace[846542069]: [2.55737842s] [2.55737842s] END
+I1206 08:17:47.095890       1 trace.go:205] Trace[906691173]: "Patch" url:/api/v1/nodes/kind-1-worker,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:node-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:44.537) (total time: 2558ms):
+Trace[906691173]: ---"About to apply patch" 1649ms (08:17:00.190)
+Trace[906691173]: ---"Object stored in database" 899ms (08:17:00.095)
+Trace[906691173]: [2.558078931s] [2.558078931s] END
+I1206 08:17:47.087738       1 trace.go:205] Trace[127628636]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:17:46.211) (total time: 876ms):
+Trace[127628636]: ---"Transaction committed" 875ms (08:17:00.087)
+Trace[127628636]: [876.459364ms] [876.459364ms] END
+I1206 08:17:47.096410       1 trace.go:205] Trace[1981765136]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:46.211) (total time: 885ms):
+Trace[1981765136]: ---"Object stored in database" 884ms (08:17:00.096)
+Trace[1981765136]: [885.199599ms] [885.199599ms] END
+I1206 08:17:47.097242       1 trace.go:205] Trace[62683406]: "Patch" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-6wd9d/status,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:46.217) (total time: 879ms):
+Trace[62683406]: ---"Object stored in database" 870ms (08:17:00.093)
+Trace[62683406]: [879.983867ms] [879.983867ms] END
+I1206 08:17:48.227455       1 trace.go:205] Trace[921901595]: "GuaranteedUpdate etcd3" type:*v1.Endpoints (06-Dec-2022 08:17:45.170) (total time: 3056ms):
+Trace[921901595]: ---"initial value restored" 1017ms (08:17:00.188)
+Trace[921901595]: ---"Transaction prepared" 897ms (08:17:00.085)
+Trace[921901595]: ---"Transaction committed" 1141ms (08:17:00.227)
+Trace[921901595]: [3.056444451s] [3.056444451s] END
+I1206 08:17:48.228598       1 trace.go:205] Trace[583314123]: "GuaranteedUpdate etcd3" type:*discovery.EndpointSlice (06-Dec-2022 08:17:47.110) (total time: 1118ms):
+Trace[583314123]: ---"Transaction committed" 1116ms (08:17:00.228)
+Trace[583314123]: [1.118139706s] [1.118139706s] END
+I1206 08:17:48.228937       1 trace.go:205] Trace[4908714]: "Update" url:/apis/discovery.k8s.io/v1/namespaces/kube-system/endpointslices/kube-dns-2qg82,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpointslice-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:47.110) (total time: 1118ms):
+Trace[4908714]: ---"Object stored in database" 1118ms (08:17:00.228)
+Trace[4908714]: [1.118706163s] [1.118706163s] END
+I1206 08:17:48.233349       1 trace.go:205] Trace[1177397942]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:17:47.112) (total time: 1120ms):
+Trace[1177397942]: ---"Transaction committed" 1119ms (08:17:00.233)
+Trace[1177397942]: [1.120375177s] [1.120375177s] END
+I1206 08:17:48.233797       1 trace.go:205] Trace[1511655668]: "Update" url:/api/v1/namespaces/kube-system/endpoints/kube-dns,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpoint-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:47.112) (total time: 1121ms):
+Trace[1511655668]: ---"Object stored in database" 1120ms (08:17:00.233)
+Trace[1511655668]: [1.121146366s] [1.121146366s] END
+I1206 08:17:48.237108       1 trace.go:205] Trace[1002468917]: "GuaranteedUpdate etcd3" type:*core.Node (06-Dec-2022 08:17:47.113) (total time: 1123ms):
+Trace[1002468917]: ---"Transaction committed" 1120ms (08:17:00.236)
+Trace[1002468917]: [1.123372616s] [1.123372616s] END
+I1206 08:17:48.237469       1 trace.go:205] Trace[1396467072]: "Patch" url:/api/v1/nodes/kind-1-worker,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:node-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:47.113) (total time: 1123ms):
+Trace[1396467072]: ---"Object stored in database" 1120ms (08:17:00.237)
+Trace[1396467072]: [1.123891157s] [1.123891157s] END
+I1206 08:17:48.238840       1 trace.go:205] Trace[118583623]: "Get" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-6wd9d,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:47.116) (total time: 1122ms):
+Trace[118583623]: ---"About to write a response" 1121ms (08:17:00.237)
+Trace[118583623]: [1.122378937s] [1.122378937s] END
+I1206 08:17:48.402529       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:17:48.402575       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:17:48.402585       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:17:48.937384       1 trace.go:205] Trace[576470148]: "Get" url:/api/v1/namespaces/default/endpoints/kubernetes,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.239) (total time: 697ms):
+Trace[576470148]: ---"About to write a response" 697ms (08:17:00.937)
+Trace[576470148]: [697.295959ms] [697.295959ms] END
+I1206 08:17:48.938586       1 trace.go:205] Trace[1566276992]: "GuaranteedUpdate etcd3" type:*core.Pod (06-Dec-2022 08:17:48.242) (total time: 695ms):
+Trace[1566276992]: ---"Transaction committed" 684ms (08:17:00.938)
+Trace[1566276992]: [695.855375ms] [695.855375ms] END
+I1206 08:17:48.939466       1 trace.go:205] Trace[2054793977]: "Create" url:/api/v1/namespaces/kube-system/events,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.232) (total time: 707ms):
+Trace[2054793977]: ---"Object stored in database" 706ms (08:17:00.939)
+Trace[2054793977]: [707.304606ms] [707.304606ms] END
+I1206 08:17:48.943982       1 trace.go:205] Trace[2096223670]: "Patch" url:/api/v1/namespaces/kube-system/pods/coredns-558bd4d5db-6wd9d/status,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.242) (total time: 701ms):
+Trace[2096223670]: ---"Object stored in database" 687ms (08:17:00.938)
+Trace[2096223670]: [701.465661ms] [701.465661ms] END
+I1206 08:17:49.611636       1 trace.go:205] Trace[726748986]: "GuaranteedUpdate etcd3" type:*apps.ReplicaSet (06-Dec-2022 08:17:48.956) (total time: 655ms):
+Trace[726748986]: ---"Transaction committed" 650ms (08:17:00.611)
+Trace[726748986]: [655.196371ms] [655.196371ms] END
+I1206 08:17:49.612067       1 trace.go:205] Trace[335204488]: "Update" url:/apis/apps/v1/namespaces/kube-system/replicasets/coredns-558bd4d5db/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:replicaset-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.955) (total time: 656ms):
+Trace[335204488]: ---"Object stored in database" 655ms (08:17:00.611)
+Trace[335204488]: [656.630991ms] [656.630991ms] END
+I1206 08:17:49.612197       1 trace.go:205] Trace[2014826828]: "GuaranteedUpdate etcd3" type:*discovery.EndpointSlice (06-Dec-2022 08:17:48.955) (total time: 656ms):
+Trace[2014826828]: ---"Transaction committed" 654ms (08:17:00.612)
+Trace[2014826828]: [656.799295ms] [656.799295ms] END
+I1206 08:17:49.612477       1 trace.go:205] Trace[1619556307]: "Update" url:/apis/discovery.k8s.io/v1/namespaces/kube-system/endpointslices/kube-dns-2qg82,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpointslice-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.954) (total time: 657ms):
+Trace[1619556307]: ---"Object stored in database" 657ms (08:17:00.612)
+Trace[1619556307]: [657.439377ms] [657.439377ms] END
+I1206 08:17:49.618287       1 trace.go:205] Trace[1114528364]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:17:48.963) (total time: 654ms):
+Trace[1114528364]: ---"Transaction committed" 653ms (08:17:00.618)
+Trace[1114528364]: [654.872104ms] [654.872104ms] END
+I1206 08:17:49.618853       1 trace.go:205] Trace[1020992545]: "Update" url:/api/v1/namespaces/kube-system/endpoints/kube-dns,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:endpoint-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:48.962) (total time: 655ms):
+Trace[1020992545]: ---"Object stored in database" 655ms (08:17:00.618)
+Trace[1020992545]: [655.785289ms] [655.785289ms] END
+I1206 08:17:50.503249       1 trace.go:205] Trace[1158836695]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:49.113) (total time: 1389ms):
+Trace[1158836695]: ---"About to write a response" 1389ms (08:17:00.502)
+Trace[1158836695]: [1.38929925s] [1.38929925s] END
+I1206 08:17:50.504650       1 trace.go:205] Trace[1807456243]: "GuaranteedUpdate etcd3" type:*apps.Deployment (06-Dec-2022 08:17:49.646) (total time: 858ms):
+Trace[1807456243]: ---"Transaction committed" 852ms (08:17:00.504)
+Trace[1807456243]: [858.043879ms] [858.043879ms] END
+I1206 08:17:50.505188       1 trace.go:205] Trace[1597585003]: "Update" url:/apis/apps/v1/namespaces/kube-system/deployments/coredns/status,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:deployment-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:49.645) (total time: 859ms):
+Trace[1597585003]: ---"Object stored in database" 858ms (08:17:00.504)
+Trace[1597585003]: [859.310834ms] [859.310834ms] END
+I1206 08:17:50.505525       1 trace.go:205] Trace[544341055]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:49.114) (total time: 1390ms):
+Trace[544341055]: ---"About to write a response" 1390ms (08:17:00.505)
+Trace[544341055]: [1.390806521s] [1.390806521s] END
+I1206 08:17:50.505378       1 trace.go:205] Trace[1113139465]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:17:49.114) (total time: 1390ms):
+Trace[1113139465]: ---"About to write a response" 1390ms (08:17:00.505)
+Trace[1113139465]: [1.390915977s] [1.390915977s] END
+I1206 08:17:50.507592       1 trace.go:205] Trace[1968159149]: "List etcd3" key:/masterleases/,resourceVersion:0,resourceVersionMatch:NotOlderThan,limit:0,continue: (06-Dec-2022 08:17:48.943) (total time: 1564ms):
+Trace[1968159149]: [1.564226536s] [1.564226536s] END
+I1206 08:18:17.960998       1 trace.go:205] Trace[438837567]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:18:17.418) (total time: 542ms):
+Trace[438837567]: ---"About to write a response" 542ms (08:18:00.960)
+Trace[438837567]: [542.907018ms] [542.907018ms] END
+I1206 08:18:17.961834       1 trace.go:205] Trace[245492226]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:18:17.246) (total time: 714ms):
+Trace[245492226]: ---"About to write a response" 713ms (08:18:00.960)
+Trace[245492226]: [714.835259ms] [714.835259ms] END
+I1206 08:18:20.922614       1 trace.go:205] Trace[1380851134]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:18:20.277) (total time: 644ms):
+Trace[1380851134]: ---"Transaction committed" 643ms (08:18:00.922)
+Trace[1380851134]: [644.845432ms] [644.845432ms] END
+I1206 08:18:20.922923       1 trace.go:205] Trace[1750715780]: "Update" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:18:20.277) (total time: 645ms):
+Trace[1750715780]: ---"Object stored in database" 645ms (08:18:00.922)
+Trace[1750715780]: [645.65455ms] [645.65455ms] END
+I1206 08:18:30.259127       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:18:30.259487       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:18:30.259646       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:19:01.620375       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:19:01.620448       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:19:01.620462       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:19:19.475089       1 trace.go:205] Trace[346593340]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:18.864) (total time: 610ms):
+Trace[346593340]: ---"Transaction committed" 609ms (08:19:00.474)
+Trace[346593340]: [610.521102ms] [610.521102ms] END
+I1206 08:19:19.475895       1 trace.go:205] Trace[2708039]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:18.863) (total time: 611ms):
+Trace[2708039]: ---"Object stored in database" 611ms (08:19:00.475)
+Trace[2708039]: [611.750317ms] [611.750317ms] END
+I1206 08:19:22.095231       1 trace.go:205] Trace[386499519]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:21.488) (total time: 606ms):
+Trace[386499519]: ---"Transaction committed" 605ms (08:19:00.095)
+Trace[386499519]: [606.254894ms] [606.254894ms] END
+I1206 08:19:22.095808       1 trace.go:205] Trace[1997313483]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:21.488) (total time: 606ms):
+Trace[1997313483]: ---"Object stored in database" 606ms (08:19:00.095)
+Trace[1997313483]: [606.978997ms] [606.978997ms] END
+I1206 08:19:23.956551       1 trace.go:205] Trace[2072499032]: "GuaranteedUpdate etcd3" type:*v1.Endpoints (06-Dec-2022 08:19:23.284) (total time: 672ms):
+Trace[2072499032]: ---"Transaction committed" 669ms (08:19:00.956)
+Trace[2072499032]: [672.271773ms] [672.271773ms] END
+I1206 08:19:24.854134       1 trace.go:205] Trace[728517192]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:24.105) (total time: 748ms):
+Trace[728517192]: ---"About to write a response" 747ms (08:19:00.853)
+Trace[728517192]: [748.110409ms] [748.110409ms] END
+I1206 08:19:24.855036       1 trace.go:205] Trace[333380238]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:24.187) (total time: 667ms):
+Trace[333380238]: ---"About to write a response" 667ms (08:19:00.854)
+Trace[333380238]: [667.356941ms] [667.356941ms] END
+I1206 08:19:29.417578       1 trace.go:205] Trace[242094843]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:28.889) (total time: 527ms):
+Trace[242094843]: ---"About to write a response" 527ms (08:19:00.417)
+Trace[242094843]: [527.744227ms] [527.744227ms] END
+I1206 08:19:30.647434       1 trace.go:205] Trace[2127396858]: "Get" url:/apis/flowcontrol.apiserver.k8s.io/v1beta1/prioritylevelconfigurations/exempt,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:29.920) (total time: 726ms):
+Trace[2127396858]: ---"About to write a response" 726ms (08:19:00.647)
+Trace[2127396858]: [726.421116ms] [726.421116ms] END
+I1206 08:19:36.459211       1 trace.go:205] Trace[2134597979]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:35.914) (total time: 544ms):
+Trace[2134597979]: ---"About to write a response" 544ms (08:19:00.458)
+Trace[2134597979]: [544.646403ms] [544.646403ms] END
+I1206 08:19:37.028946       1 trace.go:205] Trace[245189652]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:19:36.469) (total time: 559ms):
+Trace[245189652]: ---"Transaction committed" 557ms (08:19:00.028)
+Trace[245189652]: [559.357102ms] [559.357102ms] END
+I1206 08:19:37.029223       1 trace.go:205] Trace[1352368797]: "Update" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:36.469) (total time: 560ms):
+Trace[1352368797]: ---"Object stored in database" 559ms (08:19:00.029)
+Trace[1352368797]: [560.068903ms] [560.068903ms] END
+I1206 08:19:37.406981       1 trace.go:205] Trace[768217144]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:36.821) (total time: 584ms):
+Trace[768217144]: ---"About to write a response" 584ms (08:19:00.406)
+Trace[768217144]: [584.94046ms] [584.94046ms] END
+I1206 08:19:37.407300       1 trace.go:205] Trace[868457168]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:19:36.894) (total time: 513ms):
+Trace[868457168]: [513.009017ms] [513.009017ms] END
+I1206 08:19:37.408495       1 trace.go:205] Trace[1243081766]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.2,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:36.894) (total time: 514ms):
+Trace[1243081766]: ---"Listing from storage done" 513ms (08:19:00.407)
+Trace[1243081766]: [514.208482ms] [514.208482ms] END
+I1206 08:19:40.018358       1 trace.go:205] Trace[427979663]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:39.431) (total time: 587ms):
+Trace[427979663]: ---"About to write a response" 587ms (08:19:00.018)
+Trace[427979663]: [587.211302ms] [587.211302ms] END
+I1206 08:19:41.774005       1 trace.go:205] Trace[1228838501]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:41.272) (total time: 501ms):
+Trace[1228838501]: ---"About to write a response" 501ms (08:19:00.773)
+Trace[1228838501]: [501.764956ms] [501.764956ms] END
+I1206 08:19:41.774301       1 trace.go:205] Trace[1035096547]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:19:41.238) (total time: 535ms):
+Trace[1035096547]: [535.576962ms] [535.576962ms] END
+I1206 08:19:41.779003       1 trace.go:205] Trace[1285355101]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:41.238) (total time: 540ms):
+Trace[1285355101]: ---"Listing from storage done" 539ms (08:19:00.777)
+Trace[1285355101]: [540.304577ms] [540.304577ms] END
+I1206 08:19:42.759096       1 trace.go:205] Trace[704322367]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:42.048) (total time: 710ms):
+Trace[704322367]: ---"About to write a response" 710ms (08:19:00.758)
+Trace[704322367]: [710.577234ms] [710.577234ms] END
+I1206 08:19:42.989519       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:19:42.989589       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:19:42.989607       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:19:44.536688       1 trace.go:205] Trace[175999765]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:43.471) (total time: 1064ms):
+Trace[175999765]: ---"Transaction committed" 1063ms (08:19:00.536)
+Trace[175999765]: [1.064701488s] [1.064701488s] END
+I1206 08:19:44.537265       1 trace.go:205] Trace[286921427]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:43.471) (total time: 1065ms):
+Trace[286921427]: ---"Object stored in database" 1064ms (08:19:00.536)
+Trace[286921427]: [1.065500776s] [1.065500776s] END
+I1206 08:19:44.537915       1 trace.go:205] Trace[1206809929]: "GuaranteedUpdate etcd3" type:*v1.Endpoints (06-Dec-2022 08:19:43.463) (total time: 1074ms):
+Trace[1206809929]: ---"Transaction committed" 1068ms (08:19:00.537)
+Trace[1206809929]: [1.074238674s] [1.074238674s] END
+I1206 08:19:44.592275       1 trace.go:205] Trace[889904820]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:43.802) (total time: 789ms):
+Trace[889904820]: ---"About to write a response" 789ms (08:19:00.592)
+Trace[889904820]: [789.642889ms] [789.642889ms] END
+I1206 08:19:45.517928       1 trace.go:205] Trace[260635067]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:44.783) (total time: 734ms):
+Trace[260635067]: ---"About to write a response" 734ms (08:19:00.517)
+Trace[260635067]: [734.703033ms] [734.703033ms] END
+I1206 08:19:47.702654       1 trace.go:205] Trace[311572176]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:46.622) (total time: 1080ms):
+Trace[311572176]: ---"About to write a response" 1080ms (08:19:00.702)
+Trace[311572176]: [1.080464193s] [1.080464193s] END
+I1206 08:19:50.974237       1 trace.go:205] Trace[713556664]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:50.069) (total time: 905ms):
+Trace[713556664]: ---"About to write a response" 904ms (08:19:00.973)
+Trace[713556664]: [905.067604ms] [905.067604ms] END
+I1206 08:19:51.766363       1 trace.go:205] Trace[1535535647]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:19:50.986) (total time: 779ms):
+Trace[1535535647]: ---"Transaction committed" 778ms (08:19:00.766)
+Trace[1535535647]: [779.948755ms] [779.948755ms] END
+I1206 08:19:51.766697       1 trace.go:205] Trace[991573107]: "Update" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:50.985) (total time: 780ms):
+Trace[991573107]: ---"Object stored in database" 780ms (08:19:00.766)
+Trace[991573107]: [780.737329ms] [780.737329ms] END
+I1206 08:19:52.648417       1 trace.go:205] Trace[902092374]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:19:51.796) (total time: 851ms):
+Trace[902092374]: [851.407276ms] [851.407276ms] END
+I1206 08:19:52.650140       1 trace.go:205] Trace[2092782106]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:51.796) (total time: 853ms):
+Trace[2092782106]: ---"Listing from storage done" 851ms (08:19:00.648)
+Trace[2092782106]: [853.142215ms] [853.142215ms] END
+I1206 08:19:54.235028       1 trace.go:205] Trace[548826877]: "Get" url:/api/v1/namespaces/default,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:53.279) (total time: 955ms):
+Trace[548826877]: ---"About to write a response" 955ms (08:19:00.234)
+Trace[548826877]: [955.121793ms] [955.121793ms] END
+I1206 08:19:54.238292       1 trace.go:205] Trace[1331937385]: "List etcd3" key:/pods,resourceVersion:,resourceVersionMatch:,limit:500,continue: (06-Dec-2022 08:19:53.082) (total time: 1156ms):
+Trace[1331937385]: [1.156062566s] [1.156062566s] END
+I1206 08:19:54.242713       1 trace.go:205] Trace[1995817577]: "List" url:/api/v1/pods,user-agent:kubectl/v1.22.2 (darwin/arm64) kubernetes/8b5a191,client:192.168.88.22,accept:application/json;as=Table;v=v1;g=meta.k8s.io,application/json;as=Table;v=v1beta1;g=meta.k8s.io,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:19:53.082) (total time: 1160ms):
+Trace[1995817577]: ---"Listing from storage done" 1156ms (08:19:00.238)
+Trace[1995817577]: [1.160539822s] [1.160539822s] END
+I1206 08:19:54.920342       1 trace.go:205] Trace[1169303045]: "GuaranteedUpdate etcd3" type:*core.Endpoints (06-Dec-2022 08:19:54.247) (total time: 672ms):
+Trace[1169303045]: ---"Transaction committed" 671ms (08:19:00.920)
+Trace[1169303045]: [672.491894ms] [672.491894ms] END
+I1206 08:19:54.921345       1 trace.go:205] Trace[241302201]: "Update" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:54.247) (total time: 673ms):
+Trace[241302201]: ---"Object stored in database" 673ms (08:19:00.920)
+Trace[241302201]: [673.959711ms] [673.959711ms] END
+I1206 08:19:54.926547       1 trace.go:205] Trace[1402058209]: "GuaranteedUpdate etcd3" type:*v1.Endpoints (06-Dec-2022 08:19:54.244) (total time: 681ms):
+Trace[1402058209]: ---"Transaction prepared" 667ms (08:19:00.919)
+Trace[1402058209]: [681.771981ms] [681.771981ms] END
+I1206 08:19:55.758119       1 trace.go:205] Trace[605262970]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:55.030) (total time: 727ms):
+Trace[605262970]: ---"About to write a response" 727ms (08:19:00.757)
+Trace[605262970]: [727.892576ms] [727.892576ms] END
+I1206 08:19:55.759681       1 trace.go:205] Trace[1632067351]: "Get" url:/api/v1/namespaces/default/endpoints/kubernetes,user-agent:kube-apiserver/v1.21.1 (linux/amd64) kubernetes/5e58841,client:::1,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:54.928) (total time: 831ms):
+Trace[1632067351]: ---"About to write a response" 831ms (08:19:00.759)
+Trace[1632067351]: [831.444722ms] [831.444722ms] END
+I1206 08:19:56.481344       1 trace.go:205] Trace[493404551]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:55.957) (total time: 524ms):
+Trace[493404551]: ---"Transaction committed" 522ms (08:19:00.481)
+Trace[493404551]: [524.082926ms] [524.082926ms] END
+I1206 08:19:56.481744       1 trace.go:205] Trace[683362622]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/kind-1-worker,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::3,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:19:55.956) (total time: 524ms):
+Trace[683362622]: ---"Object stored in database" 524ms (08:19:00.481)
+Trace[683362622]: [524.7526ms] [524.7526ms] END
+I1206 08:19:57.434381       1 trace.go:205] Trace[2050360170]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:56.263) (total time: 1170ms):
+Trace[2050360170]: ---"About to write a response" 1170ms (08:19:00.434)
+Trace[2050360170]: [1.170647162s] [1.170647162s] END
+I1206 08:19:57.437742       1 trace.go:205] Trace[2145279070]: "List etcd3" key:/pods,resourceVersion:,resourceVersionMatch:,limit:500,continue: (06-Dec-2022 08:19:56.357) (total time: 1080ms):
+Trace[2145279070]: [1.080400118s] [1.080400118s] END
+I1206 08:19:57.441785       1 trace.go:205] Trace[158379115]: "List" url:/api/v1/pods,user-agent:kubectl/v1.22.2 (darwin/arm64) kubernetes/8b5a191,client:192.168.88.22,accept:application/json;as=Table;v=v1;g=meta.k8s.io,application/json;as=Table;v=v1beta1;g=meta.k8s.io,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:19:56.357) (total time: 1084ms):
+Trace[158379115]: ---"Listing from storage done" 1080ms (08:19:00.437)
+Trace[158379115]: [1.084517331s] [1.084517331s] END
+I1206 08:19:58.575740       1 trace.go:205] Trace[1429904149]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:57.450) (total time: 1124ms):
+Trace[1429904149]: ---"Transaction committed" 1123ms (08:19:00.575)
+Trace[1429904149]: [1.124865771s] [1.124865771s] END
+I1206 08:19:58.576163       1 trace.go:205] Trace[1951231415]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:57.450) (total time: 1125ms):
+Trace[1951231415]: ---"Object stored in database" 1125ms (08:19:00.575)
+Trace[1951231415]: [1.125555019s] [1.125555019s] END
+I1206 08:19:58.578125       1 trace.go:205] Trace[747660569]: "List etcd3" key:/minions,resourceVersion:,resourceVersionMatch:,limit:0,continue: (06-Dec-2022 08:19:57.738) (total time: 839ms):
+Trace[747660569]: [839.866499ms] [839.866499ms] END
+I1206 08:19:58.580105       1 trace.go:205] Trace[1685530634]: "List" url:/api/v1/nodes,user-agent:kindnetd/v0.0.0 (linux/amd64) kubernetes/$Format,client:172.19.0.2,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:57.738) (total time: 841ms):
+Trace[1685530634]: ---"Listing from storage done" 839ms (08:19:00.578)
+Trace[1685530634]: [841.494969ms] [841.494969ms] END
+I1206 08:19:58.583756       1 trace.go:205] Trace[164249791]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:19:57.778) (total time: 805ms):
+Trace[164249791]: ---"About to write a response" 805ms (08:19:00.583)
+Trace[164249791]: [805.600519ms] [805.600519ms] END
+I1206 08:20:00.332681       1 trace.go:205] Trace[1531089900]: "List etcd3" key:/pods,resourceVersion:,resourceVersionMatch:,limit:500,continue: (06-Dec-2022 08:19:59.529) (total time: 802ms):
+Trace[1531089900]: [802.651776ms] [802.651776ms] END
+I1206 08:20:00.334007       1 trace.go:205] Trace[1140562805]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:19:59.662) (total time: 670ms):
+Trace[1140562805]: ---"Transaction committed" 669ms (08:20:00.333)
+Trace[1140562805]: [670.987532ms] [670.987532ms] END
+I1206 08:20:00.334888       1 trace.go:205] Trace[1350993909]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/kind-1-control-plane,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:19:59.662) (total time: 672ms):
+Trace[1350993909]: ---"Object stored in database" 671ms (08:20:00.334)
+Trace[1350993909]: [672.21626ms] [672.21626ms] END
+I1206 08:20:00.337431       1 trace.go:205] Trace[1279264133]: "List" url:/api/v1/pods,user-agent:kubectl/v1.22.2 (darwin/arm64) kubernetes/8b5a191,client:192.168.88.22,accept:application/json;as=Table;v=v1;g=meta.k8s.io,application/json;as=Table;v=v1beta1;g=meta.k8s.io,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:19:59.529) (total time: 807ms):
+Trace[1279264133]: ---"Listing from storage done" 802ms (08:20:00.332)
+Trace[1279264133]: [807.429073ms] [807.429073ms] END
+I1206 08:20:01.426461       1 trace.go:205] Trace[717594310]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:20:00.594) (total time: 831ms):
+Trace[717594310]: ---"About to write a response" 831ms (08:20:00.426)
+Trace[717594310]: [831.888134ms] [831.888134ms] END
+I1206 08:20:01.427014       1 trace.go:205] Trace[401832139]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:20:00.590) (total time: 835ms):
+Trace[401832139]: ---"About to write a response" 835ms (08:20:00.426)
+Trace[401832139]: [835.942101ms] [835.942101ms] END
+I1206 08:20:02.183345       1 trace.go:205] Trace[500811086]: "GuaranteedUpdate etcd3" type:*coordination.Lease (06-Dec-2022 08:20:01.441) (total time: 741ms):
+Trace[500811086]: ---"Transaction committed" 740ms (08:20:00.183)
+Trace[500811086]: [741.531363ms] [741.531363ms] END
+I1206 08:20:02.183963       1 trace.go:205] Trace[1267463072]: "Update" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:20:01.441) (total time: 742ms):
+Trace[1267463072]: ---"Object stored in database" 742ms (08:20:00.183)
+Trace[1267463072]: [742.56335ms] [742.56335ms] END
+I1206 08:20:02.186925       1 trace.go:205] Trace[340340252]: "Get" url:/api/v1/namespaces/local-path-storage/endpoints/rancher.io-local-path,user-agent:local-path-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format,client:10.244.0.3,accept:application/json, */*,protocol:HTTP/2.0 (06-Dec-2022 08:20:01.507) (total time: 679ms):
+Trace[340340252]: ---"About to write a response" 678ms (08:20:00.186)
+Trace[340340252]: [679.145618ms] [679.145618ms] END
+I1206 08:20:13.914793       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:20:13.914970       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:20:13.915088       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:20:51.349240       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:20:51.349307       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:20:51.349327       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:21:21.386998       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:21:21.387072       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:21:21.387094       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:21:56.705514       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:21:56.705585       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:21:56.705605       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:22:41.367754       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:22:41.367827       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:22:41.367848       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:23:20.172563       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:23:20.172651       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:23:20.172674       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:24:03.288292       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:24:03.288366       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:24:03.288387       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:24:38.701839       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:24:38.701945       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:24:38.701966       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:25:19.059939       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:25:19.060020       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:25:19.060040       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:25:49.234764       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:25:49.234842       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:25:49.234862       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:25:59.653433       1 controller.go:611] quota admission added evaluator for: cronjobs.batch
+I1206 08:26:19.912209       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:19.912311       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:19.950489       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:19.950594       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:19.990071       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:19.990121       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.038303       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.038354       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.050239       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.050309       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.098981       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.099103       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.113409       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.113469       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.174065       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.174151       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.185032       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.185068       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.280488       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.280531       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:20.293857       1 client.go:360] parsed scheme: "endpoint"
+I1206 08:26:20.293921       1 endpoint.go:68] ccResolverWrapper: sending new addresses to cc: [{https://127.0.0.1:2379  <nil> 0 <nil>}]
+I1206 08:26:29.393877       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:26:29.393922       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:26:29.393932       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:26:34.456083       1 trace.go:205] Trace[81591713]: "Get" url:/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler,user-agent:kube-scheduler/v1.21.1 (linux/amd64) kubernetes/5e58841/leader-election,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf, */*,protocol:HTTP/2.0 (06-Dec-2022 08:26:33.858) (total time: 597ms):
+Trace[81591713]: ---"About to write a response" 596ms (08:26:00.455)
+Trace[81591713]: [597.050575ms] [597.050575ms] END
+I1206 08:27:01.025175       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:27:01.025273       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:27:01.025296       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:27:44.514587       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:27:44.514682       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:27:44.514704       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:28:23.774106       1 trace.go:205] Trace[1209961398]: "Get" url:/api/v1/namespaces/emojivoto/pods/voting-ff4c54b8d-8pfhc,user-agent:kubelet/v1.21.1 (linux/amd64) kubernetes/5e58841,client:fc00:f853:ccd:e793::3,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:28:23.194) (total time: 579ms):
+Trace[1209961398]: ---"About to write a response" 578ms (08:28:00.772)
+Trace[1209961398]: [579.431156ms] [579.431156ms] END
+I1206 08:28:23.775902       1 trace.go:205] Trace[1946686791]: "List etcd3" key:/pods,resourceVersion:,resourceVersionMatch:,limit:500,continue: (06-Dec-2022 08:28:23.101) (total time: 674ms):
+Trace[1946686791]: [674.116649ms] [674.116649ms] END
+I1206 08:28:23.785817       1 trace.go:205] Trace[1253352553]: "List" url:/api/v1/pods,user-agent:kubectl/v1.22.2 (darwin/arm64) kubernetes/8b5a191,client:192.168.88.22,accept:application/json;as=Table;v=v1;g=meta.k8s.io,application/json;as=Table;v=v1beta1;g=meta.k8s.io,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:28:23.101) (total time: 684ms):
+Trace[1253352553]: ---"Listing from storage done" 674ms (08:28:00.775)
+Trace[1253352553]: [684.060927ms] [684.060927ms] END
+I1206 08:28:28.770951       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:28:28.771010       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:28:28.771027       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:29:00.797104       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:29:00.797187       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:29:00.797207       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:29:34.451377       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:29:34.451447       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:29:34.451464       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:30:09.981357       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:30:09.981435       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:30:09.981455       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:30:51.038074       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:30:51.038171       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:30:51.038187       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:31:22.630105       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:31:22.630164       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:31:22.630179       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:31:55.973299       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:31:55.973352       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:31:55.973365       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:32:27.421850       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:32:27.421920       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:32:27.421941       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:33:10.562415       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:33:10.562516       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:33:10.562541       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:33:41.016784       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:33:41.016859       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:33:41.016877       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:34:25.422827       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:34:25.422929       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:34:25.422947       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:35:00.395278       1 controller.go:611] quota admission added evaluator for: jobs.batch
+I1206 08:35:00.599084       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:35:00.599142       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:35:00.599155       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:35:34.795780       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:35:34.795864       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:35:34.795882       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:36:11.091183       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:36:11.091308       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:36:11.091333       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:36:42.905106       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:36:42.905191       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:36:42.905212       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+E1206 08:36:53.723687       1 upgradeaware.go:401] Error proxying data from backend to client: write tcp 172.19.0.2:6443->192.168.88.22:49963: write: connection reset by peer
+I1206 08:37:17.376309       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:37:17.376395       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:37:17.376415       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:37:57.380315       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:37:57.380428       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:37:57.380450       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:38:34.058917       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:38:34.058987       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:38:34.059004       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:39:17.552186       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:39:17.552271       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:39:17.552293       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:39:53.659400       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:39:53.659473       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:39:53.659487       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:40:25.863038       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:40:25.863111       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:40:25.863130       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+E1206 08:40:26.591946       1 upgradeaware.go:401] Error proxying data from backend to client: write tcp 172.19.0.2:6443->192.168.88.22:51228: write: connection reset by peer
+I1206 08:40:47.336127       1 trace.go:205] Trace[429709788]: "Delete" url:/apis/events.k8s.io/v1/namespaces/emojivoto/events,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:namespace-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:40:45.389) (total time: 1946ms):
+Trace[429709788]: [1.94629358s] [1.94629358s] END
+I1206 08:40:48.191123       1 trace.go:205] Trace[523067667]: "Delete" url:/api/v1/namespaces/emojivoto/pods,user-agent:kube-controller-manager/v1.21.1 (linux/amd64) kubernetes/5e58841/system:serviceaccount:kube-system:namespace-controller,client:172.19.0.2,accept:application/vnd.kubernetes.protobuf,application/json,protocol:HTTP/2.0 (06-Dec-2022 08:40:47.485) (total time: 705ms):
+Trace[523067667]: [705.50426ms] [705.50426ms] END
+I1206 08:41:06.466494       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:41:06.466591       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:41:06.466614       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:41:48.301066       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:41:48.301149       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:41:48.301171       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:42:28.360195       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:42:28.360299       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:42:28.360318       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:43:10.620308       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:43:10.620380       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:43:10.620405       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:43:53.982525       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:43:53.982603       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:43:53.982624       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:44:24.370521       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:44:24.370619       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:44:24.370642       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:45:05.355020       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:45:05.355082       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:45:05.355097       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:45:35.583713       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:45:35.583785       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:45:35.583805       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:46:10.876008       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:46:10.876144       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:46:10.876171       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:46:41.159249       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:46:41.159333       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:46:41.159353       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:47:11.696245       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:47:11.696325       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:47:11.696345       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:47:43.117411       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:47:43.117476       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:47:43.117487       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:48:23.105908       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:48:23.106010       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:48:23.106031       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:49:02.394261       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:49:02.394354       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:49:02.394378       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:49:33.009805       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:49:33.009882       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:49:33.009917       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:50:11.935843       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:50:11.935912       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:50:11.935930       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:50:46.067815       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:50:46.067908       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:50:46.067929       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:51:18.889334       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:51:18.889447       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:51:18.889469       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:52:02.256608       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:52:02.256693       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:52:02.256719       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+I1206 08:52:35.480896       1 client.go:360] parsed scheme: "passthrough"
+I1206 08:52:35.480969       1 passthrough.go:48] ccResolverWrapper: sending update to cc: {[{https://127.0.0.1:2379  <nil> 0 <nil>}] <nil> <nil>}
+I1206 08:52:35.480999       1 clientconn.go:948] ClientConn switching balancer to "pick_first"
+==== END logs for container kube-apiserver of pod kube-system/kube-apiserver-kind-1-control-plane ====

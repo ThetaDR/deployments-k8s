@@ -1,0 +1,868 @@
+==== START logs for container kindnet-cni of pod kube-system/kindnet-6hhgv ====
+I1206 08:17:01.706577       1 main.go:316] probe TCP address kind-1-control-plane:6443
+I1206 08:17:01.708935       1 main.go:102] connected to apiserver: https://kind-1-control-plane:6443
+I1206 08:17:01.708996       1 main.go:107] hostIP = 172.19.0.2
+podIP = 172.19.0.2
+I1206 08:17:01.709149       1 main.go:116] setting mtu 1500 for CNI 
+I1206 08:17:01.709163       1 main.go:146] kindnetd IP family: "ipv4"
+I1206 08:17:01.709178       1 main.go:150] noMask IPv4 subnets: [10.244.0.0/16]
+I1206 08:17:02.508818       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:02.508863       1 main.go:227] handling current node
+I1206 08:17:13.068955       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:13.069026       1 main.go:227] handling current node
+I1206 08:17:13.069064       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:17:13.069371       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:17:13.069819       1 routes.go:46] Adding route {Ifindex: 0 Dst: 10.244.1.0/24 Src: <nil> Gw: 172.19.0.3 Flags: [] Table: 0} 
+I1206 08:17:23.534897       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:23.534966       1 main.go:227] handling current node
+I1206 08:17:23.535004       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:17:23.535024       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:17:34.155042       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:34.155107       1 main.go:227] handling current node
+I1206 08:17:34.155148       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:17:34.155168       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:17:46.194308       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:46.194357       1 main.go:227] handling current node
+I1206 08:17:46.194400       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:17:46.194415       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:17:56.231723       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:17:56.232017       1 main.go:227] handling current node
+I1206 08:17:56.232056       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:17:56.232077       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:06.269548       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:06.269596       1 main.go:227] handling current node
+I1206 08:18:06.269627       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:06.269646       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:16.286947       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:16.286976       1 main.go:227] handling current node
+I1206 08:18:16.286995       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:16.287003       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:26.301954       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:26.301994       1 main.go:227] handling current node
+I1206 08:18:26.302011       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:26.302069       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:36.317440       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:36.317481       1 main.go:227] handling current node
+I1206 08:18:36.317538       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:36.317547       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:46.352967       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:46.353019       1 main.go:227] handling current node
+I1206 08:18:46.353048       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:46.353067       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:18:56.368030       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:18:56.368262       1 main.go:227] handling current node
+I1206 08:18:56.368431       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:18:56.368509       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:06.403009       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:06.403058       1 main.go:227] handling current node
+I1206 08:19:06.403100       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:06.403117       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:16.508186       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:16.508226       1 main.go:227] handling current node
+I1206 08:19:16.508246       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:16.508256       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:26.868900       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:26.868940       1 main.go:227] handling current node
+I1206 08:19:26.868964       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:26.868979       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:37.413158       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:37.413234       1 main.go:227] handling current node
+I1206 08:19:37.413268       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:37.413287       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:47.705124       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:47.705175       1 main.go:227] handling current node
+I1206 08:19:47.705207       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:47.705226       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:19:58.585796       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:19:58.585853       1 main.go:227] handling current node
+I1206 08:19:58.585879       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:19:58.585891       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:08.611359       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:08.611420       1 main.go:227] handling current node
+I1206 08:20:08.611460       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:08.611480       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:18.650518       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:18.650575       1 main.go:227] handling current node
+I1206 08:20:18.650608       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:18.650627       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:28.691067       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:28.691122       1 main.go:227] handling current node
+I1206 08:20:28.691160       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:28.691194       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:38.731458       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:38.731783       1 main.go:227] handling current node
+I1206 08:20:38.731906       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:38.731979       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:48.775997       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:48.776050       1 main.go:227] handling current node
+I1206 08:20:48.776091       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:48.776110       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:20:58.816337       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:20:58.816410       1 main.go:227] handling current node
+I1206 08:20:58.816446       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:20:58.816467       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:08.855376       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:08.855414       1 main.go:227] handling current node
+I1206 08:21:08.855438       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:08.855452       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:18.894291       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:18.894353       1 main.go:227] handling current node
+I1206 08:21:18.894381       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:18.894403       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:28.933560       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:28.933616       1 main.go:227] handling current node
+I1206 08:21:28.933643       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:28.933658       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:38.963285       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:38.963344       1 main.go:227] handling current node
+I1206 08:21:38.963367       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:38.963380       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:48.992622       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:48.992675       1 main.go:227] handling current node
+I1206 08:21:48.992707       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:48.992726       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:21:59.033525       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:21:59.033581       1 main.go:227] handling current node
+I1206 08:21:59.033613       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:21:59.033633       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:09.073775       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:09.073815       1 main.go:227] handling current node
+I1206 08:22:09.073838       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:09.073851       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:19.114575       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:19.114629       1 main.go:227] handling current node
+I1206 08:22:19.114659       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:19.114677       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:29.157163       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:29.157231       1 main.go:227] handling current node
+I1206 08:22:29.157264       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:29.157284       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:39.188628       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:39.188668       1 main.go:227] handling current node
+I1206 08:22:39.188690       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:39.188704       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:49.214016       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:49.214084       1 main.go:227] handling current node
+I1206 08:22:49.214127       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:49.214139       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:22:59.256900       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:22:59.256952       1 main.go:227] handling current node
+I1206 08:22:59.256986       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:22:59.257035       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:09.299663       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:09.299729       1 main.go:227] handling current node
+I1206 08:23:09.299761       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:09.299780       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:19.341606       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:19.341656       1 main.go:227] handling current node
+I1206 08:23:19.341686       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:19.341705       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:29.385613       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:29.385681       1 main.go:227] handling current node
+I1206 08:23:29.385714       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:29.385733       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:39.429086       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:39.429144       1 main.go:227] handling current node
+I1206 08:23:39.429177       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:39.429197       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:49.472371       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:49.472430       1 main.go:227] handling current node
+I1206 08:23:49.472465       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:49.472485       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:23:59.514838       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:23:59.514898       1 main.go:227] handling current node
+I1206 08:23:59.514932       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:23:59.514951       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:09.556415       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:09.556463       1 main.go:227] handling current node
+I1206 08:24:09.556495       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:09.556512       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:19.610495       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:19.610537       1 main.go:227] handling current node
+I1206 08:24:19.610556       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:19.610563       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:29.651005       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:29.651076       1 main.go:227] handling current node
+I1206 08:24:29.651111       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:29.651133       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:39.692886       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:39.692948       1 main.go:227] handling current node
+I1206 08:24:39.692982       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:39.693002       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:49.698614       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:49.698769       1 main.go:227] handling current node
+I1206 08:24:49.698795       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:49.698807       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:24:59.745913       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:24:59.745964       1 main.go:227] handling current node
+I1206 08:24:59.745993       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:24:59.746011       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:25:09.790732       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:25:09.790790       1 main.go:227] handling current node
+I1206 08:25:09.790823       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:25:09.790844       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:25:19.795842       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:25:19.795878       1 main.go:227] handling current node
+I1206 08:25:19.795895       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:25:19.795904       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:25:29.840233       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:25:29.840293       1 main.go:227] handling current node
+I1206 08:25:29.840327       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:25:29.840346       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:25:39.882780       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:25:39.882830       1 main.go:227] handling current node
+I1206 08:25:39.882860       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:25:39.882879       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:25:49.889585       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:25:49.889805       1 main.go:227] handling current node
+I1206 08:25:49.889872       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:25:49.889891       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:00.047918       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:00.049113       1 main.go:227] handling current node
+I1206 08:26:00.049358       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:00.049468       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:10.084575       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:10.084619       1 main.go:227] handling current node
+I1206 08:26:10.084648       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:10.084661       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:20.093182       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:20.093219       1 main.go:227] handling current node
+I1206 08:26:20.093234       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:20.093241       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:30.109854       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:30.109892       1 main.go:227] handling current node
+I1206 08:26:30.109913       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:30.109923       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:40.147101       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:40.147149       1 main.go:227] handling current node
+I1206 08:26:40.147185       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:40.147205       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:26:50.155276       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:26:50.155306       1 main.go:227] handling current node
+I1206 08:26:50.155322       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:26:50.155330       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:00.193629       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:00.193669       1 main.go:227] handling current node
+I1206 08:27:00.193692       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:00.193705       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:10.240578       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:10.240642       1 main.go:227] handling current node
+I1206 08:27:10.240676       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:10.240697       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:20.379056       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:20.379218       1 main.go:227] handling current node
+I1206 08:27:20.379267       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:20.379303       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:30.385174       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:30.385222       1 main.go:227] handling current node
+I1206 08:27:30.385251       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:30.385273       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:40.434835       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:40.434888       1 main.go:227] handling current node
+I1206 08:27:40.434907       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:40.434915       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:27:50.439712       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:27:50.439747       1 main.go:227] handling current node
+I1206 08:27:50.439767       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:27:50.439778       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:00.477773       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:00.477821       1 main.go:227] handling current node
+I1206 08:28:00.477864       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:00.477892       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:10.504529       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:10.504581       1 main.go:227] handling current node
+I1206 08:28:10.504610       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:10.504627       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:20.510094       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:20.510125       1 main.go:227] handling current node
+I1206 08:28:20.510142       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:20.510149       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:30.526076       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:30.526116       1 main.go:227] handling current node
+I1206 08:28:30.526140       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:30.526164       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:40.562041       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:40.562087       1 main.go:227] handling current node
+I1206 08:28:40.562111       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:40.562123       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:28:50.585463       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:28:50.585498       1 main.go:227] handling current node
+I1206 08:28:50.585516       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:28:50.585526       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:00.608938       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:00.608991       1 main.go:227] handling current node
+I1206 08:29:00.609022       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:00.609042       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:10.642812       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:10.643135       1 main.go:227] handling current node
+I1206 08:29:10.643177       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:10.643199       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:20.650159       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:20.650224       1 main.go:227] handling current node
+I1206 08:29:20.650253       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:20.650284       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:30.684517       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:30.684563       1 main.go:227] handling current node
+I1206 08:29:30.684594       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:30.684614       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:40.717039       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:40.717096       1 main.go:227] handling current node
+I1206 08:29:40.717126       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:40.717144       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:29:50.726060       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:29:50.726098       1 main.go:227] handling current node
+I1206 08:29:50.726121       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:29:50.726136       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:00.757430       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:00.757494       1 main.go:227] handling current node
+I1206 08:30:00.757525       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:00.757543       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:10.780487       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:10.780545       1 main.go:227] handling current node
+I1206 08:30:10.780578       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:10.780598       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:20.786848       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:20.786888       1 main.go:227] handling current node
+I1206 08:30:20.786915       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:20.786929       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:30.815986       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:30.816036       1 main.go:227] handling current node
+I1206 08:30:30.816065       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:30.816082       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:40.843127       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:40.843182       1 main.go:227] handling current node
+I1206 08:30:40.843214       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:40.843233       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:30:50.850837       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:30:50.850907       1 main.go:227] handling current node
+I1206 08:30:50.850938       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:30:50.850957       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:00.866760       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:00.866811       1 main.go:227] handling current node
+I1206 08:31:00.866843       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:00.866863       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:10.883385       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:10.883449       1 main.go:227] handling current node
+I1206 08:31:10.883483       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:10.883529       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:20.889053       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:20.889096       1 main.go:227] handling current node
+I1206 08:31:20.889116       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:20.889125       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:30.918378       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:30.918419       1 main.go:227] handling current node
+I1206 08:31:30.918437       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:30.918445       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:40.944429       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:40.944490       1 main.go:227] handling current node
+I1206 08:31:40.944516       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:40.944529       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:31:50.952202       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:31:50.952253       1 main.go:227] handling current node
+I1206 08:31:50.952285       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:31:50.952299       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:00.977287       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:00.977338       1 main.go:227] handling current node
+I1206 08:32:00.977369       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:00.977443       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:10.996005       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:10.996053       1 main.go:227] handling current node
+I1206 08:32:10.996082       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:10.996102       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:21.004522       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:21.004577       1 main.go:227] handling current node
+I1206 08:32:21.004607       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:21.004624       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:31.023626       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:31.023704       1 main.go:227] handling current node
+I1206 08:32:31.023749       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:31.023770       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:41.046025       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:41.046077       1 main.go:227] handling current node
+I1206 08:32:41.046107       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:41.046127       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:32:51.054948       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:32:51.054978       1 main.go:227] handling current node
+I1206 08:32:51.054995       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:32:51.055016       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:01.072301       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:01.072351       1 main.go:227] handling current node
+I1206 08:33:01.072380       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:01.072400       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:11.097805       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:11.097865       1 main.go:227] handling current node
+I1206 08:33:11.097897       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:11.097914       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:21.108032       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:21.108079       1 main.go:227] handling current node
+I1206 08:33:21.108109       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:21.108129       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:31.126056       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:31.126112       1 main.go:227] handling current node
+I1206 08:33:31.126143       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:31.126162       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:41.152669       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:41.152886       1 main.go:227] handling current node
+I1206 08:33:41.152992       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:41.153073       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:33:51.159311       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:33:51.159343       1 main.go:227] handling current node
+I1206 08:33:51.159360       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:33:51.159369       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:01.180395       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:01.180447       1 main.go:227] handling current node
+I1206 08:34:01.180478       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:01.180496       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:11.198941       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:11.198991       1 main.go:227] handling current node
+I1206 08:34:11.199022       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:11.199041       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:21.204678       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:21.204726       1 main.go:227] handling current node
+I1206 08:34:21.204756       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:21.204775       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:31.212590       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:31.212622       1 main.go:227] handling current node
+I1206 08:34:31.212636       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:31.212643       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:41.223628       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:41.223662       1 main.go:227] handling current node
+I1206 08:34:41.223680       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:41.223688       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:34:51.230139       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:34:51.230189       1 main.go:227] handling current node
+I1206 08:34:51.230221       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:34:51.230241       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:01.237635       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:01.237672       1 main.go:227] handling current node
+I1206 08:35:01.237688       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:01.237695       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:11.247078       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:11.247114       1 main.go:227] handling current node
+I1206 08:35:11.247135       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:11.247146       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:21.252782       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:21.252828       1 main.go:227] handling current node
+I1206 08:35:21.252872       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:21.252891       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:31.299117       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:31.299314       1 main.go:227] handling current node
+I1206 08:35:31.299404       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:31.299600       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:41.310223       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:41.310285       1 main.go:227] handling current node
+I1206 08:35:41.310326       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:41.310345       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:35:51.319163       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:35:51.319212       1 main.go:227] handling current node
+I1206 08:35:51.319249       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:35:51.319267       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:01.328780       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:01.328833       1 main.go:227] handling current node
+I1206 08:36:01.328863       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:01.328882       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:11.335341       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:11.335388       1 main.go:227] handling current node
+I1206 08:36:11.335428       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:11.335445       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:21.352695       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:21.352726       1 main.go:227] handling current node
+I1206 08:36:21.352743       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:21.352800       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:31.513582       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:31.513628       1 main.go:227] handling current node
+I1206 08:36:31.513653       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:31.513664       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:41.535111       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:41.535151       1 main.go:227] handling current node
+I1206 08:36:41.535167       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:41.535175       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:36:51.603562       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:36:51.603610       1 main.go:227] handling current node
+I1206 08:36:51.603674       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:36:51.603683       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:01.729321       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:01.729400       1 main.go:227] handling current node
+I1206 08:37:01.729425       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:01.729433       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:11.872820       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:11.874044       1 main.go:227] handling current node
+I1206 08:37:11.874375       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:11.874466       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:22.001484       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:22.001781       1 main.go:227] handling current node
+I1206 08:37:22.002000       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:22.002060       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:32.156572       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:32.156602       1 main.go:227] handling current node
+I1206 08:37:32.156617       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:32.156626       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:42.297332       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:42.297366       1 main.go:227] handling current node
+I1206 08:37:42.297383       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:42.297391       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:37:52.409709       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:37:52.409777       1 main.go:227] handling current node
+I1206 08:37:52.409800       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:37:52.409809       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:02.529857       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:02.529886       1 main.go:227] handling current node
+I1206 08:38:02.529901       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:02.529908       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:12.660313       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:12.660352       1 main.go:227] handling current node
+I1206 08:38:12.660371       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:12.660379       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:22.780423       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:22.780472       1 main.go:227] handling current node
+I1206 08:38:22.780489       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:22.780496       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:32.908072       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:32.908107       1 main.go:227] handling current node
+I1206 08:38:32.908151       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:32.908179       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:43.072116       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:43.072154       1 main.go:227] handling current node
+I1206 08:38:43.072176       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:43.072187       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:38:53.316457       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:38:53.316501       1 main.go:227] handling current node
+I1206 08:38:53.316521       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:38:53.316531       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:03.321150       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:03.321182       1 main.go:227] handling current node
+I1206 08:39:03.321199       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:03.321206       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:13.436572       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:13.436750       1 main.go:227] handling current node
+I1206 08:39:13.436961       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:13.437034       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:23.576370       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:23.576397       1 main.go:227] handling current node
+I1206 08:39:23.576413       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:23.576421       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:33.766734       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:33.766789       1 main.go:227] handling current node
+I1206 08:39:33.766819       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:33.766840       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:43.803614       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:43.803657       1 main.go:227] handling current node
+I1206 08:39:43.803684       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:43.803694       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:39:53.908081       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:39:53.908280       1 main.go:227] handling current node
+I1206 08:39:53.908363       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:39:53.908443       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:04.065436       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:04.065491       1 main.go:227] handling current node
+I1206 08:40:04.065519       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:04.065532       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:14.114683       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:14.114827       1 main.go:227] handling current node
+I1206 08:40:14.114876       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:14.114913       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:24.205288       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:24.205330       1 main.go:227] handling current node
+I1206 08:40:24.205347       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:24.205354       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:34.307125       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:34.307167       1 main.go:227] handling current node
+I1206 08:40:34.307183       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:34.307192       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:44.430208       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:44.430252       1 main.go:227] handling current node
+I1206 08:40:44.430270       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:44.430277       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:40:54.495822       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:40:54.496427       1 main.go:227] handling current node
+I1206 08:40:54.496538       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:40:54.496609       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:04.633458       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:04.633574       1 main.go:227] handling current node
+I1206 08:41:04.633609       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:04.633643       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:14.774421       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:14.774455       1 main.go:227] handling current node
+I1206 08:41:14.774472       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:14.774481       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:24.943687       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:24.943968       1 main.go:227] handling current node
+I1206 08:41:24.944062       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:24.944154       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:35.008609       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:35.008656       1 main.go:227] handling current node
+I1206 08:41:35.008676       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:35.008684       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:45.134773       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:45.135031       1 main.go:227] handling current node
+I1206 08:41:45.135112       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:45.135183       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:41:55.265773       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:41:55.265857       1 main.go:227] handling current node
+I1206 08:41:55.265887       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:41:55.265895       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:05.425497       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:05.425527       1 main.go:227] handling current node
+I1206 08:42:05.425542       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:05.425549       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:15.582655       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:15.582778       1 main.go:227] handling current node
+I1206 08:42:15.582811       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:15.582857       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:25.702611       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:25.702695       1 main.go:227] handling current node
+I1206 08:42:25.702714       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:25.702748       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:35.840277       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:35.840309       1 main.go:227] handling current node
+I1206 08:42:35.840326       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:35.840333       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:45.979192       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:45.979258       1 main.go:227] handling current node
+I1206 08:42:45.979276       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:45.979284       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:42:56.112368       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:42:56.112482       1 main.go:227] handling current node
+I1206 08:42:56.112508       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:42:56.112516       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:06.246351       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:06.246460       1 main.go:227] handling current node
+I1206 08:43:06.246481       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:06.246491       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:16.410642       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:16.410671       1 main.go:227] handling current node
+I1206 08:43:16.410687       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:16.410694       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:26.580344       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:26.580393       1 main.go:227] handling current node
+I1206 08:43:26.580416       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:26.580425       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:36.665443       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:36.669150       1 main.go:227] handling current node
+I1206 08:43:36.669228       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:36.669259       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:46.799171       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:46.799216       1 main.go:227] handling current node
+I1206 08:43:46.799235       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:46.799244       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:43:57.112131       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:43:57.112185       1 main.go:227] handling current node
+I1206 08:43:57.112211       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:43:57.112227       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:07.160300       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:07.160338       1 main.go:227] handling current node
+I1206 08:44:07.160357       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:07.160365       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:17.508936       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:17.515247       1 main.go:227] handling current node
+I1206 08:44:17.515311       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:17.515346       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:27.522946       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:27.522997       1 main.go:227] handling current node
+I1206 08:44:27.523020       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:27.523028       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:37.531550       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:37.531596       1 main.go:227] handling current node
+I1206 08:44:37.531625       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:37.531640       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:47.536240       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:47.536276       1 main.go:227] handling current node
+I1206 08:44:47.536294       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:47.536303       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:44:57.573960       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:44:57.573996       1 main.go:227] handling current node
+I1206 08:44:57.574014       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:44:57.574022       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:07.711084       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:07.711120       1 main.go:227] handling current node
+I1206 08:45:07.711136       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:07.711145       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:17.833023       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:17.833130       1 main.go:227] handling current node
+I1206 08:45:17.833165       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:17.833202       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:27.968367       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:27.968405       1 main.go:227] handling current node
+I1206 08:45:27.968425       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:27.968435       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:38.114458       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:38.114509       1 main.go:227] handling current node
+I1206 08:45:38.114538       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:38.114552       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:48.238006       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:48.238048       1 main.go:227] handling current node
+I1206 08:45:48.238067       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:48.238075       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:45:58.281589       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:45:58.281634       1 main.go:227] handling current node
+I1206 08:45:58.281655       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:45:58.281664       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:08.392058       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:08.392086       1 main.go:227] handling current node
+I1206 08:46:08.392102       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:08.392109       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:18.528351       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:18.528390       1 main.go:227] handling current node
+I1206 08:46:18.528405       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:18.528412       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:28.631253       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:28.631309       1 main.go:227] handling current node
+I1206 08:46:28.631328       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:28.631338       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:38.749780       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:38.749846       1 main.go:227] handling current node
+I1206 08:46:38.749871       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:38.750122       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:48.909113       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:48.909419       1 main.go:227] handling current node
+I1206 08:46:48.909588       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:48.909695       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:46:59.047831       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:46:59.047872       1 main.go:227] handling current node
+I1206 08:46:59.047892       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:46:59.047900       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:09.170993       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:09.171066       1 main.go:227] handling current node
+I1206 08:47:09.171085       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:09.171094       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:19.320573       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:19.320805       1 main.go:227] handling current node
+I1206 08:47:19.321002       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:19.321024       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:29.431047       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:29.431079       1 main.go:227] handling current node
+I1206 08:47:29.431095       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:29.431102       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:39.586613       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:39.586691       1 main.go:227] handling current node
+I1206 08:47:39.586746       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:39.586892       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:49.839106       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:49.839137       1 main.go:227] handling current node
+I1206 08:47:49.839154       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:49.839185       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:47:59.893643       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:47:59.893676       1 main.go:227] handling current node
+I1206 08:47:59.893692       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:47:59.893724       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:48:09.949242       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:48:09.949284       1 main.go:227] handling current node
+I1206 08:48:09.949303       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:48:09.949321       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:48:20.102287       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:48:20.102332       1 main.go:227] handling current node
+I1206 08:48:20.102352       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:48:20.102360       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:48:30.218755       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:48:30.218794       1 main.go:227] handling current node
+I1206 08:48:30.218809       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:48:30.218816       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:48:40.340890       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:48:40.341022       1 main.go:227] handling current node
+I1206 08:48:40.341063       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:48:40.341100       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:48:50.498490       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:48:50.498530       1 main.go:227] handling current node
+I1206 08:48:50.498547       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:48:50.498555       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:00.707395       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:00.707430       1 main.go:227] handling current node
+I1206 08:49:00.707447       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:00.707455       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:10.773785       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:10.773825       1 main.go:227] handling current node
+I1206 08:49:10.773843       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:10.773852       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:20.888521       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:20.888575       1 main.go:227] handling current node
+I1206 08:49:20.888594       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:20.888601       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:31.075877       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:31.075914       1 main.go:227] handling current node
+I1206 08:49:31.075933       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:31.075941       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:41.175749       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:41.175892       1 main.go:227] handling current node
+I1206 08:49:41.175949       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:41.175961       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:49:51.228072       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:49:51.228103       1 main.go:227] handling current node
+I1206 08:49:51.228120       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:49:51.228129       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:01.392058       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:01.392104       1 main.go:227] handling current node
+I1206 08:50:01.392126       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:01.392134       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:11.466331       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:11.466363       1 main.go:227] handling current node
+I1206 08:50:11.466379       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:11.466387       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:21.599841       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:21.599898       1 main.go:227] handling current node
+I1206 08:50:21.599923       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:21.599931       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:31.727384       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:31.727427       1 main.go:227] handling current node
+I1206 08:50:31.727447       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:31.727457       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:41.858037       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:41.858158       1 main.go:227] handling current node
+I1206 08:50:41.858194       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:41.858229       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:50:52.033211       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:50:52.033268       1 main.go:227] handling current node
+I1206 08:50:52.033287       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:50:52.033296       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:02.152325       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:02.152376       1 main.go:227] handling current node
+I1206 08:51:02.152400       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:02.152414       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:12.273697       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:12.273742       1 main.go:227] handling current node
+I1206 08:51:12.273760       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:12.273768       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:22.412143       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:22.412197       1 main.go:227] handling current node
+I1206 08:51:22.412214       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:22.412222       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:32.538024       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:32.538147       1 main.go:227] handling current node
+I1206 08:51:32.538183       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:32.538264       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:42.686685       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:42.686726       1 main.go:227] handling current node
+I1206 08:51:42.686742       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:42.686749       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:51:52.786682       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:51:52.786732       1 main.go:227] handling current node
+I1206 08:51:52.786751       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:51:52.786758       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:02.916478       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:02.916510       1 main.go:227] handling current node
+I1206 08:52:02.916526       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:02.916533       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:13.169555       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:13.169588       1 main.go:227] handling current node
+I1206 08:52:13.169606       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:13.169614       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:23.287649       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:23.287708       1 main.go:227] handling current node
+I1206 08:52:23.287729       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:23.287737       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:33.467183       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:33.467224       1 main.go:227] handling current node
+I1206 08:52:33.467242       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:33.467252       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:43.497369       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:43.497403       1 main.go:227] handling current node
+I1206 08:52:43.497420       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:43.497428       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:52:53.595191       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:52:53.595390       1 main.go:227] handling current node
+I1206 08:52:53.595439       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:52:53.595490       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+I1206 08:53:03.724433       1 main.go:223] Handling node with IPs: map[172.19.0.2:{}]
+I1206 08:53:03.724514       1 main.go:227] handling current node
+I1206 08:53:03.724546       1 main.go:223] Handling node with IPs: map[172.19.0.3:{}]
+I1206 08:53:03.724570       1 main.go:250] Node kind-1-worker has CIDR [10.244.1.0/24] 
+==== END logs for container kindnet-cni of pod kube-system/kindnet-6hhgv ====

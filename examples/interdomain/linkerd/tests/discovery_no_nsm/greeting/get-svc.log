@@ -1,0 +1,12 @@
+NAMESPACE     NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
+default       greeting                    ClusterIP   10.96.148.171   <none>        9080/TCP                 8m22s
+default       kubernetes                  ClusterIP   10.96.0.1       <none>        443/TCP                  35m
+kube-system   kube-dns                    ClusterIP   10.96.0.10      <none>        53/UDP,53/TCP,9153/TCP   35m
+linkerd       linkerd-dst                 ClusterIP   10.96.221.145   <none>        8086/TCP                 26m
+linkerd       linkerd-dst-headless        ClusterIP   None            <none>        8086/TCP                 26m
+linkerd       linkerd-identity            ClusterIP   10.96.1.86      <none>        8080/TCP                 26m
+linkerd       linkerd-identity-headless   ClusterIP   None            <none>        8080/TCP                 26m
+linkerd       linkerd-policy              ClusterIP   None            <none>        8090/TCP                 26m
+linkerd       linkerd-policy-validator    ClusterIP   10.96.43.161    <none>        443/TCP                  26m
+linkerd       linkerd-proxy-injector      ClusterIP   10.96.220.60    <none>        443/TCP                  26m
+linkerd       linkerd-sp-validator        ClusterIP   10.96.113.71    <none>        443/TCP                  26m

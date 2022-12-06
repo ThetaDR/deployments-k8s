@@ -1,0 +1,323 @@
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "5312"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "alpine-78f4f84cdc",
+                "namespace": "default",
+                "uid": "41aa7af1-cd9c-4472-9529-9ffd8de1cda5",
+                "resourceVersion": "4353",
+                "generation": 1,
+                "creationTimestamp": "2022-12-06T08:44:15Z",
+                "labels": {
+                    "app": "alpine",
+                    "pod-template-hash": "78f4f84cdc"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "2"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "alpine",
+                        "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "alpine",
+                        "pod-template-hash": "78f4f84cdc"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "alpine",
+                            "pod-template-hash": "78f4f84cdc"
+                        },
+                        "annotations": {
+                            "linkerd.io/inject": "enabled"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "alpine",
+                                "image": "alpine:3.15.0",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "stdin": true,
+                                "tty": true
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "alpine-bc578d674",
+                "namespace": "default",
+                "uid": "e510760f-3fa1-4460-a87e-c2ee6d5b07d1",
+                "resourceVersion": "4364",
+                "generation": 2,
+                "creationTimestamp": "2022-12-06T08:43:52Z",
+                "labels": {
+                    "app": "alpine",
+                    "pod-template-hash": "bc578d674"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "alpine",
+                        "uid": "691bd979-072c-432c-ae19-999fd7224651",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 0,
+                "selector": {
+                    "matchLabels": {
+                        "app": "alpine",
+                        "pod-template-hash": "bc578d674"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "alpine",
+                            "pod-template-hash": "bc578d674"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "alpine",
+                                "image": "alpine:3.15.0",
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "stdin": true,
+                                "tty": true
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 0,
+                "observedGeneration": 2
+            }
+        },
+        {
+            "metadata": {
+                "name": "greeting-5d648687f7",
+                "namespace": "default",
+                "uid": "577ca22e-ff99-4e34-a6cd-777748cb4ae1",
+                "resourceVersion": "4354",
+                "generation": 2,
+                "creationTimestamp": "2022-12-06T08:43:47Z",
+                "labels": {
+                    "app": "greeting",
+                    "pod-template-hash": "5d648687f7"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "greeting",
+                        "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 0,
+                "selector": {
+                    "matchLabels": {
+                        "app": "greeting",
+                        "pod-template-hash": "5d648687f7"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "greeting",
+                            "pod-template-hash": "5d648687f7"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "server",
+                                "image": "hashicorp/http-echo:alpine",
+                                "args": [
+                                    "-text=\"hello world from istio\"",
+                                    "-listen=:9080"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "http",
+                                        "containerPort": 9080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "greeting-sa",
+                        "serviceAccount": "greeting-sa",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 0,
+                "observedGeneration": 2
+            }
+        },
+        {
+            "metadata": {
+                "name": "greeting-999995b5b",
+                "namespace": "default",
+                "uid": "12265723-4549-4bde-b95f-bdc3c9aa2164",
+                "resourceVersion": "4341",
+                "generation": 1,
+                "creationTimestamp": "2022-12-06T08:44:15Z",
+                "labels": {
+                    "app": "greeting",
+                    "pod-template-hash": "999995b5b"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "2"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "greeting",
+                        "uid": "d0c229be-ad80-458a-8e3b-ae969fc765bf",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app": "greeting",
+                        "pod-template-hash": "999995b5b"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "greeting",
+                            "pod-template-hash": "999995b5b"
+                        },
+                        "annotations": {
+                            "linkerd.io/inject": "enabled"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "server",
+                                "image": "hashicorp/http-echo:alpine",
+                                "args": [
+                                    "-text=\"hello world from istio\"",
+                                    "-listen=:9080"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "http",
+                                        "containerPort": 9080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "greeting-sa",
+                        "serviceAccount": "greeting-sa",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}
