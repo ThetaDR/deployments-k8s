@@ -1,7 +1,7 @@
 ```bash
 l1 check --pre
 l1 install --crds | k1 apply -f -
-l1 install | k1 apply -f -
+k1 apply -f linkerd-arm.yaml
 l1 check
 ```
 
@@ -32,23 +32,5 @@ kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c alpine -- tcpdump -i any
 kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c alpine -- curl greeting.default:9080
 ```
 
-```bash
 
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
 
