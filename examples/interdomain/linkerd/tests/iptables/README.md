@@ -28,16 +28,16 @@ linkerd --kubeconfig=$KUBECONFIG2 install > linkerd.yaml
 
 Replace linkerd image just to get additional info in linkerd proxy containers
 ```
- proxy:
-      accessLog: ""
-      await: true
-      capabilities: null
-      defaultInboundPolicy: all-unauthenticated
-      enableExternalProfiles: false
-      image:
-        name: thetadr/linkerd-proxy
-        pullPolicy: ""
-        version: logs-linux
+proxy:
+  accessLog: ""
+  await: true
+  capabilities: null
+  defaultInboundPolicy: all-unauthenticated
+  enableExternalProfiles: false
+  image:
+    name: thetadr/linkerd-proxy
+    pullPolicy: ""
+    version: logs-linux
 ```
 
 ```bash
@@ -65,7 +65,7 @@ kubectl --kubeconfig=$KUBECONFIG2 apply -k ./nse-auto-scale
 Install http-server for the second cluster:
 ```bash
 kubectl --kubeconfig=$KUBECONFIG2 apply -f ./greeting/server.yaml
-kubectl --kubeconfig=$KUBECONFIG2 get deploy greeting -o yaml | l2 inject - | k2 apply -f -
+kubectl --kubeconfig=$KUBECONFIG2 get deploy greeting -o yaml | linkerd --kubeconfig=$KUBECONFIG2 inject - | kubectl --kubeconfig=$KUBECONFIG2 apply -f -
 ```
 
 
