@@ -15,20 +15,39 @@ The client will be `alpine` (**Workload-1**), we will use curl.
 - [Interdomain spire](../../spire)
 - [Interdomain nsm](../../nsm)
 
+Or you can run [interdomain script](../../../interdomain.sh)
 
 ## Run
 
 Install linkerd for second cluster:
 ```bash
-l2 check --pre
-l2 install --crds | k2 apply -f -
-l2 install | k2 apply -f -
-l2 check
+linkerd --kubeconfig=$KUBECONFIG2 check --pre
+linkerd --kubeconfig=$KUBECONFIG2 install --crds | kubectl --kubeconfig=$KUBECONFIG2 apply -f -
+linkerd --kubeconfig=$KUBECONFIG2 install > linkerd.yaml
+```
+
+Replace linkerd image just to get additional info in linkerd proxy containers
+```
+ proxy:
+      accessLog: ""
+      await: true
+      capabilities: null
+      defaultInboundPolicy: all-unauthenticated
+      enableExternalProfiles: false
+      image:
+        name: thetadr/linkerd-proxy
+        pullPolicy: ""
+        version: logs-linux
+```
+
+```bash
+kubectl --kubeconfig=$KUBECONFIG2 apply -f linkerd.yaml
+linkerd --kubeconfig=$KUBECONFIG2 check
 ```
 
 Install networkservice for the second cluster:
 ```bash
-k2 create ns ns-nsm-linkerd
+kubectl --kubeconfig=$KUBECONFIG2 create ns ns-nsm-linkerd
 kubectl --kubeconfig=$KUBECONFIG2 apply -f ./networkservice.yaml
 ```
 
@@ -45,10 +64,8 @@ kubectl --kubeconfig=$KUBECONFIG2 apply -k ./nse-auto-scale
 
 Install http-server for the second cluster:
 ```bash
-#k2 get -n ns-nsm-linkerd deploy web-local -o yaml | l2 inject --enable-debug-sidecar - | k2 apply -f -
-
 kubectl --kubeconfig=$KUBECONFIG2 apply -f ./greeting/server.yaml
-k2 get deploy greeting -o yaml | l2 inject - | k2 apply -f -
+kubectl --kubeconfig=$KUBECONFIG2 get deploy greeting -o yaml | l2 inject - | k2 apply -f -
 ```
 
 
@@ -62,17 +79,28 @@ Get curl for nsc:
 kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c cmd-nsc -- apk add curl
 ```
 
+Add iptables to nse (copy pod name like proxy-alpine-86fc94c47-kqdtx manually)
+```bash
+PROXY_NAME=
+kubectl --kubeconfig=$KUBECONFIG2 exec $PROXY_NAME -c nse -- apk add iptables
+```
+
+Add this iptables to proxy nse container. (1)
+Don't forget to get interface for third rule
+```
+-N NSM_PREROUTE
+-A NSM_PREROUTE -j DNAT --to-destination 127.0.0.1
+-I PREROUTING 1 -p tcp -i nsm-linker-276b -j NSM_PREROUTE
+```
+
+Get curl for nsc:
+```bash
+kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c cmd-nsc -- apk add curl
+```
+
 Verify connectivity:
 ```bash
 kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c cmd-nsc -- curl -s greeting.default:9080 | grep -o "hello world from linkerd"
 ```
 **Expected output** is "hello world from linkerd"
 
-Congratulations! 
-You have made a interdomain connection between two clusters via NSM + linkerd!
-
-## Cleanup
-
-```bash
-
-```

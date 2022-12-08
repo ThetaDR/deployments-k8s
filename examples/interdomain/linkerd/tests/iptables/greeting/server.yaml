@@ -26,8 +26,6 @@ metadata:
   name: greeting
   labels:
     app: greeting
-  annotations:
-    linkerd.io/inject: enabled
 spec:
   replicas: 1
   selector:
