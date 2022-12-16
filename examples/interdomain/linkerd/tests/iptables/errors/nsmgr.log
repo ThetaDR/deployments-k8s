@@ -1,0 +1,17 @@
+Dec 14 15:18:44.074[36m [INFO] [0m(1.1)   Setting env variable DLV_LISTEN_NSMGR to a valid dlv '--listen' value will cause the dlv debugger to execute this binary and listen as directed.
+This application is configured via the environment. The following environment
+variables can be used:
+
+KEY                                   TYPE                           DEFAULT                                                REQUIRED    DESCRIPTION
+NSM_NAME                              String                         nmgr                                                               Name of Network service manager
+NSM_LISTEN_ON                         Comma-separated list of URL    unix:///var/lib/networkservicemesh/nsm.io.sock                     url to listen on. tcp:// one will be used a public to register NSM.
+NSM_REGISTRY_URL                      URL                            tcp://localhost:5001                                               A NSE registry url to use
+NSM_MAX_TOKEN_LIFETIME                Duration                       10m                                                                maximum lifetime of tokens
+NSM_LOG_LEVEL                         String                         INFO                                                               Log level
+NSM_DIAL_TIMEOUT                      Duration                       100ms                                                              Timeout for the dial the next endpoint
+NSM_FORWARDER_NETWORK_SERVICE_NAME    String                         forwarder                                                          the default service name for forwarder discovering
+NSM_OPENTELEMETRYENDPOINT             String                         otel-collector.observability.svc.cluster.local:4317                OpenTelemetry Collector Endpoint
+Dec 14 15:18:44.077[36m [INFO] [0m(1.2)   Using configuration: &{nsmgr-rx4pl [{unix    /var/lib/networkservicemesh/nsm.io.sock  false   } {tcp   [10.244.1.11]:5001   false   }] {registry 5002     false   } 10m0s TRACE 100ms forwarder otel-collector.observability.svc.cluster.local:4317}
+Dec 14 15:18:44.077[37m [TRAC] [0m(1) ⎆ cmd-nsmgr()
+Dec 14 15:18:44.077[36m [INFO] [0mObtaining X509 Certificate Source
+Dec 14 15:20:47.773[31m [FATA] [0merror getting x509 source: context canceled

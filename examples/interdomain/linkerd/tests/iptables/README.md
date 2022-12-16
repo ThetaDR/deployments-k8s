@@ -90,12 +90,7 @@ Don't forget to get interface for third rule
 ```
 -N NSM_PREROUTE
 -A NSM_PREROUTE -j DNAT --to-destination 127.0.0.1
--I PREROUTING 1 -p tcp -i nsm-linker-276b -j NSM_PREROUTE
-```
-
-Get curl for nsc:
-```bash
-kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c cmd-nsc -- apk add curl
+-I PREROUTING 1 -p tcp -i nsm-linker-4d5a -j NSM_PREROUTE
 ```
 
 Verify connectivity:
@@ -104,3 +99,19 @@ kubectl --kubeconfig=$KUBECONFIG1 exec deploy/alpine -c cmd-nsc -- curl -s greet
 ```
 **Expected output** is "hello world from linkerd"
 
+-N NSM_OUTPUT
+-A NSM_OUTPUT -j DNAT --to-destination 10.244.1.9
+-A OUTPUT -p tcp -s 127.0.0.6 -j NSM_OUTPUT
+# ^ should be fine
+-N NSM_POSTROUTING
+-A NSM_POSTROUTING -j SNAT --to-source {{ index .NsmDstIPs 0 }}
+-A POSTROUTING -p tcp -o {{ .NsmInterfaceName }} -j NSM_POSTROUTING
+
+
+- -I PREROUTING 1 -p tcp -i nsm-linker-d049 -j DNAT --to-destination 127.0.0.1
+- -N NSM_OUTPUT
+- -A NSM_OUTPUT -j DNAT --to-destination {{ index .NsmSrcIPs 0 }}
+- -A OUTPUT -p tcp -d 127.0.0.1 -j NSM_OUTPUT
+- -N NSM_POSTROUTING
+- -A NSM_POSTROUTING -j SNAT --to-source {{ index .NsmDstIPs 0 }}
+- -A POSTROUTING -p tcp -o nsm-linker-d049 -j NSM_POSTROUTING
