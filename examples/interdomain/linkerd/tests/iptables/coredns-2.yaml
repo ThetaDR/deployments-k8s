@@ -6,6 +6,10 @@ metadata:
 data:
   Corefile: |
     .:53 {
+        template IN ANY {
+            match "greeting.default.*"
+            answer "10.244.1.17"
+        }
         errors
         health {
             lameduck 5s

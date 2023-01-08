@@ -9,8 +9,15 @@ metadata:
     linkerd.io/inject: enabled
     config.linkerd.io/enable-debug-sidecar: "false"
 spec:
+  shareProcessNamespace: true
   restartPolicy: Never
   containers:
+    - name: debian
+      image: debian
+      securityContext:
+        privileged: true
+      stdin: true
+      tty: true
     - name: nse
       image: thetadr/cmd-nse-l7-proxy:no-default-iptables
       imagePullPolicy: IfNotPresent
