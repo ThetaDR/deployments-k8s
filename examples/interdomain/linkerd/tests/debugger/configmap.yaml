@@ -6,7 +6,6 @@ metadata:
 data:
   Corefile: |
     .:53 {
-
         errors
         health {
             lameduck 5s
@@ -17,7 +16,7 @@ data:
             fallthrough in-addr.arpa ip6.arpa
             ttl 30
         }
-        k8s_external my.cluster1
+        k8s_external my.cluster2
         prometheus :9153
         forward . /etc/resolv.conf {
             max_concurrent 1000
@@ -25,8 +24,8 @@ data:
         loop
         reload 5s
     }
-    my.cluster2:53 {
-      forward . 172.19.129.0:53 {
+    my.cluster1:53 {
+      forward . 172.19.128.0:53 {
         force_tcp
       }
     }
